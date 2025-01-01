@@ -1,6 +1,6 @@
 <!-- -->
 <h1 align="center">Hey, I am Vishal Rathod! :wave:</h1>
-<h2 align="center">:books: Integrated MCA :books:</h2>
+<h2 align="center">:books: Integrated MTech :books:</h2>
 
 <p align="center">
   <a href="https://github.com/VishalRathod21"><img src="https://readme-typing-svg.herokuapp.com?lines=%20SDSF+,+DAVV+,+Indore%20;Python%20|%20ML%20|%20Data+Science%20;&center=true&width=550&height=40"></a>
