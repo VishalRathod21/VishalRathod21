@@ -8,10 +8,10 @@
 </p>
 
 <div align="center">
-  <a href="https://www.linkedin.com/in/vishalrathod21/">
+  <a href="https://www.linkedin.com/in/vishalrathod09/">
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white">
   </a>
-  <a href="mailto:your.email@example.com">
+  <a href="mailto:vr3204917@gmail.com">
     <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white">
   </a>
   <a href="https://github.com/VishalRathod21">
@@ -92,8 +92,8 @@
 ---
 
 ## 📫 Let's Connect
-- LinkedIn: [Vishal Rathod](https://www.linkedin.com/in/vishalrathod21/)
-- Email: your.email@example.com
+- LinkedIn: [Vishal Rathod]([https://www.linkedin.com/in/vishalrathod09/])
+- Email: vr3204917@gmail.com
 - GitHub: [VishalRathod21](https://github.com/VishalRathod21)
 
 ---
