@@ -1,4 +1,3 @@
-<!-- -->
 <h1 align="center">Hey, I am Vishal Rathod! :wave:</h1>
 <h2 align="center">:books: Integrated MTech :books:</h2>
 
@@ -22,6 +21,10 @@
   <img src="https://github.com/devicons/devicon/blob/master/icons/mongodb/mongodb-original.svg" alt="mongodb" width="40" height="40"/> 
   <img src="https://github.com/devicons/devicon/blob/master/icons/sqlite/sqlite-original.svg" alt="sql" width="40" height="40"/> 
   <img src="https://github.com/devicons/devicon/blob/master/icons/flask/flask-original.svg" alt="flask" width="40" height="40"/> 
+  <img src="https://github.com/devicons/devicon/blob/master/icons/docker/docker-original.svg" alt="docker" width="40" height="40"/>
+  <img src="https://github.com/devicons/devicon/blob/master/icons/pytorch/pytorch-original.svg" alt="pytorch" width="40" height="40"/>
+  <img src="https://github.com/devicons/devicon/blob/master/icons/tensorflow/tensorflow-original.svg" alt="tensorflow" width="40" height="40"/>
+  <img src="https://mlflow.org/images/logo.svg" alt="mlflow" width="80" height="40"/>
 </p>
 
 <br>
@@ -33,11 +36,3 @@
 <div align="center">
   <img src="https://github-readme-stats.vercel.app/api/top-langs?username=VishalRathod21&locale=en&hide_title=true&layout=compact&card_width=320&langs_count=5&theme=dracula&hide_border=false&order=2" height="100" alt="languages graph" />
 </div>
-
-<h2 align="center">:telephone_receiver: Reach Me :telephone_receiver:</h2>
-<div align="center">
-<a href="https://www.linkedin.com/in/vishal-rathod-065a3624b/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a>
-<a href="https://www.instagram.com/rathod_jii_20/"><img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white"></a>
-<a href="mailto:vr3204917@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"></a>
-</div>
-<!-- -->
