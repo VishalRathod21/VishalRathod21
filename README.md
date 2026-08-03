@@ -1,13 +1,24 @@
 <div align="center">
 
-<!-- HERO BANNER (LIGHT/DARK THEME SWITCHING WITH VECTOR AI AVATAR) -->
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg?v=4">
-  <source media="(prefers-color-scheme: light)" srcset="assets/banner-light.svg?v=4">
-  <img alt="Vishal Rathod - AI Engineer Research Facility Banner" src="assets/banner-dark.svg?v=4" width="100%">
-</picture>
+<!-- HERO HEADER: FUTURISTIC AI BANNER + ACTUAL PROFILE PHOTO CARD -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="70%" align="center" valign="middle">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg?v=5">
+        <source media="(prefers-color-scheme: light)" srcset="assets/banner-light.svg?v=5">
+        <img alt="Vishal Rathod - AI Engineer Research Facility Banner" src="assets/banner-dark.svg?v=5" width="100%">
+      </picture>
+    </td>
+    <td width="30%" align="center" valign="middle" style="padding-left: 12px;">
+      <div align="center">
+        <img src="assets/profile.png" width="92%" style="border-radius: 22px; border: 2.5px solid #7C5CFF; box-shadow: 0 0 25px rgba(124, 92, 255, 0.45);" alt="Vishal Rathod Profile Picture" />
+      </div>
+    </td>
+  </tr>
+</table>
 
-<br/><br/>
+<br/>
 
 <!-- AMBIENT SUBTITLE BADGES -->
 <p align="center">
@@ -25,9 +36,6 @@
 
 <table width="100%" border="0">
   <tr>
-    <td width="260" align="center" valign="middle">
-      <img src="assets/profile.png" width="220" style="border-radius: 22px; border: 2.5px solid #7C5CFF; box-shadow: 0 0 25px rgba(124, 92, 255, 0.4);" alt="Vishal Rathod Profile Picture" />
-    </td>
     <td valign="middle">
       <blockquote><em>"Building intelligent, production-grade AI systems that solve real-world problems and positively impact millions of people."</em></blockquote>
       <p>I am an <b>AI Engineer</b> specializing in <b>Deep Learning</b>, <b>Large Language Models (LLMs)</b>, <b>Agentic AI Systems</b>, and <b>MLOps infrastructure</b>. My work bridges the gap between frontier research in neural architectures and robust, high-performance software engineering.</p>
