@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 60" width="100%" height="100%">
+  <style>
+    .mono { font-family: 'JetBrains Mono', monospace; }
+    @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+  </style>
+  <g transform="translate(20, 30)">
+    <circle cx="15" cy="0" r="10" fill="none" stroke="rgba(79,140,255,0.2)" stroke-width="3"/>
+    <circle cx="15" cy="0" r="10" fill="none" stroke="#4F8CFF" stroke-width="3" stroke-dasharray="25 40" style="transform-origin: 15px 0px; animation: spin 1s linear infinite;"/>
+    <text x="40" y="4" fill="#94A3B8" font-size="12" class="mono">Initializing AI Neural Engine...</text>
+  </g>
+</svg>

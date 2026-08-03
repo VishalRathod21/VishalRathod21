@@ -1,73 +1,46 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 220" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 180" width="100%" height="100%">
   <defs>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#04070E" />
-      <stop offset="100%" stop-color="#0A1224" />
+    <linearGradient id="bgGradFooter" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0E1A35"/>
+      <stop offset="100%" stop-color="#04070E"/>
     </linearGradient>
 
-    <linearGradient id="cardBorder" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="rgba(255, 255, 255, 0.18)" />
-      <stop offset="100%" stop-color="rgba(255, 255, 255, 0.03)" />
+    <linearGradient id="borderGradFooter" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="rgba(79, 140, 255, 0.3)"/>
+      <stop offset="50%" stop-color="rgba(124, 92, 255, 0.2)"/>
+      <stop offset="100%" stop-color="rgba(178, 141, 255, 0.3)"/>
     </linearGradient>
-
-    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#4F8CFF" />
-      <stop offset="100%" stop-color="#7C5CFF" />
-    </linearGradient>
-
-    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="8" result="blur" />
-      <feComposite in="SourceGraphic" in2="blur" operator="over" />
-    </filter>
-
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&amp;family=Inter:wght@400;600&amp;display=swap');
-      
-      .font-mono { font-family: 'Fira Code', monospace; }
-      .font-sans { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
-
-      @keyframes blinkCursor {
-        0%, 100% { opacity: 1; }
-        50% { opacity: 0; }
-      }
-
-      @keyframes pulseDot {
-        0%, 100% { opacity: 1; }
-        50% { opacity: 0.3; }
-      }
-
-      .blinking-cursor { animation: blinkCursor 1s step-end indefinite; }
-      .pulse-dot { animation: pulseDot 2s ease-in-out indefinite; }
-    </style>
   </defs>
 
-  <!-- Container -->
-  <rect width="1200" height="220" rx="24" fill="url(#bgGrad)" stroke="url(#cardBorder)" stroke-width="1.5" />
+  <style>
+    .mono { font-family: 'JetBrains Mono', monospace; }
+    @keyframes blinkCursor { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+  </style>
 
-  <!-- Top Accent Beam -->
-  <rect width="1200" height="3" rx="1.5" fill="url(#primaryGrad)" />
+  <rect width="900" height="180" rx="20" fill="url(#bgGradFooter)" stroke="url(#borderGradFooter)" stroke-width="1.5"/>
 
-  <!-- Terminal Window Content -->
-  <g transform="translate(60, 45)">
-    <!-- Code Loop Container -->
-    <g class="font-mono" font-size="15" fill="#F8FAFC">
-      <text x="0" y="0"><tspan fill="#7C5CFF" font-weight="700">while</tspan> (<tspan fill="#4F8CFF">alive</tspan>) {</text>
-      <text x="32" y="28"><tspan fill="#B28DFF">learn</tspan>();</text>
-      <text x="32" y="56"><tspan fill="#4F8CFF">build</tspan>();</text>
-      <text x="32" y="84"><tspan fill="#7C5CFF">share</tspan>();</text>
-      <text x="32" y="112"><tspan fill="#27C93F">repeat</tspan>();</text>
-      <text x="0" y="140">}</text>
+  <!-- Top Bar -->
+  <rect width="900" height="35" rx="20" fill="rgba(255,255,255,0.03)"/>
+  <circle cx="20" cy="18" r="5" fill="#FF5F56"/>
+  <circle cx="36" cy="18" r="5" fill="#FFBD2E"/>
+  <circle cx="52" cy="18" r="5" fill="#27C93F"/>
+  <text x="450" y="22" fill="#94A3B8" font-size="11" class="mono" text-anchor="middle">life_loop.py</text>
 
-      <!-- Active Cursor on Last Line -->
-      <rect x="15" y="126" width="9" height="18" fill="#4F8CFF" class="blinking-cursor" />
-    </g>
+  <!-- Loop Content -->
+  <g transform="translate(30, 65)" class="mono" font-size="14">
+    <text fill="#4F8CFF" y="0"><tspan fill="#7C5CFF" font-weight="bold">while</tspan> (<tspan fill="#27C93F">alive</tspan>) {</text>
+    <text fill="#94A3B8" y="24" x="25">learn();</text>
+    <text fill="#94A3B8" y="44" x="25">build();</text>
+    <text fill="#94A3B8" y="64" x="25">share();</text>
+    <text fill="#B28DFF" y="84" x="25">repeat();</text>
+    <text fill="#4F8CFF" y="104">}</text>
 
-    <!-- Right Side Status Badge -->
-    <g transform="translate(750, 40)">
-      <rect x="0" y="0" width="330" height="60" rx="14" fill="rgba(10, 18, 36, 0.7)" stroke="url(#cardBorder)" stroke-width="1.5" />
-      <circle cx="28" cy="30" r="6" fill="#27C93F" class="pulse-dot" />
-      <text x="46" y="28" class="font-mono" fill="#F8FAFC" font-size="12" font-weight="700">SYSTEM STATUS: OPERATIONAL</text>
-      <text x="46" y="46" class="font-mono" fill="#94A3B8" font-size="11">CONTINUOUS LEARNING LOOP ACTIVE</text>
-    </g>
+    <!-- Blinking Cursor -->
+    <rect x="20" y="92" width="8" height="16" fill="#4F8CFF" style="animation: blinkCursor 1s infinite;"/>
+  </g>
+
+  <!-- Right Watermark -->
+  <g transform="translate(860, 150)" class="mono" text-anchor="end">
+    <text fill="#94A3B8" font-size="10" opacity="0.6">VISHAL RATHOD // AI LAB v2026</text>
   </g>
 </svg>

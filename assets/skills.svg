@@ -1,250 +1,170 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" width="100%" height="100%">
   <defs>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#04070E" />
-      <stop offset="100%" stop-color="#0A1224" />
+    <linearGradient id="bgGradSkills" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0E1A35"/>
+      <stop offset="100%" stop-color="#04070E"/>
     </linearGradient>
 
     <linearGradient id="cardBorder" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="rgba(255, 255, 255, 0.18)" />
-      <stop offset="100%" stop-color="rgba(255, 255, 255, 0.03)" />
+      <stop offset="0%" stop-color="rgba(79, 140, 255, 0.4)"/>
+      <stop offset="50%" stop-color="rgba(124, 92, 255, 0.2)"/>
+      <stop offset="100%" stop-color="rgba(255, 255, 255, 0.05)"/>
     </linearGradient>
 
-    <linearGradient id="accent1" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#4F8CFF" />
-      <stop offset="100%" stop-color="#7C5CFF" />
+    <linearGradient id="badgeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="rgba(79, 140, 255, 0.15)"/>
+      <stop offset="100%" stop-color="rgba(124, 92, 255, 0.15)"/>
     </linearGradient>
 
-    <linearGradient id="accent2" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#7C5CFF" />
-      <stop offset="100%" stop-color="#B28DFF" />
-    </linearGradient>
-
-    <linearGradient id="accent3" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#B28DFF" />
-      <stop offset="100%" stop-color="#4F8CFF" />
-    </linearGradient>
-
-    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
       <feGaussianBlur stdDeviation="8" result="blur" />
       <feComposite in="SourceGraphic" in2="blur" operator="over" />
     </filter>
-
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;family=Fira+Code:wght@400;500&amp;display=swap');
-      
-      .font-sans { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
-      .font-mono { font-family: 'Fira Code', monospace; }
-
-      @keyframes floatCard1 {
-        0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(-6px); }
-      }
-      @keyframes floatCard2 {
-        0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(-8px); }
-      }
-      @keyframes floatCard3 {
-        0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(-5px); }
-      }
-
-      .card-1 { animation: floatCard1 6s ease-in-out indefinite; }
-      .card-2 { animation: floatCard2 7s ease-in-out indefinite; }
-      .card-3 { animation: floatCard3 5.5s ease-in-out indefinite; }
-
-      .badge-bg {
-        fill: rgba(255, 255, 255, 0.05);
-        stroke: rgba(255, 255, 255, 0.12);
-        stroke-width: 1;
-        transition: all 0.3s ease;
-      }
-    </style>
   </defs>
 
-  <!-- Background -->
-  <rect width="1200" height="500" rx="30" fill="url(#bgGrad)" stroke="url(#cardBorder)" stroke-width="1.5" />
+  <style>
+    .sans { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
+    .mono { font-family: 'JetBrains Mono', monospace; }
+    
+    @keyframes floatCard {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-6px); }
+    }
+    .c1 { animation: floatCard 6s infinite ease-in-out; }
+    .c2 { animation: floatCard 6s infinite ease-in-out 1.5s; }
+    .c3 { animation: floatCard 6s infinite ease-in-out 3s; }
+  </style>
 
-  <!-- Section Title Header -->
-  <g transform="translate(60, 50)">
-    <text y="0" class="font-mono" fill="#4F8CFF" font-size="12" font-weight="600" letter-spacing="3">CAPABILITIES &amp; ARCHITECTURE</text>
-    <text y="32" class="font-sans" fill="#F8FAFC" font-size="26" font-weight="800" letter-spacing="1">AI STACK &amp; TECHNICAL ECOSYSTEM</text>
+  <rect width="900" height="520" rx="24" fill="url(#bgGradSkills)" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/>
+
+  <!-- Title Header -->
+  <g transform="translate(40, 45)">
+    <text fill="#F8FAFC" font-size="22" class="sans" font-weight="800" letter-spacing="1">AI &amp; ENGINEERING TECH STACK</text>
+    <text fill="#94A3B8" font-size="13" class="mono" y="24">System Architecture &amp; Core Competencies</text>
   </g>
 
-  <!-- CATEGORY 1: LANGUAGES -->
-  <g transform="translate(60, 110)" class="card-1">
-    <rect width="340" height="340" rx="20" fill="rgba(10, 18, 36, 0.7)" stroke="url(#cardBorder)" stroke-width="1.5" />
-    <rect width="340" height="4" rx="2" fill="url(#accent1)" />
+  <!-- CARD 1: LANGUAGES -->
+  <g transform="translate(40, 100)" class="c1">
+    <rect width="820" height="100" rx="16" fill="rgba(10, 18, 36, 0.65)" stroke="url(#cardBorder)" stroke-width="1"/>
+    <rect width="4" height="100" rx="2" fill="#4F8CFF"/>
+    
+    <text x="24" y="32" fill="#4F8CFF" font-size="14" class="sans" font-weight="bold">⚡ LANGUAGES &amp; CORE</text>
 
-    <!-- Card Header -->
-    <g transform="translate(24, 35)">
-      <circle cx="14" cy="14" r="14" fill="rgba(79, 140, 255, 0.15)" />
-      <path d="M 9,14 L 14,9 L 19,14 M 14,19 L 14,9" stroke="#4F8CFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
-      <text x="38" y="19" class="font-sans" fill="#F8FAFC" font-size="18" font-weight="700">Languages</text>
-      <text x="38" y="36" class="font-mono" fill="#94A3B8" font-size="11">CORE COMPUTATION</text>
-    </g>
-
-    <!-- Skill Items -->
-    <g transform="translate(24, 105)">
+    <!-- Badges Row -->
+    <g transform="translate(24, 48)">
       <!-- Python -->
-      <g transform="translate(0, 0)">
-        <rect width="292" height="42" rx="10" class="badge-bg" />
-        <text x="16" y="26" class="font-sans" fill="#F8FAFC" font-size="14" font-weight="600">Python</text>
-        <text x="276" y="26" text-anchor="end" class="font-mono" fill="#4F8CFF" font-size="12" font-weight="600">98%</text>
-        <rect x="16" y="34" width="260" height="3" rx="1.5" fill="rgba(255,255,255,0.08)" />
-        <rect x="16" y="34" width="254" height="3" rx="1.5" fill="url(#accent1)" />
-      </g>
+      <rect width="110" height="32" rx="8" fill="url(#badgeGrad)" stroke="rgba(79, 140, 255, 0.3)"/>
+      <circle cx="16" cy="16" r="4" fill="#3776AB"/>
+      <text x="28" y="21" fill="#F8FAFC" font-size="12" class="mono">Python</text>
 
       <!-- C++ -->
-      <g transform="translate(0, 54)">
-        <rect width="292" height="42" rx="10" class="badge-bg" />
-        <text x="16" y="26" class="font-sans" fill="#F8FAFC" font-size="14" font-weight="600">C++</text>
-        <text x="276" y="26" text-anchor="end" class="font-mono" fill="#4F8CFF" font-size="12" font-weight="600">88%</text>
-        <rect x="16" y="34" width="260" height="3" rx="1.5" fill="rgba(255,255,255,0.08)" />
-        <rect x="16" y="34" width="228" height="3" rx="1.5" fill="url(#accent1)" />
-      </g>
+      <rect x="122" width="90" height="32" rx="8" fill="url(#badgeGrad)" stroke="rgba(79, 140, 255, 0.3)"/>
+      <circle cx="138" cy="16" r="4" fill="#00599C"/>
+      <text x="150" y="21" fill="#F8FAFC" font-size="12" class="mono">C++</text>
 
       <!-- SQL -->
-      <g transform="translate(0, 108)">
-        <rect width="292" height="42" rx="10" class="badge-bg" />
-        <text x="16" y="26" class="font-sans" fill="#F8FAFC" font-size="14" font-weight="600">SQL</text>
-        <text x="276" y="26" text-anchor="end" class="font-mono" fill="#4F8CFF" font-size="12" font-weight="600">92%</text>
-        <rect x="16" y="34" width="260" height="3" rx="1.5" fill="rgba(255,255,255,0.08)" />
-        <rect x="16" y="34" width="239" height="3" rx="1.5" fill="url(#accent1)" />
-      </g>
+      <rect x="224" width="90" height="32" rx="8" fill="url(#badgeGrad)" stroke="rgba(79, 140, 255, 0.3)"/>
+      <circle cx="240" cy="16" r="4" fill="#F29111"/>
+      <text x="252" y="21" fill="#F8FAFC" font-size="12" class="mono">SQL</text>
 
       <!-- JavaScript -->
-      <g transform="translate(0, 162)">
-        <rect width="292" height="42" rx="10" class="badge-bg" />
-        <text x="16" y="26" class="font-sans" fill="#F8FAFC" font-size="14" font-weight="600">JavaScript / TS</text>
-        <text x="276" y="26" text-anchor="end" class="font-mono" fill="#4F8CFF" font-size="12" font-weight="600">90%</text>
-        <rect x="16" y="34" width="260" height="3" rx="1.5" fill="rgba(255,255,255,0.08)" />
-        <rect x="16" y="34" width="234" height="3" rx="1.5" fill="url(#accent1)" />
+      <rect x="326" width="120" height="32" rx="8" fill="url(#badgeGrad)" stroke="rgba(79, 140, 255, 0.3)"/>
+      <circle cx="342" cy="16" r="4" fill="#F7DF1E"/>
+      <text x="354" y="21" fill="#F8FAFC" font-size="12" class="mono">JavaScript</text>
+    </g>
+  </g>
+
+  <!-- CARD 2: AI / ML / LLM -->
+  <g transform="translate(40, 220)" class="c2">
+    <rect width="820" height="150" rx="16" fill="rgba(10, 18, 36, 0.65)" stroke="url(#cardBorder)" stroke-width="1"/>
+    <rect width="4" height="150" rx="2" fill="#7C5CFF"/>
+    
+    <text x="24" y="30" fill="#7C5CFF" font-size="14" class="sans" font-weight="bold">🧠 AI, DEEP LEARNING &amp; AGENTIC FRAMEWORKS</text>
+
+    <g transform="translate(24, 45)">
+      <!-- Row 1 -->
+      <g transform="translate(0,0)">
+        <rect width="110" height="32" rx="8" fill="url(#badgeGrad)" stroke="rgba(124, 92, 255, 0.3)"/>
+        <circle cx="16" cy="16" r="4" fill="#EE4C2C"/>
+        <text x="28" y="21" fill="#F8FAFC" font-size="12" class="mono">PyTorch</text>
+
+        <rect x="122" width="130" height="32" rx="8" fill="url(#badgeGrad)" stroke="rgba(124, 92, 255, 0.3)"/>
+        <circle cx="138" cy="16" r="4" fill="#FF6F00"/>
+        <text x="150" y="21" fill="#F8FAFC" font-size="12" class="mono">TensorFlow</text>
+
+        <rect x="264" width="135" height="32" rx="8" fill="url(#badgeGrad)" stroke="rgba(124, 92, 255, 0.3)"/>
+        <circle cx="280" cy="16" r="4" fill="#F7931E"/>
+        <text x="292" y="21" fill="#F8FAFC" font-size="12" class="mono">Scikit-Learn</text>
+
+        <rect x="411" width="125" height="32" rx="8" fill="url(#badgeGrad)" stroke="rgba(124, 92, 255, 0.3)"/>
+        <circle cx="427" cy="16" r="4" fill="#1C3C3C"/>
+        <text x="439" y="21" fill="#F8FAFC" font-size="12" class="mono">LangChain</text>
+
+        <rect x="548" width="125" height="32" rx="8" fill="url(#badgeGrad)" stroke="rgba(124, 92, 255, 0.3)"/>
+        <circle cx="564" cy="16" r="4" fill="#7C5CFF"/>
+        <text x="576" y="21" fill="#F8FAFC" font-size="12" class="mono">LangGraph</text>
+      </g>
+
+      <!-- Row 2 -->
+      <g transform="translate(0, 46)">
+        <rect width="105" height="32" rx="8" fill="url(#badgeGrad)" stroke="rgba(124, 92, 255, 0.3)"/>
+        <circle cx="16" cy="16" r="4" fill="#B28DFF"/>
+        <text x="28" y="21" fill="#F8FAFC" font-size="12" class="mono">CrewAI</text>
+
+        <rect x="117" width="110" height="32" rx="8" fill="url(#badgeGrad)" stroke="rgba(124, 92, 255, 0.3)"/>
+        <circle cx="133" cy="16" r="4" fill="#4F8CFF"/>
+        <text x="145" y="21" fill="#F8FAFC" font-size="12" class="mono">AutoGen</text>
+
+        <rect x="239" width="105" height="32" rx="8" fill="url(#badgeGrad)" stroke="rgba(124, 92, 255, 0.3)"/>
+        <circle cx="255" cy="16" r="4" fill="#10A37F"/>
+        <text x="267" y="21" fill="#F8FAFC" font-size="12" class="mono">OpenAI</text>
+
+        <rect x="356" width="105" height="32" rx="8" fill="url(#badgeGrad)" stroke="rgba(124, 92, 255, 0.3)"/>
+        <circle cx="372" cy="16" r="4" fill="#8E75FF"/>
+        <text x="384" y="21" fill="#F8FAFC" font-size="12" class="mono">Gemini</text>
+
+        <rect x="473" width="95" height="32" rx="8" fill="url(#badgeGrad)" stroke="rgba(124, 92, 255, 0.3)"/>
+        <circle cx="489" cy="16" r="4" fill="#F55036"/>
+        <text x="501" y="21" fill="#F8FAFC" font-size="12" class="mono">Groq</text>
       </g>
     </g>
   </g>
 
-  <!-- CATEGORY 2: AI & FRAMEWORKS -->
-  <g transform="translate(430, 110)" class="card-2">
-    <rect width="340" height="340" rx="20" fill="rgba(10, 18, 36, 0.7)" stroke="url(#cardBorder)" stroke-width="1.5" />
-    <rect width="340" height="4" rx="2" fill="url(#accent2)" />
+  <!-- CARD 3: BACKEND & CLOUD -->
+  <g transform="translate(40, 390)" class="c3">
+    <rect width="820" height="100" rx="16" fill="rgba(10, 18, 36, 0.65)" stroke="url(#cardBorder)" stroke-width="1"/>
+    <rect width="4" height="100" rx="2" fill="#B28DFF"/>
+    
+    <text x="24" y="32" fill="#B28DFF" font-size="14" class="sans" font-weight="bold">⚙️ BACKEND, INFRASTRUCTURE &amp; MLOPS</text>
 
-    <!-- Card Header -->
-    <g transform="translate(24, 35)">
-      <circle cx="14" cy="14" r="14" fill="rgba(124, 92, 255, 0.15)" />
-      <circle cx="14" cy="14" r="5" fill="#7C5CFF" />
-      <text x="38" y="19" class="font-sans" fill="#F8FAFC" font-size="18" font-weight="700">AI &amp; Frameworks</text>
-      <text x="38" y="36" class="font-mono" fill="#94A3B8" font-size="11">NEURAL &amp; AGENTIC</text>
-    </g>
+    <g transform="translate(24, 48)">
+      <rect width="105" height="32" rx="8" fill="url(#badgeGrad)" stroke="rgba(178, 141, 255, 0.3)"/>
+      <circle cx="16" cy="16" r="4" fill="#059669"/>
+      <text x="28" y="21" fill="#F8FAFC" font-size="12" class="mono">FastAPI</text>
 
-    <!-- Skill Pills Grid -->
-    <g transform="translate(24, 95)">
-      <g transform="translate(0, 0)">
-        <rect width="140" height="34" rx="8" class="badge-bg" />
-        <text x="70" y="21" text-anchor="middle" class="font-sans" fill="#F8FAFC" font-size="12" font-weight="600">PyTorch</text>
-      </g>
-      <g transform="translate(150, 0)">
-        <rect width="140" height="34" rx="8" class="badge-bg" />
-        <text x="70" y="21" text-anchor="middle" class="font-sans" fill="#F8FAFC" font-size="12" font-weight="600">TensorFlow</text>
-      </g>
+      <rect x="117" width="90" height="32" rx="8" fill="url(#badgeGrad)" stroke="rgba(178, 141, 255, 0.3)"/>
+      <circle cx="133" cy="16" r="4" fill="#94A3B8"/>
+      <text x="145" y="21" fill="#F8FAFC" font-size="12" class="mono">Flask</text>
 
-      <g transform="translate(0, 44)">
-        <rect width="140" height="34" rx="8" class="badge-bg" />
-        <text x="70" y="21" text-anchor="middle" class="font-sans" fill="#F8FAFC" font-size="12" font-weight="600">LangChain</text>
-      </g>
-      <g transform="translate(150, 44)">
-        <rect width="140" height="34" rx="8" class="badge-bg" />
-        <text x="70" y="21" text-anchor="middle" class="font-sans" fill="#F8FAFC" font-size="12" font-weight="600">LangGraph</text>
-      </g>
+      <rect x="219" width="100" height="32" rx="8" fill="url(#badgeGrad)" stroke="rgba(178, 141, 255, 0.3)"/>
+      <circle cx="235" cy="16" r="4" fill="#2496ED"/>
+      <text x="247" y="21" fill="#F8FAFC" font-size="12" class="mono">Docker</text>
 
-      <g transform="translate(0, 88)">
-        <rect width="140" height="34" rx="8" class="badge-bg" />
-        <text x="70" y="21" text-anchor="middle" class="font-sans" fill="#F8FAFC" font-size="12" font-weight="600">CrewAI</text>
-      </g>
-      <g transform="translate(150, 88)">
-        <rect width="140" height="34" rx="8" class="badge-bg" />
-        <text x="70" y="21" text-anchor="middle" class="font-sans" fill="#F8FAFC" font-size="12" font-weight="600">AutoGen</text>
-      </g>
+      <rect x="331" width="90" height="32" rx="8" fill="url(#badgeGrad)" stroke="rgba(178, 141, 255, 0.3)"/>
+      <circle cx="347" cy="16" r="4" fill="#FCC624"/>
+      <text x="359" y="21" fill="#F8FAFC" font-size="12" class="mono">Linux</text>
 
-      <g transform="translate(0, 132)">
-        <rect width="140" height="34" rx="8" class="badge-bg" />
-        <text x="70" y="21" text-anchor="middle" class="font-sans" fill="#F8FAFC" font-size="12" font-weight="600">OpenAI API</text>
-      </g>
-      <g transform="translate(150, 132)">
-        <rect width="140" height="34" rx="8" class="badge-bg" />
-        <text x="70" y="21" text-anchor="middle" class="font-sans" fill="#F8FAFC" font-size="12" font-weight="600">Gemini Pro</text>
-      </g>
+      <rect x="433" width="90" height="32" rx="8" fill="url(#badgeGrad)" stroke="rgba(178, 141, 255, 0.3)"/>
+      <circle cx="449" cy="16" r="4" fill="#DC382D"/>
+      <text x="461" y="21" fill="#F8FAFC" font-size="12" class="mono">Redis</text>
 
-      <g transform="translate(0, 176)">
-        <rect width="140" height="34" rx="8" class="badge-bg" />
-        <text x="70" y="21" text-anchor="middle" class="font-sans" fill="#F8FAFC" font-size="12" font-weight="600">Groq LPU</text>
-      </g>
-      <g transform="translate(150, 176)">
-        <rect width="140" height="34" rx="8" class="badge-bg" />
-        <text x="70" y="21" text-anchor="middle" class="font-sans" fill="#F8FAFC" font-size="12" font-weight="600">Scikit-Learn</text>
-      </g>
-    </g>
-  </g>
+      <rect x="535" width="110" height="32" rx="8" fill="url(#badgeGrad)" stroke="rgba(178, 141, 255, 0.3)"/>
+      <circle cx="551" cy="16" r="4" fill="#4169E1"/>
+      <text x="563" y="21" fill="#F8FAFC" font-size="12" class="mono">Postgres</text>
 
-  <!-- CATEGORY 3: MLOPS & BACKEND -->
-  <g transform="translate(800, 110)" class="card-3">
-    <rect width="340" height="340" rx="20" fill="rgba(10, 18, 36, 0.7)" stroke="url(#cardBorder)" stroke-width="1.5" />
-    <rect width="340" height="4" rx="2" fill="url(#accent3)" />
-
-    <!-- Card Header -->
-    <g transform="translate(24, 35)">
-      <circle cx="14" cy="14" r="14" fill="rgba(178, 141, 255, 0.15)" />
-      <rect x="9" y="9" width="10" height="10" rx="2" stroke="#B28DFF" stroke-width="2" fill="none" />
-      <text x="38" y="19" class="font-sans" fill="#F8FAFC" font-size="18" font-weight="700">Backend &amp; MLOps</text>
-      <text x="38" y="36" class="font-mono" fill="#94A3B8" font-size="11">DEPLOYMENT &amp; INFRA</text>
-    </g>
-
-    <!-- Skill Pills Grid -->
-    <g transform="translate(24, 95)">
-      <g transform="translate(0, 0)">
-        <rect width="140" height="34" rx="8" class="badge-bg" />
-        <text x="70" y="21" text-anchor="middle" class="font-sans" fill="#F8FAFC" font-size="12" font-weight="600">FastAPI</text>
-      </g>
-      <g transform="translate(150, 0)">
-        <rect width="140" height="34" rx="8" class="badge-bg" />
-        <text x="70" y="21" text-anchor="middle" class="font-sans" fill="#F8FAFC" font-size="12" font-weight="600">Flask</text>
-      </g>
-
-      <g transform="translate(0, 44)">
-        <rect width="140" height="34" rx="8" class="badge-bg" />
-        <text x="70" y="21" text-anchor="middle" class="font-sans" fill="#F8FAFC" font-size="12" font-weight="600">Docker</text>
-      </g>
-      <g transform="translate(150, 44)">
-        <rect width="140" height="34" rx="8" class="badge-bg" />
-        <text x="70" y="21" text-anchor="middle" class="font-sans" fill="#F8FAFC" font-size="12" font-weight="600">Linux / Bash</text>
-      </g>
-
-      <g transform="translate(0, 88)">
-        <rect width="140" height="34" rx="8" class="badge-bg" />
-        <text x="70" y="21" text-anchor="middle" class="font-sans" fill="#F8FAFC" font-size="12" font-weight="600">Redis</text>
-      </g>
-      <g transform="translate(150, 88)">
-        <rect width="140" height="34" rx="8" class="badge-bg" />
-        <text x="70" y="21" text-anchor="middle" class="font-sans" fill="#F8FAFC" font-size="12" font-weight="600">PostgreSQL</text>
-      </g>
-
-      <g transform="translate(0, 132)">
-        <rect width="140" height="34" rx="8" class="badge-bg" />
-        <text x="70" y="21" text-anchor="middle" class="font-sans" fill="#F8FAFC" font-size="12" font-weight="600">MongoDB</text>
-      </g>
-      <g transform="translate(150, 132)">
-        <rect width="140" height="34" rx="8" class="badge-bg" />
-        <text x="70" y="21" text-anchor="middle" class="font-sans" fill="#F8FAFC" font-size="12" font-weight="600">AWS Cloud</text>
-      </g>
-
-      <g transform="translate(0, 176)">
-        <rect width="140" height="34" rx="8" class="badge-bg" />
-        <text x="70" y="21" text-anchor="middle" class="font-sans" fill="#F8FAFC" font-size="12" font-weight="600">Git / GitHub</text>
-      </g>
-      <g transform="translate(150, 176)">
-        <rect width="140" height="34" rx="8" class="badge-bg" />
-        <text x="70" y="21" text-anchor="middle" class="font-sans" fill="#F8FAFC" font-size="12" font-weight="600">ChromaDB / Vector</text>
-      </g>
+      <rect x="657" width="90" height="32" rx="8" fill="url(#badgeGrad)" stroke="rgba(178, 141, 255, 0.3)"/>
+      <circle cx="673" cy="16" r="4" fill="#FF9900"/>
+      <text x="685" y="21" fill="#F8FAFC" font-size="12" class="mono">AWS</text>
     </g>
   </g>
 </svg>
