@@ -109,6 +109,9 @@
         to { opacity: 1; }
       }
     </style>
+      <clipPath id="avatarClip">
+      <rect width="300" height="320" rx="16" />
+    </clipPath>
   </defs>
 
   <!-- Base Background Container -->

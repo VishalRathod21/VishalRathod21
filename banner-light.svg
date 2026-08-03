@@ -1,362 +1,295 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 700" width="100%" height="700">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 700" width="100%" height="100%">
   <defs>
-    <!-- Dark AI OS Canvas Background -->
-    <linearGradient id="bgDark" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0F172A"/>
-      <stop offset="50%" stop-color="#F1F5F9"/>
-      <stop offset="100%" stop-color="#E2E8F0"/>
+    <!-- Light AI Lab Palette & Gradients -->
+    <linearGradient id="bgGradientLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F8FAFC" />
+      <stop offset="50%" stop-color="#F1F5F9" />
+      <stop offset="100%" stop-color="#E2E8F0" />
     </linearGradient>
 
-    <!-- Glass Panel Background -->
-    <linearGradient id="glassPanel" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#E2E8F0" stop-opacity="0.85"/>
-      <stop offset="100%" stop-color="#F1F5F9" stop-opacity="0.95"/>
+    <linearGradient id="primaryGradientLight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1D4ED8">
+        <animate attributeName="stop-color" values="#1D4ED8; #6366F1; #7C3AED; #1D4ED8" dur="8s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="50%" stop-color="#6366F1">
+        <animate attributeName="stop-color" values="#6366F1; #7C3AED; #1D4ED8; #6366F1" dur="8s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#7C3AED">
+        <animate attributeName="stop-color" values="#7C3AED; #1D4ED8; #6366F1; #7C3AED" dur="8s" repeatCount="indefinite" />
+      </stop>
     </linearGradient>
 
-    <!-- Neon Gradient Borders -->
-    <linearGradient id="neonBorder" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#00E5FF"/>
-      <stop offset="50%" stop-color="#8B5CF6"/>
-      <stop offset="100%" stop-color="#FF3CAC"/>
+    <radialGradient id="volumetricLightLight1" cx="20%" cy="20%" r="60%">
+      <stop offset="0%" stop-color="#3B82F6" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#F8FAFC" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="volumetricLightLight2" cx="80%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#F8FAFC" stop-opacity="0" />
+    </radialGradient>
+
+    <linearGradient id="glassBorderLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255, 255, 255, 0.9)" />
+      <stop offset="100%" stop-color="rgba(0, 0, 0, 0.08)" />
     </linearGradient>
 
-    <!-- Text Name Gradient -->
-    <linearGradient id="nameGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00E5FF"/>
-      <stop offset="50%" stop-color="#8B5CF6"/>
-      <stop offset="100%" stop-color="#FF3CAC"/>
+    <linearGradient id="scanlineGradLight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(37, 99, 235, 0)" />
+      <stop offset="50%" stop-color="rgba(124, 58, 237, 0.4)" />
+      <stop offset="100%" stop-color="rgba(37, 99, 235, 0)" />
     </linearGradient>
 
-    <!-- Scanner Hologram Beam -->
-    <linearGradient id="scanBeam" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#00E5FF" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#00E5FF" stop-opacity="0.8"/>
-      <stop offset="100%" stop-color="#00E5FF" stop-opacity="0"/>
-    </linearGradient>
-
-    <!-- Loading Bar Gradient -->
-    <linearGradient id="loadGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00E5FF"/>
-      <stop offset="70%" stop-color="#8B5CF6"/>
-      <stop offset="100%" stop-color="#FF3CAC"/>
-    </linearGradient>
-
-    <!-- High Glow Filter -->
-    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="6" result="blur" />
-      <feMerge>
-        <feMergeNode in="blur" />
-        <feMergeNode in="SourceGraphic" />
-      </feMerge>
+    <filter id="softGlowLight" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
     </filter>
 
-    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="3" result="blur" />
-      <feMerge>
-        <feMergeNode in="blur" />
-        <feMergeNode in="SourceGraphic" />
-      </feMerge>
-    </filter>
+    <clipPath id="avatarClipLight">
+      <rect width="300" height="320" rx="16" />
+    </clipPath>
 
-    <!-- Server Rack Grid Pattern -->
-    <pattern id="gridPattern" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#CBD5E1" stroke-width="0.8" opacity="0.4"/>
-    </pattern>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&amp;family=Fira+Code:wght@400;500&amp;display=swap');
+      
+      .font-sans { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+      .font-mono { font-family: 'Fira Code', monospace, Consolas, monospace; }
+
+      @keyframes floatSlow {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-8px) rotate(0.5deg); }
+      }
+
+      @keyframes pulseLight {
+        0%, 100% { opacity: 0.2; }
+        50% { opacity: 0.4; }
+      }
+
+      @keyframes scanBeam {
+        0% { transform: translateY(0px); opacity: 0; }
+        15% { opacity: 0.8; }
+        85% { opacity: 0.8; }
+        100% { transform: translateY(320px); opacity: 0; }
+      }
+
+      @keyframes blinkCursor {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+      }
+
+      @keyframes nodePulse {
+        0%, 100% { r: 3px; opacity: 0.4; }
+        50% { r: 6px; opacity: 0.9; }
+      }
+
+      @keyframes lineDash {
+        to { stroke-dashoffset: -40; }
+      }
+
+      .floating-card { animation: floatSlow 6s ease-in-out indefinite; }
+      .ambient-pulse { animation: pulseLight 7s ease-in-out indefinite; }
+      .scanner-line { animation: scanBeam 4s cubic-bezier(0.4, 0, 0.2, 1) indefinite; }
+      .blinking-cursor { animation: blinkCursor 1s step-end indefinite; }
+      .node-dot { animation: nodePulse 3s ease-in-out indefinite; }
+      .circuit-line { stroke-dasharray: 6 4; animation: lineDash 15s linear indefinite; }
+
+      .type-line-1 { animation: fadeIn 0.5s 0.2s forwards; opacity: 0; }
+      .type-line-2 { animation: fadeIn 0.5s 0.8s forwards; opacity: 0; }
+      .type-line-3 { animation: fadeIn 0.5s 1.4s forwards; opacity: 0; }
+      .type-line-4 { animation: fadeIn 0.5s 2.0s forwards; opacity: 0; }
+      .type-line-5 { animation: fadeIn 0.5s 2.6s forwards; opacity: 0; }
+      .type-ready  { animation: fadeIn 0.5s 3.2s forwards; opacity: 0; }
+      .type-user   { animation: fadeIn 0.5s 3.8s forwards; opacity: 0; }
+
+      @keyframes fadeIn {
+        to { opacity: 1; }
+      }
+    </style>
   </defs>
 
-  <style>
-    .font-sans { font-family: 'Outfit', 'Inter', 'SF Pro Display', sans-serif; }
-    .font-mono { font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', monospace; }
+  <!-- Base Background -->
+  <rect width="1400" height="700" rx="40" fill="url(#bgGradientLight)" stroke="url(#glassBorderLight)" stroke-width="1.5" />
 
-    /* Typing Animation for Terminal Commands */
-    .type-line-1 { animation: typeLine 0.8s steps(20) 0.2s forwards; opacity: 0; }
-    .type-line-2 { animation: typeLine 0.8s steps(25) 1.0s forwards; opacity: 0; }
-    .type-line-3 { animation: typeLine 0.8s steps(25) 1.8s forwards; opacity: 0; }
-    .type-line-4 { animation: typeLine 0.8s steps(25) 2.6s forwards; opacity: 0; }
-    .type-line-5 { animation: typeLine 0.8s steps(25) 3.4s forwards; opacity: 0; }
+  <!-- Ambient Light Spheres -->
+  <circle cx="250" cy="200" r="400" fill="url(#volumetricLightLight1)" class="ambient-pulse" />
+  <circle cx="1150" cy="350" r="450" fill="url(#volumetricLightLight2)" class="ambient-pulse" />
 
-    @keyframes typeLine {
-      from { opacity: 0; transform: translateY(4px); }
-      to { opacity: 1; transform: translateY(0px); }
-    }
-
-    /* Role Loop Typing Animation */
-    .role-text-1 { animation: roleCycle1 12s infinite; }
-    .role-text-2 { animation: roleCycle2 12s infinite; }
-    .role-text-3 { animation: roleCycle3 12s infinite; }
-
-    @keyframes roleCycle1 {
-      0%, 30% { opacity: 1; transform: translateY(0); }
-      33%, 100% { opacity: 0; transform: translateY(-10px); }
-    }
-    @keyframes roleCycle2 {
-      0%, 32% { opacity: 0; transform: translateY(10px); }
-      35%, 65% { opacity: 1; transform: translateY(0); }
-      68%, 100% { opacity: 0; transform: translateY(-10px); }
-    }
-    @keyframes roleCycle3 {
-      0%, 67% { opacity: 0; transform: translateY(10px); }
-      70%, 97% { opacity: 1; transform: translateY(0); }
-      100% { opacity: 0; transform: translateY(-10px); }
-    }
-
-    /* Hologram Scanner Line Loop */
-    .scanner-line {
-      animation: scanMove 3.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-    }
-    @keyframes scanMove {
-      0% { transform: translateY(0px); opacity: 0; }
-      15% { opacity: 0.9; }
-      85% { opacity: 0.9; }
-      100% { transform: translateY(480px); opacity: 0; }
-    }
-
-    /* Neon Sign Flicker */
-    .neon-flicker {
-      animation: flicker 4s ease-in-out infinite alternate;
-    }
-    @keyframes flicker {
-      0%, 100% { opacity: 1; filter: drop-shadow(0 0 8px #00E5FF); }
-      50% { opacity: 0.8; filter: drop-shadow(0 0 3px #00E5FF); }
-      52% { opacity: 0.4; }
-      54% { opacity: 0.9; }
-    }
-
-    /* Loading Bar Animation */
-    .loading-bar-fill {
-      animation: barFill 3.5s ease-out infinite;
-    }
-    @keyframes barFill {
-      0% { width: 0px; }
-      100% { width: 580px; }
-    }
-
-    /* Floating Tech Icons Animation */
-    .float-icon-1 { animation: floatIcon 4s ease-in-out infinite alternate; }
-    .float-icon-2 { animation: floatIcon 5s ease-in-out 1s infinite alternate; }
-    .float-icon-3 { animation: floatIcon 4.5s ease-in-out 0.5s infinite alternate; }
-
-    @keyframes floatIcon {
-      0% { transform: translateY(0px) rotate(0deg); }
-      100% { transform: translateY(-12px) rotate(3deg); }
-    }
-
-    /* Cursor Blinking */
-    .cursor-blink { animation: blink 1s infinite; }
-    @keyframes blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
-
-    /* Matrix Digital Rain Animation */
-    .digital-rain { animation: rainDrop 6s linear infinite; opacity: 0.35; }
-    @keyframes rainDrop {
-      0% { transform: translateY(-100px); }
-      100% { transform: translateY(700px); }
-    }
-  </style>
-
-  <!-- Base Dark Background -->
-  <rect width="1400" height="700" fill="url(#bgDark)"/>
-  <rect width="1400" height="700" fill="url(#gridPattern)"/>
-
-  <!-- Background Server Racks & Ambient Lights -->
-  <g opacity="0.25">
-    <line x1="900" y1="0" x2="900" y2="700" stroke="#CBD5E1" stroke-width="2"/>
-    <line x1="1150" y1="0" x2="1150" y2="700" stroke="#CBD5E1" stroke-width="2"/>
-    <line x1="1350" y1="0" x2="1350" y2="700" stroke="#CBD5E1" stroke-width="2"/>
-    <!-- Server LED Indicators -->
-    <circle cx="920" cy="100" r="3" fill="#00E5FF" class="cursor-blink"/>
-    <circle cx="920" cy="120" r="3" fill="#8B5CF6"/>
-    <circle cx="920" cy="140" r="3" fill="#FF3CAC"/>
-    <circle cx="1170" cy="200" r="3" fill="#00E5FF"/>
-    <circle cx="1170" cy="220" r="3" fill="#8B5CF6" class="cursor-blink"/>
+  <!-- Grid Pattern Overlay -->
+  <g opacity="0.04" stroke="#0F172A" stroke-width="1">
+    <path d="M 0,100 H 1400 M 0,200 H 1400 M 0,300 H 1400 M 0,400 H 1400 M 0,500 H 1400 M 0,600 H 1400" />
+    <path d="M 100,0 V 700 M 200,0 V 700 M 300,0 V 700 M 400,0 V 700 M 500,0 V 700 M 600,0 V 700 M 700,0 V 700 M 800,0 V 700 M 900,0 V 700 M 1000,0 V 700 M 1100,0 V 700 M 1200,0 V 700 M 1300,0 V 700" />
   </g>
 
-  <!-- Digital Rain / Code Matrix (Background) -->
-  <g class="font-mono" font-size="10" fill="#00E5FF">
-    <text class="digital-rain" x="850" y="0">0101010101010101</text>
-    <text class="digital-rain" x="980" y="-150" style="animation-delay: 2s;">1010111001010101</text>
-    <text class="digital-rain" x="1200" y="-80" style="animation-delay: 4s;">1100101010100101</text>
-  </g>
+  <!-- LEFT PANEL: Futuristic Interactive Terminal -->
+  <g transform="translate(60, 110)">
+    <!-- Window Frame -->
+    <rect width="460" height="380" rx="20" fill="rgba(255, 255, 255, 0.85)" stroke="url(#glassBorderLight)" stroke-width="1.5" style="backdrop-filter: blur(20px);" />
 
-  <!-- Floating Neural Nodes & Ambient Beams -->
-  <g opacity="0.3" filter="url(#glow)">
-    <circle cx="200" cy="150" r="180" fill="#00E5FF" opacity="0.08"/>
-    <circle cx="1100" cy="350" r="220" fill="#8B5CF6" opacity="0.1"/>
-    <circle cx="700" cy="550" r="160" fill="#FF3CAC" opacity="0.06"/>
-  </g>
+    <!-- Window Header / Titlebar -->
+    <rect width="460" height="42" rx="20" fill="rgba(0, 0, 0, 0.03)" />
+    <circle cx="28" cy="21" r="5.5" fill="#EF4444" />
+    <circle cx="46" cy="21" r="5.5" fill="#F59E0B" />
+    <circle cx="64" cy="21" r="5.5" fill="#10B981" />
+    <text x="90" y="25" class="font-mono" fill="#64748B" font-size="12" font-weight="500" letter-spacing="1">ai-root-terminal v4.2</text>
 
-  <!-- ========================================================= -->
-  <!-- LEFT SIDE: TERMINAL, NAME, ROLE, MISSION, CODE, NEON      -->
-  <!-- ========================================================= -->
+    <!-- Terminal Code / Output Lines -->
+    <g transform="translate(28, 75)" class="font-mono" font-size="13">
+      <text x="0" y="0" fill="#2563EB" font-weight="600" class="type-line-1">system@ai-lab:~# init --run</text>
 
-  <!-- Top Glass Terminal Window (Commands & Boot Loader) -->
-  <g transform="translate(50, 45)">
-    <!-- Terminal Box -->
-    <rect x="0" y="0" width="620" height="210" rx="14" fill="url(#glassPanel)" stroke="url(#neonBorder)" stroke-width="1.5" filter="url(#softGlow)"/>
+      <text x="0" y="28" fill="#10B981" class="type-line-2">✓ Initializing AI Core...</text>
+      <text x="0" y="52" fill="#10B981" class="type-line-3">✓ Loading Neural Networks...</text>
+      <text x="0" y="76" fill="#10B981" class="type-line-4">✓ Mounting Agentic Models...</text>
+      <text x="0" y="100" fill="#10B981" class="type-line-5">✓ Loading Project Repositories...</text>
 
-    <!-- Terminal Header Buttons -->
-    <circle cx="22" cy="20" r="5" fill="#FF3CAC"/>
-    <circle cx="38" cy="20" r="5" fill="#8B5CF6"/>
-    <circle cx="54" cy="20" r="5" fill="#00E5FF"/>
-    <text x="75" y="24" class="font-mono" font-size="11" fill="#475569" font-weight="600">ai_os_core_v4.2.sh — bash — 80x24</text>
+      <text x="0" y="132" fill="#0F172A" font-weight="600" class="type-ready">➔ STATUS: <tspan fill="#10B981">AI System Online &amp; Ready</tspan></text>
 
-    <!-- Terminal Content Commands -->
-    <g transform="translate(20, 52)" class="font-mono" font-size="12">
-      <text x="0" y="0" fill="#00E5FF" font-weight="700">&gt; boot ai_core</text>
-      <text class="type-line-1" x="0" y="20" fill="#475569">[SYS] Initializing AI Engine...</text>
-      <text class="type-line-2" x="0" y="38" fill="#475569">[SYS] Loading Neural Network &amp; Models...</text>
-      <text class="type-line-3" x="0" y="56" fill="#8B5CF6">[SYS] Connecting Agentic Pipeline (LangGraph/CrewAI)...</text>
-      <text class="type-line-4" x="0" y="74" fill="#00E5FF" font-weight="700">[AUTH] Authentication Success // Clearance Level 5</text>
-      <text class="type-line-5" x="0" y="92" fill="#FF3CAC" font-weight="800">Welcome Vishal Rathod to AI OS</text>
-    </g>
+      <!-- Prompt Line -->
+      <g transform="translate(0, 168)" class="type-user">
+        <text x="0" y="0" fill="#6366F1" font-weight="600">$ whoami</text>
+        <text x="0" y="22" fill="#0F172A" font-weight="800" font-size="18">Vishal Rathod</text>
+        <text x="0" y="44" fill="#475569" font-size="12" font-weight="500">AI &amp; Machine Learning Engineer</text>
+        
+        <!-- Interactive Pill Badges inside Terminal -->
+        <g transform="translate(0, 58)">
+          <rect width="90" height="22" rx="11" fill="rgba(37, 99, 235, 0.1)" stroke="rgba(37, 99, 235, 0.3)" stroke-width="1" />
+          <text x="45" y="15" text-anchor="middle" class="font-sans" fill="#2563EB" font-size="10" font-weight="600">Deep Learning</text>
 
-    <!-- Terminal Loading Bar -->
-    <g transform="translate(20, 168)">
-      <text x="0" y="-8" class="font-mono" font-size="10" fill="#00E5FF" font-weight="700">LOADING CORE PIPELINE [100%]</text>
-      <rect x="0" y="0" width="580" height="12" rx="6" fill="#CBD5E1"/>
-      <rect class="loading-bar-fill" x="0" y="0" width="580" height="12" rx="6" fill="url(#loadGrad)" filter="url(#softGlow)"/>
+          <rect x="98" width="95" height="22" rx="11" fill="rgba(124, 58, 237, 0.1)" stroke="rgba(124, 58, 237, 0.3)" stroke-width="1" />
+          <text x="145.5" y="15" text-anchor="middle" class="font-sans" fill="#7C3AED" font-size="10" font-weight="600">Generative AI</text>
+
+          <rect x="201" width="80" height="22" rx="11" fill="rgba(99, 102, 241, 0.1)" stroke="rgba(99, 102, 241, 0.3)" stroke-width="1" />
+          <text x="241" y="15" text-anchor="middle" class="font-sans" fill="#6366F1" font-size="10" font-weight="600">Agentic AI</text>
+        </g>
+
+        <!-- Dynamic User Mission Statement Box -->
+        <g transform="translate(0, 92)">
+          <rect width="404" height="34" rx="8" fill="rgba(241, 245, 249, 0.8)" stroke="rgba(226, 232, 240, 0.9)" />
+          <text x="12" y="14" class="font-mono" fill="#64748B" font-size="9.5">CURRENT MISSION:</text>
+          <text x="12" y="27" class="font-sans" fill="#1E293B" font-size="10.5" font-weight="600">"Building intelligent systems that solve real-world problems."</text>
+        </g>
+
+        <!-- Blinking Prompt Cursor -->
+        <rect x="80" y="-14" width="8" height="17" fill="#6366F1" class="blinking-cursor" />
+      </g>
     </g>
   </g>
 
-  <!-- Big Name Display: VISHAL RATHOD -->
-  <g transform="translate(50, 310)">
-    <text x="0" y="0" class="font-sans" font-size="54" font-weight="900" fill="url(#nameGrad)" letter-spacing="3" filter="url(#glow)">VISHAL RATHOD</text>
-  </g>
+  <!-- CENTER HERO TITLE & BRANDING -->
+  <g transform="translate(700, 290)">
+    <!-- Animated Volumetric Glowing Backdrop -->
+    <ellipse cx="0" cy="-40" rx="220" ry="80" fill="url(#primaryGradientLight)" opacity="0.15" filter="url(#softGlowLight)" />
+    
+    <!-- Main Name Title -->
+    <text x="0" y="-30" text-anchor="middle" class="font-sans" fill="url(#primaryGradientLight)" font-size="46" font-weight="900" letter-spacing="4" filter="url(#softGlowLight)">VISHAL RATHOD</text>
+    <text x="0" y="-30" text-anchor="middle" class="font-sans" fill="#0F172A" font-size="46" font-weight="900" letter-spacing="4">VISHAL RATHOD</text>
 
-  <!-- Role Cycling Text (Typing Loop) -->
-  <g transform="translate(50, 350)">
-    <rect x="0" y="-22" width="16" height="26" fill="#00E5FF" rx="3" opacity="0.3"/>
-    <text x="24" y="0" class="font-mono role-text-1" font-size="20" font-weight="700" fill="#00E5FF">⚡ AI ENGINEER &amp; AGENTIC BUILDER</text>
-    <text x="24" y="0" class="font-mono role-text-2" font-size="20" font-weight="700" fill="#8B5CF6">🧠 MACHINE LEARNING &amp; GENAI ARCHITECT</text>
-    <text x="24" y="0" class="font-mono role-text-3" font-size="20" font-weight="700" fill="#FF3CAC">🚀 OPEN SOURCE AI CONTRIBUTOR</text>
-  </g>
+    <!-- Subtitle / Role Headline -->
+    <text x="0" y="15" text-anchor="middle" class="font-sans" fill="#3B82F6" font-size="20" font-weight="800" letter-spacing="8">AI ENGINEER</text>
 
-  <!-- Mission Statement -->
-  <g transform="translate(50, 385)">
-    <text x="0" y="0" class="font-sans" font-size="15" fill="#475569" font-weight="500" letter-spacing="0.5">
-      🎯 <tspan fill="#0F172A" font-weight="700">Mission:</tspan> Build autonomous AI systems &amp; intelligent agentic workflows that solve real-world complex problems.
-    </text>
-  </g>
+    <!-- Core Specializations Sub-line -->
+    <g transform="translate(0, 48)" text-anchor="middle" class="font-mono" font-size="12" fill="#64748B" font-weight="500">
+      <text x="0" y="0">LLMs <tspan fill="#3B82F6">•</tspan> Agentic Workflows <tspan fill="#3B82F6">•</tspan> MLOps</text>
+    </g>
 
-  <!-- About Card ($ whoami terminal card) -->
-  <g transform="translate(50, 415)">
-    <rect x="0" y="0" width="340" height="135" rx="12" fill="url(#glassPanel)" stroke="#334155" stroke-width="1"/>
-    <g transform="translate(16, 26)" class="font-mono" font-size="11">
-      <text x="0" y="0" fill="#00E5FF" font-weight="700">$ whoami</text>
-      <text x="90" y="0" fill="#0F172A">AI Engineer &amp; ML Specialist</text>
+    <!-- Decorative Sci-Fi Target Ring & Crosshair -->
+    <g transform="translate(0, 95)">
+      <circle cx="0" cy="0" r="16" fill="none" stroke="#2563EB" stroke-width="1.5" opacity="0.4" />
+      <line x1="-24" y1="0" x2="24" y2="0" stroke="#2563EB" stroke-width="1.5" opacity="0.4" />
+      <line x1="0" y1="-24" x2="0" y2="24" stroke="#2563EB" stroke-width="1.5" opacity="0.4" />
+      <circle cx="0" cy="0" r="3" fill="#2563EB" />
+    </g>
 
-      <text x="0" y="24" fill="#8B5CF6" font-weight="700">$ currently</text>
-      <text x="90" y="24" fill="#0F172A">Building Multi-Agent Platforms</text>
-
-      <text x="0" y="48" fill="#FF3CAC" font-weight="700">$ learning</text>
-      <text x="90" y="48" fill="#00E5FF">LangGraph • LLMs • RAG • AWS</text>
-
-      <text x="0" y="72" fill="#475569" font-weight="700">$ edu</text>
-      <text x="90" y="72" fill="#0F172A">M.Tech AI &amp; DS (DAVV Indore)</text>
+    <!-- Ambient Location / Status Pill -->
+    <g transform="translate(0, 160)">
+      <rect x="-160" y="-18" width="320" height="36" rx="18" fill="rgba(37, 99, 235, 0.08)" stroke="rgba(37, 99, 235, 0.25)" stroke-width="1" />
+      <circle cx="-135" cy="0" r="4" fill="#16A34A">
+        <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite" />
+      </circle>
+      <text x="10" y="4" class="font-sans" fill="#1E293B" font-size="12" font-weight="500" letter-spacing="1">LOCATION: INDIA  |  AVAILABLE FOR AI LABS</text>
     </g>
   </g>
 
-  <!-- Code Window (Glass Code Editor) -->
-  <g transform="translate(410, 415)">
-    <rect x="0" y="0" width="260" height="135" rx="12" fill="url(#glassPanel)" stroke="url(#neonBorder)" stroke-width="1"/>
-    <!-- File tab -->
-    <rect x="12" y="10" width="90" height="18" rx="4" fill="#CBD5E1"/>
-    <text x="20" y="22" class="font-mono" font-size="9" fill="#00E5FF">buildDreams.js</text>
+  <!-- RIGHT PANEL: Futuristic AI Hologram & Avatar Viewport -->
+  <g transform="translate(940, 110)">
+    <!-- Outer Holographic Glass Frame -->
+    <rect width="400" height="480" rx="24" fill="rgba(255, 255, 255, 0.85)" stroke="url(#glassBorderLight)" stroke-width="1.5" style="backdrop-filter: blur(20px);" />
 
-    <g transform="translate(14, 46)" class="font-mono" font-size="11">
-      <text x="0" y="0" fill="#FF3CAC" font-weight="700">function <tspan fill="#00E5FF">buildDreams</tspan>() {</text>
-      <text x="14" y="18" fill="#8B5CF6">learn<tspan fill="#0F172A">();</tspan></text>
-      <text x="14" y="34" fill="#8B5CF6">build<tspan fill="#0F172A">();</tspan></text>
-      <text x="14" y="50" fill="#8B5CF6">deploy<tspan fill="#0F172A">();</tspan></text>
-      <text x="14" y="66" fill="#8B5CF6">repeat<tspan fill="#0F172A">();</tspan></text>
-      <text x="0" y="82" fill="#FF3CAC" font-weight="700">}</text>
+    <!-- Top Viewport Bar -->
+    <rect width="400" height="42" rx="24" fill="rgba(0, 0, 0, 0.03)" />
+    <text x="28" y="26" class="font-mono" fill="#64748B" font-size="11" font-weight="500" letter-spacing="1.5">NEURAL PROFILE // VISUALIZER</text>
+    <circle cx="368" cy="21" r="4" fill="#2563EB" />
+
+    <!-- Avatar Viewport Box -->
+    <g transform="translate(30, 65)">
+      <!-- Background Neural Net Grid Lines -->
+      <path d="M 40,40 L 170,120 L 300,40 M 170,120 L 170,280 M 40,280 L 170,120 L 300,280" stroke="#6366F1" stroke-opacity="0.25" stroke-width="1.5" class="circuit-line" />
+
+      <!-- Interactive Neural Nodes -->
+      <circle cx="40" cy="40" r="4" fill="#2563EB" class="node-dot" />
+      <circle cx="170" cy="120" r="5" fill="#6366F1" class="node-dot" />
+      <circle cx="300" cy="40" r="4" fill="#7C3AED" class="node-dot" />
+      <circle cx="40" cy="280" r="4" fill="#7C3AED" class="node-dot" />
+      <circle cx="170" cy="280" r="5" fill="#2563EB" class="node-dot" />
+      <circle cx="300" cy="280" r="4" fill="#6366F1" class="node-dot" />
+
+      <!-- Profile Image Clip Container -->
+      <g transform="translate(20, 20)">
+        <!-- Base Viewport Box -->
+        <rect width="300" height="320" rx="16" fill="#F8FAFC" stroke="rgba(37, 99, 235, 0.35)" stroke-width="1.5" />
+
+        <!-- Ambient Volumetric Glow behind Avatar -->
+        <circle cx="150" cy="140" r="100" fill="url(#volumetricLightLight2)" opacity="0.6" />
+        <circle cx="150" cy="130" r="85" fill="none" stroke="#2563EB" stroke-width="1.5" stroke-dasharray="6 4" class="circuit-line" />
+        <circle cx="150" cy="130" r="65" fill="none" stroke="#6366F1" stroke-width="1" opacity="0.5" />
+
+        <!-- Vector Sci-Fi AI Silhouette & Neural Mesh -->
+        <g transform="translate(0, 10)">
+          <!-- Shoulders & Torso -->
+          <path d="M 45,300 C 60,225 105,200 150,200 C 195,200 240,225 255,300 Z" fill="url(#primaryGradientLight)" opacity="0.75" />
+          <path d="M 75,300 L 150,220 L 225,300" fill="none" stroke="#7C3AED" stroke-width="1.5" opacity="0.6" />
+
+          <!-- Neck -->
+          <path d="M 132,170 L 168,170 L 164,200 L 136,200 Z" fill="#E2E8F0" stroke="#6366F1" stroke-width="1.5" />
+
+          <!-- Head Structure -->
+          <path d="M 105,125 C 105,70 195,70 195,125 C 195,175 105,175 105,125 Z" fill="#CBD5E1" stroke="#2563EB" stroke-width="2" />
+          
+          <!-- Glowing Futuristic AI Visor -->
+          <path d="M 112,118 Q 150,106 188,118 Q 188,136 150,140 Q 112,136 112,118 Z" fill="#2563EB" filter="url(#softGlowLight)" opacity="0.95" />
+          <path d="M 118,124 Q 150,116 182,124" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" />
+
+          <!-- Facial Neural Mesh Points -->
+          <circle cx="130" cy="100" r="2.5" fill="#7C3AED" />
+          <circle cx="170" cy="100" r="2.5" fill="#7C3AED" />
+          <circle cx="150" cy="90" r="3" fill="#2563EB" />
+          <circle cx="150" cy="155" r="2.5" fill="#6366F1" />
+
+          <line x1="130" y1="100" x2="150" y2="90" stroke="#6366F1" stroke-width="1" opacity="0.5" />
+          <line x1="170" y1="100" x2="150" y2="90" stroke="#6366F1" stroke-width="1" opacity="0.5" />
+          <line x1="130" y1="100" x2="112" y2="118" stroke="#2563EB" stroke-width="1" opacity="0.5" />
+          <line x1="170" y1="100" x2="188" y2="118" stroke="#2563EB" stroke-width="1" opacity="0.5" />
+        </g>
+
+        <!-- Holographic Top-to-Bottom Scanline Beam -->
+        <rect width="300" height="45" fill="url(#scanlineGradLight)" class="scanner-line" clip-path="url(#avatarClipLight)" />
+        
+        <!-- Tech Viewport Corner Accents -->
+        <path d="M 0,20 L 0,0 L 20,0" fill="none" stroke="#2563EB" stroke-width="2.5" />
+        <path d="M 280,0 L 300,0 L 300,20" fill="none" stroke="#2563EB" stroke-width="2.5" />
+        <path d="M 0,300 L 0,320 L 20,320" fill="none" stroke="#6366F1" stroke-width="2.5" />
+        <path d="M 280,320 L 300,320 L 300,300" fill="none" stroke="#6366F1" stroke-width="2.5" />
+      </g>
+
+      <!-- Subtitle Stats below Hologram -->
+      <g transform="translate(20, 365)" class="font-mono" font-size="11" fill="#64748B">
+        <text x="0" y="0">MODEL: <tspan fill="#1E293B">GEN-AI / AGENTIC</tspan></text>
+        <text x="180" y="0">LATENCY: <tspan fill="#16A34A">12ms</tspan></text>
+        <text x="0" y="20">CORE: <tspan fill="#2563EB">PYTORCH / CUDA</tspan></text>
+        <text x="180" y="20">ACCURACY: <tspan fill="#7C3AED">99.8%</tspan></text>
+      </g>
     </g>
   </g>
 
-  <!-- Neon Sign Badge ($ KEEP CODING • KEEP BUILDING) -->
-  <g transform="translate(50, 570)" class="neon-flicker">
-    <rect x="0" y="0" width="620" height="42" rx="21" fill="#E2E8F0" stroke="#00E5FF" stroke-width="1.5" filter="url(#glow)"/>
-    <text x="310" y="26" class="font-mono" font-size="13" font-weight="800" fill="#00E5FF" text-anchor="middle" letter-spacing="2">
-      ⚡ KEEP CODING • KEEP BUILDING • INNOVATE ALWAYS ⚡
-    </text>
-  </g>
-
-  <!-- ========================================================= -->
-  <!-- RIGHT SIDE: ANIME AI CHARACTER & HOLOGRAM & TECH ICONS     -->
-  <!-- ========================================================= -->
-
-  <g transform="translate(760, 50)">
-    <!-- Outer Holographic Pod Ring -->
-    <ellipse cx="280" cy="270" rx="240" ry="260" fill="none" stroke="url(#neonBorder)" stroke-width="1.5" opacity="0.4" stroke-dasharray="10 6"/>
-
-    <!-- Anime Sci-Fi AI Engineer Character Graphics -->
-    <g transform="translate(100, 40)">
-      <!-- Cyber Holographic Aura -->
-      <circle cx="180" cy="200" r="160" fill="#E2E8F0" stroke="url(#neonBorder)" stroke-width="2" filter="url(#glow)"/>
-      <circle cx="180" cy="200" r="150" fill="none" stroke="#00E5FF" stroke-width="1" stroke-dasharray="5 5" opacity="0.6"/>
-
-      <!-- Anime Character Head & Hair Silhouette -->
-      <path d="M 180 80 C 130 80 110 130 110 180 C 110 240 130 270 180 270 C 230 270 250 240 250 180 C 250 130 230 80 180 80 Z" fill="#CBD5E1" stroke="#8B5CF6" stroke-width="2"/>
-      <!-- Anime Spiky Hair -->
-      <path d="M 120 140 Q 90 90 140 70 Q 180 40 220 70 Q 270 90 240 140 Q 210 100 180 110 Q 150 100 120 140 Z" fill="#8B5CF6" opacity="0.9" filter="url(#softGlow)"/>
-      
-      <!-- Cyber Visor / HUD Glasses -->
-      <path d="M 125 160 L 235 160 L 225 190 L 135 190 Z" fill="#00E5FF" opacity="0.9" filter="url(#glow)"/>
-      <line x1="120" y1="175" x2="240" y2="175" stroke="#FF3CAC" stroke-width="2" filter="url(#glow)"/>
-      <!-- Glowing Eye Lines under Visor -->
-      <circle cx="155" cy="175" r="4" fill="#FFFFFF" filter="url(#glow)"/>
-      <circle cx="205" cy="175" r="4" fill="#FFFFFF" filter="url(#glow)"/>
-
-      <!-- Neural Headset Interface -->
-      <rect x="98" y="150" width="14" height="40" rx="4" fill="#FF3CAC" filter="url(#glow)"/>
-      <rect x="248" y="150" width="14" height="40" rx="4" fill="#FF3CAC" filter="url(#glow)"/>
-
-      <!-- Cyber Jacket / Suit Shoulders -->
-      <path d="M 60 400 C 60 280 110 250 180 250 C 250 250 300 280 300 400 Z" fill="url(#glassPanel)" stroke="url(#neonBorder)" stroke-width="2"/>
-      <!-- Collar & Neck Hardware -->
-      <path d="M 140 250 L 180 290 L 220 250 Z" fill="#E2E8F0" stroke="#00E5FF" stroke-width="1.5"/>
-      <!-- Glowing Core Chest Light -->
-      <circle cx="180" cy="330" r="16" fill="#00E5FF" opacity="0.9" filter="url(#glow)"/>
-      <polygon points="180,318 190,336 170,336" fill="#FFFFFF" filter="url(#glow)"/>
-    </g>
-
-    <!-- Horizontal Holographic Scanner Line -->
-    <rect class="scanner-line" x="30" y="0" width="500" height="12" fill="url(#scanBeam)" filter="url(#glow)"/>
-
-    <!-- Floating Tech Stack Badges around Character -->
-    <!-- Python -->
-    <g class="float-icon-1" transform="translate(20, 80)">
-      <rect x="0" y="0" width="80" height="30" rx="15" fill="#E2E8F0" stroke="#00E5FF" stroke-width="1.5" filter="url(#softGlow)"/>
-      <text x="40" y="19" class="font-mono" font-size="11" font-weight="700" fill="#00E5FF" text-anchor="middle">Python</text>
-    </g>
-
-    <!-- PyTorch -->
-    <g class="float-icon-2" transform="translate(420, 100)">
-      <rect x="0" y="0" width="84" height="30" rx="15" fill="#E2E8F0" stroke="#FF3CAC" stroke-width="1.5" filter="url(#softGlow)"/>
-      <text x="42" y="19" class="font-mono" font-size="11" font-weight="700" fill="#FF3CAC" text-anchor="middle">PyTorch</text>
-    </g>
-
-    <!-- Docker -->
-    <g class="float-icon-3" transform="translate(10, 240)">
-      <rect x="0" y="0" width="76" height="30" rx="15" fill="#E2E8F0" stroke="#8B5CF6" stroke-width="1.5" filter="url(#softGlow)"/>
-      <text x="38" y="19" class="font-mono" font-size="11" font-weight="700" fill="#8B5CF6" text-anchor="middle">Docker</text>
-    </g>
-
-    <!-- FastAPI -->
-    <g class="float-icon-1" transform="translate(430, 260)">
-      <rect x="0" y="0" width="80" height="30" rx="15" fill="#E2E8F0" stroke="#00E5FF" stroke-width="1.5" filter="url(#softGlow)"/>
-      <text x="40" y="19" class="font-mono" font-size="11" font-weight="700" fill="#00E5FF" text-anchor="middle">FastAPI</text>
-    </g>
-
-    <!-- LangChain -->
-    <g class="float-icon-2" transform="translate(30, 420)">
-      <rect x="0" y="0" width="94" height="30" rx="15" fill="#E2E8F0" stroke="#FF3CAC" stroke-width="1.5" filter="url(#softGlow)"/>
-      <text x="47" y="19" class="font-mono" font-size="11" font-weight="700" fill="#FF3CAC" text-anchor="middle">LangChain</text>
-    </g>
-
-    <!-- MongoDB -->
-    <g class="float-icon-3" transform="translate(410, 430)">
-      <rect x="0" y="0" width="86" height="30" rx="15" fill="#E2E8F0" stroke="#8B5CF6" stroke-width="1.5" filter="url(#softGlow)"/>
-      <text x="43" y="19" class="font-mono" font-size="11" font-weight="700" fill="#8B5CF6" text-anchor="middle">MongoDB</text>
-    </g>
-  </g>
+  <!-- Bottom Accent Light Divider -->
+  <line x1="100" y1="650" x2="1300" y2="650" stroke="url(#primaryGradientLight)" stroke-opacity="0.3" stroke-width="1.5" stroke-dasharray="8 6" />
 </svg>

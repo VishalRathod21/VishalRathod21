@@ -2,9 +2,9 @@
 
 <!-- HERO BANNER (LIGHT/DARK THEME SWITCHING WITH VECTOR AI AVATAR) -->
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg?v=3">
-  <source media="(prefers-color-scheme: light)" srcset="assets/banner-light.svg?v=3">
-  <img alt="Vishal Rathod - AI Engineer Research Facility Banner" src="assets/banner-dark.svg?v=3" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg?v=4">
+  <source media="(prefers-color-scheme: light)" srcset="assets/banner-light.svg?v=4">
+  <img alt="Vishal Rathod - AI Engineer Research Facility Banner" src="assets/banner-dark.svg?v=4" width="100%">
 </picture>
 
 <br/><br/>
