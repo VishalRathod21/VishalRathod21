@@ -2,20 +2,20 @@
 
 <!-- HERO ANIMATED BANNER (THEME SWITCHING) -->
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/VishalRathod21/VishalRathod21/main/assets/banner-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/VishalRathod21/VishalRathod21/main/assets/banner-light.svg">
-  <img alt="Vishal Rathod — AI Engineer Research Lab Banner" src="https://raw.githubusercontent.com/VishalRathod21/VishalRathod21/main/assets/banner-dark.svg" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg?v=3">
+  <source media="(prefers-color-scheme: light)" srcset="assets/banner-light.svg?v=3">
+  <img alt="Vishal Rathod — AI Engineer Research Lab Banner" src="assets/banner-dark.svg?v=3" width="100%">
 </picture>
 
 <br/><br/>
 
 <!-- SECURITY ACCESS LANYARD PASS -->
-<img src="https://raw.githubusercontent.com/VishalRathod21/VishalRathod21/main/assets/lanyard.svg" alt="Vishal Rathod Security Access Pass" width="100%" style="max-width: 800px;"/>
+<img src="assets/lanyard.svg?v=3" alt="Vishal Rathod Security Access Pass" width="100%" style="max-width: 800px;"/>
 
 <br/><br/>
 
 <!-- AMBIENT PARTICLES SEPARATOR -->
-<img src="https://raw.githubusercontent.com/VishalRathod21/VishalRathod21/main/assets/particles.svg" alt="Separator" width="100%"/>
+<img src="assets/particles.svg?v=3" alt="Separator" width="100%"/>
 
 </div>
 
@@ -40,14 +40,14 @@ system.connect({
 
 <!-- SECTION 2: SKILL MATRIX -->
 <div align="center">
-  <img src="https://raw.githubusercontent.com/VishalRathod21/VishalRathod21/main/assets/skills.svg" alt="Technical Skill Matrix" width="100%"/>
+  <img src="assets/skills.svg?v=3" alt="Technical Skill Matrix" width="100%"/>
 </div>
 
 <br/>
 
 <!-- SECTION 3: AI DASHBOARD STATS -->
 <div align="center">
-  <img src="https://raw.githubusercontent.com/VishalRathod21/VishalRathod21/main/assets/stats.svg" alt="AI Telemetry Dashboard" width="100%"/>
+  <img src="assets/stats.svg?v=3" alt="AI Telemetry Dashboard" width="100%"/>
 </div>
 
 <br/>
@@ -127,7 +127,7 @@ system.connect({
 
 <!-- SECTION 5: ENGINEERING TIMELINE -->
 <div align="center">
-  <img src="https://raw.githubusercontent.com/VishalRathod21/VishalRathod21/main/assets/timeline.svg" alt="Engineering Timeline" width="100%"/>
+  <img src="assets/timeline.svg?v=3" alt="Engineering Timeline" width="100%"/>
 </div>
 
 <br/>
@@ -135,14 +135,14 @@ system.connect({
 <!-- SECTION 6 & 7: CONTRIBUTION SWARM & SNAKE -->
 <div align="center">
   <h3>📊 Contribution Swarm</h3>
-  <img src="https://raw.githubusercontent.com/VishalRathod21/VishalRathod21/main/assets/github-snake-dark.svg" alt="GitHub Contribution Snake" width="100%"/>
+  <img src="assets/github-snake-dark.svg?v=3" alt="GitHub Contribution Snake" width="100%"/>
 </div>
 
 <br/>
 
 <!-- SECTION 8: TERMINAL LOOP FOOTER -->
 <div align="center">
-  <img src="https://raw.githubusercontent.com/VishalRathod21/VishalRathod21/main/assets/footer.svg" alt="AI Executive Directive Loop Footer" width="100%"/>
+  <img src="assets/footer.svg?v=3" alt="AI Executive Directive Loop Footer" width="100%"/>
   <br/><br/>
   <p align="center">© 2026 <b>Vishal Rathod</b> • Engineered with Precision &amp; Vision</p>
 </div>
