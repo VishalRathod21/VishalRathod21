@@ -18,8 +18,8 @@
     </linearGradient>
 
     <linearGradient id="card-border" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="rgba(79, 140, 255, 0.3)"/>
-      <stop offset="100%" stop-color="rgba(178, 141, 255, 0.1)"/>
+      <stop offset="0%" stop-color="rgba(79, 140, 255, 0.35)"/>
+      <stop offset="100%" stop-color="rgba(178, 141, 255, 0.12)"/>
     </linearGradient>
 
     <radialGradient id="node-glow" cx="50%" cy="50%" r="50%">
@@ -29,30 +29,10 @@
   </defs>
 
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&amp;family=Fira+Code:wght@500;600&amp;display=swap');
-    text { font-family: 'Inter', -apple-system, sans-serif; }
-    .mono { font-family: 'Fira Code', monospace; }
-
-    /* Pulsing Timeline Node */
-    .node-pulse {
-      animation: pulse 2.5s ease-in-out infinite alternate;
-    }
-    @keyframes pulse {
-      0% { transform: scale(1); opacity: 0.7; }
-      100% { transform: scale(1.35); opacity: 1; }
-    }
-
-    /* Flow Line Animation */
-    .flow-dash {
-      stroke-dasharray: 10;
-      animation: flow 3s linear infinite;
-    }
-    @keyframes flow {
-      to { stroke-dashoffset: -40; }
-    }
+    text { font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+    .mono { font-family: 'Fira Code', Consolas, Monaco, monospace; }
   </style>
 
-  <!-- Container -->
   <rect width="1000" height="580" rx="28" fill="url(#bg-grad)" stroke="rgba(255,255,255,0.08)" stroke-width="1.5"/>
 
   <!-- Section Title -->
@@ -62,21 +42,20 @@
     <text x="0" y="24" fill="#F8FAFC" font-size="28" font-weight="900" letter-spacing="2">ENGINEERING TIMELINE</text>
   </g>
 
-  <!-- Vertical Optical Fiber Center Line -->
+  <!-- Vertical Optical Fiber Line -->
   <g transform="translate(500, 110)">
-    <line x1="0" y1="0" x2="0" y2="420" stroke="url(#line-grad)" stroke-width="3"/>
-    <line x1="0" y1="0" x2="0" y2="420" stroke="#F8FAFC" stroke-width="1.5" opacity="0.7" class="flow-dash"/>
+    <line x1="0" y1="0" x2="0" y2="420" stroke="url(#line-grad)" stroke-width="4"/>
+    <line x1="0" y1="0" x2="0" y2="420" stroke="#F8FAFC" stroke-width="2" opacity="0.8" stroke-dasharray="12,12">
+      <animate attributeName="stroke-dashoffset" from="0" to="-96" dur="2.5s" repeatCount="indefinite"/>
+    </line>
   </g>
 
-  <!-- TIMELINE STEPS -->
-
-  <!-- STEP 1: 2024 - Machine Learning (LEFT) -->
+  <!-- STEP 1: 2024 (LEFT) -->
   <g transform="translate(500, 130)">
-    <!-- Node -->
     <circle cx="0" cy="0" r="16" fill="url(#node-glow)"/>
-    <circle cx="0" cy="0" r="7" fill="#4F8CFF" class="node-pulse"/>
-    
-    <!-- Left Card -->
+    <circle cx="0" cy="0" r="7" fill="#4F8CFF">
+      <animate attributeName="r" values="5;9;5" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
     <g transform="translate(-420, -42)">
       <rect width="380" height="84" rx="16" fill="url(#glass-card)" stroke="url(#card-border)" stroke-width="1.5"/>
       <text x="20" y="28" fill="#4F8CFF" font-size="12" font-weight="800" class="mono">2024</text>
@@ -86,13 +65,12 @@
     </g>
   </g>
 
-  <!-- STEP 2: 2025 - Deep Learning (RIGHT) -->
+  <!-- STEP 2: 2025 (RIGHT) -->
   <g transform="translate(500, 220)">
-    <!-- Node -->
     <circle cx="0" cy="0" r="16" fill="url(#node-glow)"/>
-    <circle cx="0" cy="0" r="7" fill="#7C5CFF" class="node-pulse" style="animation-delay: 0.5s;"/>
-    
-    <!-- Right Card -->
+    <circle cx="0" cy="0" r="7" fill="#7C5CFF">
+      <animate attributeName="r" values="5;9;5" dur="2.5s" begin="0.5s" repeatCount="indefinite"/>
+    </circle>
     <g transform="translate(40, -42)">
       <rect width="380" height="84" rx="16" fill="url(#glass-card)" stroke="url(#card-border)" stroke-width="1.5"/>
       <text x="20" y="28" fill="#7C5CFF" font-size="12" font-weight="800" class="mono">2025</text>
@@ -102,13 +80,12 @@
     </g>
   </g>
 
-  <!-- STEP 3: 2026 - Generative AI (LEFT) -->
+  <!-- STEP 3: 2026 (LEFT) -->
   <g transform="translate(500, 310)">
-    <!-- Node -->
     <circle cx="0" cy="0" r="16" fill="url(#node-glow)"/>
-    <circle cx="0" cy="0" r="7" fill="#B28DFF" class="node-pulse" style="animation-delay: 1.0s;"/>
-    
-    <!-- Left Card -->
+    <circle cx="0" cy="0" r="7" fill="#B28DFF">
+      <animate attributeName="r" values="5;9;5" dur="2.5s" begin="1s" repeatCount="indefinite"/>
+    </circle>
     <g transform="translate(-420, -42)">
       <rect width="380" height="84" rx="16" fill="url(#glass-card)" stroke="url(#card-border)" stroke-width="1.5"/>
       <text x="20" y="28" fill="#B28DFF" font-size="12" font-weight="800" class="mono">2026</text>
@@ -118,13 +95,12 @@
     </g>
   </g>
 
-  <!-- STEP 4: 2027 - Agentic AI (RIGHT) -->
+  <!-- STEP 4: 2027 (RIGHT) -->
   <g transform="translate(500, 400)">
-    <!-- Node -->
     <circle cx="0" cy="0" r="16" fill="url(#node-glow)"/>
-    <circle cx="0" cy="0" r="7" fill="#4F8CFF" class="node-pulse" style="animation-delay: 1.5s;"/>
-    
-    <!-- Right Card -->
+    <circle cx="0" cy="0" r="7" fill="#4F8CFF">
+      <animate attributeName="r" values="5;9;5" dur="2.5s" begin="1.5s" repeatCount="indefinite"/>
+    </circle>
     <g transform="translate(40, -42)">
       <rect width="380" height="84" rx="16" fill="url(#glass-card)" stroke="url(#card-border)" stroke-width="1.5"/>
       <text x="20" y="28" fill="#4F8CFF" font-size="12" font-weight="800" class="mono">2027</text>
@@ -134,11 +110,12 @@
     </g>
   </g>
 
-  <!-- STEP 5: FUTURE - AI Engineer (CENTER END BADGE) -->
+  <!-- STEP 5: FUTURE (CENTER) -->
   <g transform="translate(500, 490)">
     <circle cx="0" cy="0" r="18" fill="url(#node-glow)"/>
-    <circle cx="0" cy="0" r="8" fill="#27C93F" class="node-pulse" style="animation-delay: 2.0s;"/>
-    
+    <circle cx="0" cy="0" r="8" fill="#27C93F">
+      <animate attributeName="r" values="6;10;6" dur="2s" repeatCount="indefinite"/>
+    </circle>
     <g transform="translate(-160, 20)">
       <rect width="320" height="42" rx="21" fill="rgba(39, 201, 63, 0.1)" stroke="rgba(39, 201, 63, 0.4)" stroke-width="1.5"/>
       <text x="160" y="26" fill="#27C93F" font-size="13" font-weight="900" letter-spacing="2" text-anchor="middle">FUTURE: AI RESEARCH LEAD</text>

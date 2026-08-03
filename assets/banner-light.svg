@@ -1,31 +1,35 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1400 700" width="100%" height="auto">
   <defs>
     <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#04070E"/>
-      <stop offset="50%" stop-color="#0A1224"/>
-      <stop offset="100%" stop-color="#04070E"/>
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="50%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
     </linearGradient>
 
-    <radialGradient id="volumetric-light" cx="80%" cy="20%" r="75%">
-      <stop offset="0%" stop-color="#4F8CFF" stop-opacity="0.32"/>
-      <stop offset="45%" stop-color="#7C5CFF" stop-opacity="0.16"/>
-      <stop offset="100%" stop-color="#04070E" stop-opacity="0"/>
+    <radialGradient id="volumetric-light" cx="80%" cy="20%" r="70%">
+      <stop offset="0%" stop-color="#4F8CFF" stop-opacity="0.35">
+        <animate attributeName="stop-opacity" values="0.35;0.18;0.35" dur="5s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="45%" stop-color="#7C5CFF" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#0F172A" stop-opacity="0"/>
     </radialGradient>
 
     <radialGradient id="ambient-center" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#7C5CFF" stop-opacity="0.18"/>
-      <stop offset="100%" stop-color="#04070E" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#7C5CFF" stop-opacity="0.2">
+        <animate attributeName="stop-opacity" values="0.2;0.08;0.2" dur="6s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#0F172A" stop-opacity="0"/>
     </radialGradient>
 
     <linearGradient id="name-grad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#F8FAFC">
-        <animate attributeName="stop-color" values="#F8FAFC;#4F8CFF;#B28DFF;#F8FAFC" dur="8s" repeatCount="indefinite"/>
+        <animate attributeName="stop-color" values="#F8FAFC;#4F8CFF;#B28DFF;#F8FAFC" dur="6s" repeatCount="indefinite"/>
       </stop>
       <stop offset="50%" stop-color="#4F8CFF">
-        <animate attributeName="stop-color" values="#4F8CFF;#B28DFF;#7C5CFF;#4F8CFF" dur="8s" repeatCount="indefinite"/>
+        <animate attributeName="stop-color" values="#4F8CFF;#B28DFF;#7C5CFF;#4F8CFF" dur="6s" repeatCount="indefinite"/>
       </stop>
       <stop offset="100%" stop-color="#B28DFF">
-        <animate attributeName="stop-color" values="#B28DFF;#F8FAFC;#4F8CFF;#B28DFF" dur="8s" repeatCount="indefinite"/>
+        <animate attributeName="stop-color" values="#B28DFF;#F8FAFC;#4F8CFF;#B28DFF" dur="6s" repeatCount="indefinite"/>
       </stop>
     </linearGradient>
 
@@ -37,11 +41,11 @@
 
     <linearGradient id="glass-border" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="rgba(255,255,255,0.25)"/>
-      <stop offset="100%" stop-color="rgba(255,255,255,0.05)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0.04)"/>
     </linearGradient>
 
-    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="12" result="blur"/>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="14" result="blur"/>
       <feComposite in="SourceGraphic" in2="blur" operator="over"/>
     </filter>
 
@@ -66,60 +70,52 @@
     .code-text {
       font-family: 'Fira Code', Consolas, Monaco, monospace;
     }
-    .type-line-1 { animation: fadeIn 0.4s 0.4s forwards; opacity: 0; }
-    .type-line-2 { animation: fadeIn 0.4s 0.9s forwards; opacity: 0; }
-    .type-line-3 { animation: fadeIn 0.4s 1.4s forwards; opacity: 0; }
-    .type-line-4 { animation: fadeIn 0.4s 1.9s forwards; opacity: 0; }
-    .type-line-5 { animation: fadeIn 0.4s 2.4s forwards; opacity: 0; }
-    .type-line-6 { animation: fadeIn 0.4s 2.9s forwards; opacity: 0; }
-    .type-line-7 { animation: fadeIn 0.4s 3.4s forwards; opacity: 0; }
-    .type-line-8 { animation: fadeIn 0.4s 3.9s forwards; opacity: 0; }
-    @keyframes fadeIn { to { opacity: 1; } }
   </style>
 
   <g clip-path="url(#banner-clip)">
+    <!-- Base Background -->
     <rect width="1400" height="700" fill="url(#bg-grad)"/>
     <rect width="1400" height="700" fill="url(#volumetric-light)"/>
     <rect width="1400" height="700" fill="url(#ambient-center)"/>
 
+    <!-- Grid Background -->
     <g opacity="0.04" stroke="#4F8CFF" stroke-width="1">
       <path d="M 0,100 L 1400,100 M 0,200 L 1400,200 M 0,300 L 1400,300 M 0,400 L 1400,400 M 0,500 L 1400,500 M 0,600 L 1400,600"/>
       <path d="M 200,0 L 200,700 M 400,0 L 400,700 M 600,0 L 600,700 M 800,0 L 800,700 M 1000,0 L 1000,700 M 1200,0 L 1200,700"/>
     </g>
 
-    <!-- FLOATING DUST PARTICLES -->
-    <g opacity="0.65">
+    <!-- Animated Particles -->
+    <g opacity="0.7">
       <circle cx="150" cy="650" r="2.5" fill="#4F8CFF">
-        <animate attributeName="cy" values="650;150" dur="12s" repeatCount="indefinite"/>
+        <animate attributeName="cy" values="650;100;650" dur="12s" repeatCount="indefinite"/>
         <animate attributeName="opacity" values="0;0.9;0" dur="12s" repeatCount="indefinite"/>
       </circle>
-      <circle cx="320" cy="680" r="1.8" fill="#7C5CFF">
-        <animate attributeName="cy" values="680;120" dur="14s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0;0.8;0" dur="14s" repeatCount="indefinite"/>
+      <circle cx="380" cy="680" r="2" fill="#7C5CFF">
+        <animate attributeName="cy" values="680;120;680" dur="10s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;0.8;0" dur="10s" repeatCount="indefinite"/>
       </circle>
-      <circle cx="500" cy="640" r="2.8" fill="#B28DFF">
-        <animate attributeName="cy" values="640;180" dur="10s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0;0.9;0" dur="10s" repeatCount="indefinite"/>
+      <circle cx="620" cy="640" r="3" fill="#B28DFF">
+        <animate attributeName="cy" values="640;80;640" dur="14s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;1;0" dur="14s" repeatCount="indefinite"/>
       </circle>
-      <circle cx="720" cy="670" r="2" fill="#4F8CFF">
-        <animate attributeName="cy" values="670;140" dur="15s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0;0.8;0" dur="15s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="880" cy="630" r="2.4" fill="#7C5CFF">
-        <animate attributeName="cy" values="630;160" dur="11s" repeatCount="indefinite"/>
+      <circle cx="920" cy="670" r="2.2" fill="#4F8CFF">
+        <animate attributeName="cy" values="670;150;670" dur="11s" repeatCount="indefinite"/>
         <animate attributeName="opacity" values="0;0.9;0" dur="11s" repeatCount="indefinite"/>
       </circle>
-      <circle cx="1100" cy="660" r="1.5" fill="#F8FAFC">
-        <animate attributeName="cy" values="660;100" dur="13s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0;0.7;0" dur="13s" repeatCount="indefinite"/>
+      <circle cx="1250" cy="660" r="2.8" fill="#7C5CFF">
+        <animate attributeName="cy" values="660;90;660" dur="13s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;1;0" dur="13s" repeatCount="indefinite"/>
       </circle>
     </g>
 
     <!-- TITLE HEADER -->
     <g transform="translate(700, 105)">
       <g transform="translate(-110, -55)">
-        <rect x="0" y="0" width="220" height="32" rx="16" fill="rgba(79, 140, 255, 0.08)" stroke="rgba(79, 140, 255, 0.3)" stroke-width="1"/>
+        <rect x="0" y="0" width="220" height="32" rx="16" fill="rgba(79, 140, 255, 0.08)" stroke="rgba(79, 140, 255, 0.35)" stroke-width="1.2">
+          <animate attributeName="stroke-opacity" values="0.25;0.7;0.25" dur="3s" repeatCount="indefinite"/>
+        </rect>
         <circle cx="18" cy="16" r="4" fill="#4F8CFF">
+          <animate attributeName="r" values="3;5;3" dur="2s" repeatCount="indefinite"/>
           <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite"/>
         </circle>
         <text x="32" y="21" fill="#4F8CFF" font-size="11" font-weight="700" letter-spacing="2">AI RESEARCH LAB</text>
@@ -131,7 +127,7 @@
     <!-- LEFT TERMINAL CARD -->
     <g transform="translate(60, 190)">
       <animateTransform attributeName="transform" type="translate" values="60,190; 60,182; 60,190" dur="6s" repeatCount="indefinite"/>
-      <rect x="0" y="0" width="760" height="440" rx="20" fill="rgba(10, 18, 36, 0.72)" stroke="url(#glass-border)" stroke-width="1.5"/>
+      <rect x="0" y="0" width="760" height="440" rx="20" fill="rgba(10, 18, 36, 0.75)" stroke="url(#glass-border)" stroke-width="1.5"/>
       <rect x="1" y="1" width="758" height="438" rx="19" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
 
       <rect x="0" y="0" width="760" height="44" rx="20" fill="rgba(255, 255, 255, 0.03)"/>
@@ -143,35 +139,43 @@
       <text x="730" y="27" fill="#4F8CFF" font-size="11" font-weight="600" text-anchor="end" class="code-text">v3.6</text>
 
       <g transform="translate(30, 75)" class="code-text" font-size="13.5">
-        <g class="type-line-1">
+        <g opacity="0">
+          <animate attributeName="opacity" values="0;1" dur="0.3s" begin="0.2s" fill="freeze"/>
           <text x="0" y="0" fill="#7C5CFF">system@ai-lab:~$ </text>
           <text x="145" y="0" fill="#F8FAFC">init --core-agent</text>
         </g>
-        <g class="type-line-2">
+        <g opacity="0">
+          <animate attributeName="opacity" values="0;1" dur="0.3s" begin="0.7s" fill="freeze"/>
           <text x="0" y="25" fill="#94A3B8">[1/4] Initializing AI Core...</text>
           <text x="440" y="25" fill="#27C93F">[OK]</text>
         </g>
-        <g class="type-line-3">
+        <g opacity="0">
+          <animate attributeName="opacity" values="0;1" dur="0.3s" begin="1.2s" fill="freeze"/>
           <text x="0" y="48" fill="#94A3B8">[2/4] Loading Neural Networks &amp; LLMs...</text>
           <text x="440" y="48" fill="#27C93F">[OK]</text>
         </g>
-        <g class="type-line-4">
+        <g opacity="0">
+          <animate attributeName="opacity" values="0;1" dur="0.3s" begin="1.7s" fill="freeze"/>
           <text x="0" y="71" fill="#94A3B8">[3/4] Loading Memory &amp; Vector Indexes...</text>
           <text x="440" y="71" fill="#27C93F">[OK]</text>
         </g>
-        <g class="type-line-5">
+        <g opacity="0">
+          <animate attributeName="opacity" values="0;1" dur="0.3s" begin="2.2s" fill="freeze"/>
           <text x="0" y="94" fill="#94A3B8">[4/4] Loading Projects &amp; MLOps Pipelines...</text>
           <text x="440" y="94" fill="#27C93F">[OK]</text>
         </g>
-        <g class="type-line-6">
+        <g opacity="0">
+          <animate attributeName="opacity" values="0;1" dur="0.3s" begin="2.7s" fill="freeze"/>
           <text x="0" y="117" fill="#B28DFF">[SUCCESS] All systems operational. Status: Ready.</text>
         </g>
-        <g class="type-line-7">
+        <g opacity="0">
+          <animate attributeName="opacity" values="0;1" dur="0.3s" begin="3.2s" fill="freeze"/>
           <line x1="0" y1="135" x2="700" y2="135" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
           <text x="0" y="160" fill="#4F8CFF">system@ai-lab:~$ </text>
           <text x="145" y="160" fill="#F8FAFC">whoami</text>
         </g>
-        <g class="type-line-8" transform="translate(0, 182)">
+        <g opacity="0" transform="translate(0, 182)">
+          <animate attributeName="opacity" values="0;1" dur="0.4s" begin="3.7s" fill="freeze"/>
           <text x="0" y="0" fill="#F8FAFC" font-weight="700" font-size="17">Vishal Rathod</text>
           <text x="140" y="0" fill="#4F8CFF" font-weight="600" font-size="13">| AI Engineer • ML Specialist</text>
           <text x="0" y="24" fill="#94A3B8" font-size="12.5">Location: </text>
@@ -187,26 +191,37 @@
             <text x="0" y="0" fill="#4F8CFF">system@ai-lab:~$ </text>
             <text x="145" y="0" fill="#B28DFF">start-ai-agent --active</text>
             <rect x="330" y="-11" width="8" height="15" fill="#4F8CFF">
-              <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="1;0;1" dur="0.8s" repeatCount="indefinite"/>
             </rect>
           </g>
         </g>
       </g>
     </g>
 
-    <!-- RIGHT AVATAR CARD -->
+    <!-- RIGHT AVATAR CARD WITH SCANNER BEAM -->
     <g transform="translate(870, 190)">
       <rect x="0" y="0" width="470" height="440" rx="20" fill="rgba(10, 18, 36, 0.65)" stroke="url(#glass-border)" stroke-width="1.5"/>
-      <g opacity="0.35" stroke="#4F8CFF" stroke-width="1">
+      
+      <!-- Pulsing Neural Links -->
+      <g opacity="0.4" stroke="#4F8CFF" stroke-width="1">
         <line x1="60" y1="90" x2="160" y2="50"/>
         <line x1="160" y1="50" x2="280" y2="110"/>
         <line x1="280" y1="110" x2="390" y2="60"/>
         <line x1="160" y1="50" x2="210" y2="190"/>
         <line x1="280" y1="110" x2="330" y2="230"/>
-        <circle cx="60" cy="90" r="4" fill="#4F8CFF"/>
-        <circle cx="160" cy="50" r="5" fill="#7C5CFF"/>
-        <circle cx="280" cy="110" r="4" fill="#B28DFF"/>
-        <circle cx="390" cy="60" r="5" fill="#4F8CFF"/>
+        
+        <circle cx="60" cy="90" r="4" fill="#4F8CFF">
+          <animate attributeName="r" values="3;6;3" dur="2.5s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="160" cy="50" r="5" fill="#7C5CFF">
+          <animate attributeName="r" values="4;7;4" dur="3s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="280" cy="110" r="4" fill="#B28DFF">
+          <animate attributeName="r" values="3;6;3" dur="2.8s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="390" cy="60" r="5" fill="#4F8CFF">
+          <animate attributeName="r" values="4;7;4" dur="3.2s" repeatCount="indefinite"/>
+        </circle>
         <circle cx="210" cy="190" r="4" fill="#7C5CFF"/>
         <circle cx="330" cy="230" r="5" fill="#B28DFF"/>
       </g>
@@ -217,17 +232,17 @@
 
       <rect x="0" y="0" width="470" height="440" rx="20" fill="none" stroke="rgba(79, 140, 255, 0.3)" stroke-width="1.5"/>
 
-      <!-- HOLOGRAPHIC SCANNER LINE -->
+      <!-- DYNAMIC HOLOGRAPHIC SCANNER BEAM -->
       <g>
-        <animateTransform attributeName="transform" type="translate" values="0,0; 0,420; 0,0" dur="4s" repeatCount="indefinite"/>
-        <rect x="10" y="10" width="450" height="4" fill="url(#scanner-grad)" filter="url(#glow)"/>
-        <line x1="10" y1="12" x2="460" y2="12" stroke="#F8FAFC" stroke-width="1.5" opacity="0.9"/>
+        <animateTransform attributeName="transform" type="translate" values="0,0; 0,420; 0,0" dur="3.5s" repeatCount="indefinite"/>
+        <rect x="10" y="10" width="450" height="5" fill="url(#scanner-grad)" filter="url(#glow)"/>
+        <line x1="10" y1="12" x2="460" y2="12" stroke="#F8FAFC" stroke-width="2" opacity="0.95"/>
       </g>
 
       <g transform="translate(290, 20)">
         <rect x="0" y="0" width="160" height="30" rx="15" fill="rgba(4, 7, 14, 0.85)" stroke="rgba(79, 140, 255, 0.4)" stroke-width="1"/>
         <circle cx="16" cy="15" r="4" fill="#27C93F">
-          <animate attributeName="opacity" values="0.3;1;0.3" dur="1.5s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.3;1;0.3" dur="1.2s" repeatCount="indefinite"/>
         </circle>
         <text x="30" y="19" fill="#F8FAFC" font-size="10" font-weight="700" letter-spacing="1">SYSTEM ACTIVE</text>
       </g>
