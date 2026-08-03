@@ -1,23 +1,69 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 70" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 240" width="900" height="240">
   <defs>
-    <linearGradient id="bgLanyard" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#0A1224"/>
-      <stop offset="100%" stop-color="#0E1A35"/>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@500;600&amp;display=swap');
+      * { box-sizing: border-box; }
+      text { font-family: 'Inter', sans-serif; }
+      .mono { font-family: 'JetBrains Mono', monospace; }
+
+      @keyframes waveAnim {
+        0% { stroke-dashoffset: 0; }
+        100% { stroke-dashoffset: -200; }
+      }
+
+      @keyframes pulseDot {
+        0%, 100% { transform: scale(1); opacity: 0.8; }
+        50% { transform: scale(1.4); opacity: 1; }
+      }
+    </style>
+
+    <linearGradient id="lanyard-bg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="rgba(10, 18, 36, 0.8)"/>
+      <stop offset="100%" stop-color="rgba(4, 7, 14, 0.9)"/>
     </linearGradient>
   </defs>
 
-  <style>
-    .sans { font-family: 'Inter', sans-serif; }
-    .mono { font-family: 'JetBrains Mono', monospace; }
-    @keyframes pulseOnline { 0%, 100% { opacity: 0.4; } 50% { opacity: 1; } }
-  </style>
+  <rect width="900" height="240" rx="20" fill="url(#lanyard-bg)" stroke="rgba(79, 140, 255, 0.25)" stroke-width="1.5"/>
 
-  <rect width="500" height="70" rx="35" fill="url(#bgLanyard)" stroke="rgba(79, 140, 255, 0.3)" stroke-width="1.5"/>
+  <!-- Header Status Bar -->
+  <g transform="translate(30, 35)">
+    <circle cx="10" cy="10" r="5" fill="#27C93F" style="animation: pulseDot 2s infinite;"/>
+    <text x="26" y="14" fill="#27C93F" font-size="12" font-weight="700" class="mono" letter-spacing="1.5">SYSTEM STATUS // ONLINE &amp; ACTIVE</text>
+  </g>
 
-  <g transform="translate(25, 38)">
-    <circle cx="15" cy="0" r="6" fill="#27C93F" style="animation: pulseOnline 2s infinite;"/>
-    <text x="32" y="5" fill="#F8FAFC" font-size="13" class="sans" font-weight="bold">SYSTEM STATUS:</text>
-    <text x="160" y="5" fill="#27C93F" font-size="13" class="mono">ONLINE</text>
-    <text x="235" y="5" fill="#94A3B8" font-size="12" class="mono">| Latency: 12ms | India 🇮🇳</text>
+  <!-- Content Grid -->
+  <g transform="translate(30, 75)">
+    <!-- Box 1: Active Model -->
+    <rect width="260" height="125" rx="14" fill="rgba(255, 255, 255, 0.03)" stroke="rgba(255, 255, 255, 0.08)"/>
+    <g transform="translate(20, 30)">
+      <text x="0" y="0" fill="#94A3B8" font-size="10" font-weight="600" class="mono">PRIMARY MODELS</text>
+      <text x="0" y="26" fill="#F8FAFC" font-size="15" font-weight="700">Claude 3.5 Sonnet</text>
+      <text x="0" y="48" fill="#4F8CFF" font-size="13" font-weight="600">GPT-4o &amp; Gemini 1.5</text>
+      <text x="0" y="70" fill="#94A3B8" font-size="10" class="mono">Autonomous Multi-Agent</text>
+    </g>
+
+    <!-- Box 2: Infrastructure -->
+    <g transform="translate(280, 0)">
+      <rect width="260" height="125" rx="14" fill="rgba(255, 255, 255, 0.03)" stroke="rgba(255, 255, 255, 0.08)"/>
+      <g transform="translate(20, 30)">
+        <text x="0" y="0" fill="#94A3B8" font-size="10" font-weight="600" class="mono">COMPUTE ENGINE</text>
+        <text x="0" y="26" fill="#F8FAFC" font-size="15" font-weight="700">PyTorch + vLLM</text>
+        <text x="0" y="48" fill="#7C5CFF" font-size="13" font-weight="600">Groq LPU Acceleration</text>
+        <text x="0" y="70" fill="#94A3B8" font-size="10" class="mono">Sub-10ms Inference</text>
+      </g>
+    </g>
+
+    <!-- Box 3: Waveform Visualizer -->
+    <g transform="translate(560, 0)">
+      <rect width="280" height="125" rx="14" fill="rgba(255, 255, 255, 0.03)" stroke="rgba(178, 141, 255, 0.2)"/>
+      <g transform="translate(20, 30)">
+        <text x="0" y="0" fill="#94A3B8" font-size="10" font-weight="600" class="mono">SIGNAL FREQUENCY</text>
+        
+        <!-- Animated Wave Sine Line -->
+        <path d="M 0 45 Q 20 15, 40 45 T 80 45 T 120 45 T 160 45 T 200 45 T 240 45" fill="none" stroke="#B28DFF" stroke-width="2" stroke-dasharray="10 5" style="animation: waveAnim 4s linear infinite;"/>
+        
+        <text x="0" y="75" fill="#B28DFF" font-size="12" font-weight="700" class="mono">STABLE // 120 FPS MOTION</text>
+      </g>
+    </g>
   </g>
 </svg>

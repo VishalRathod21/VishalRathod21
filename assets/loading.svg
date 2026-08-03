@@ -1,11 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 60" width="100%" height="100%">
-  <style>
-    .mono { font-family: 'JetBrains Mono', monospace; }
-    @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-  </style>
-  <g transform="translate(20, 30)">
-    <circle cx="15" cy="0" r="10" fill="none" stroke="rgba(79,140,255,0.2)" stroke-width="3"/>
-    <circle cx="15" cy="0" r="10" fill="none" stroke="#4F8CFF" stroke-width="3" stroke-dasharray="25 40" style="transform-origin: 15px 0px; animation: spin 1s linear infinite;"/>
-    <text x="40" y="4" fill="#94A3B8" font-size="12" class="mono">Initializing AI Neural Engine...</text>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100" width="400" height="100">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@600&amp;display=swap');
+      text { font-family: 'JetBrains Mono', monospace; }
+      @keyframes loadBar {
+        0% { width: 0%; }
+        100% { width: 100%; }
+      }
+    </style>
+  </defs>
+  <rect width="400" height="100" rx="16" fill="#04070E" stroke="rgba(255,255,255,0.1)"/>
+  <text x="200" y="38" fill="#4F8CFF" font-size="12" text-anchor="middle" letter-spacing="2">INITIALIZING AI SYSTEM...</text>
+  <rect x="50" y="55" width="300" height="8" rx="4" fill="rgba(255,255,255,0.08)"/>
+  <rect x="50" y="55" width="300" height="8" rx="4" fill="url(#load-grad)">
+    <animate attributeName="width" from="0" to="300" dur="2.5s" repeatCount="indefinite"/>
+  </rect>
+  <linearGradient id="load-grad" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#4F8CFF"/>
+    <stop offset="50%" stop-color="#7C5CFF"/>
+    <stop offset="100%" stop-color="#B28DFF"/>
+  </linearGradient>
 </svg>
