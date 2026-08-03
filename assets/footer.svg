@@ -1,49 +1,77 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 180" width="900" height="180">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 220" width="1400" height="220">
   <defs>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap');
-      text { font-family: 'JetBrains Mono', monospace; }
+      @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap');
+      text { font-family: 'Inter', sans-serif; }
+      .mono { font-family: 'Fira Code', monospace; }
 
       @keyframes blinkCursor {
         0%, 100% { opacity: 1; }
         50% { opacity: 0; }
       }
+      @keyframes floatParticle {
+        0%, 100% { transform: translateY(0px); opacity: 0.3; }
+        50% { transform: translateY(-10px); opacity: 0.8; }
+      }
+
+      .cursor { animation: blinkCursor 0.9s infinite; }
+      .pFloat { animation: floatParticle 5s ease-in-out infinite; }
     </style>
+
+    <linearGradient id="footerBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#04070E"/>
+      <stop offset="50%" stop-color="#070D1C"/>
+      <stop offset="100%" stop-color="#0A1224"/>
+    </linearGradient>
+
+    <linearGradient id="footerBorder" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="rgba(79, 140, 255, 0.3)"/>
+      <stop offset="50%" stop-color="rgba(124, 92, 255, 0.3)"/>
+      <stop offset="100%" stop-color="rgba(178, 141, 255, 0.3)"/>
+    </linearGradient>
+
+    <filter id="footerGlow">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
   </defs>
 
-  <rect width="900" height="180" rx="20" fill="#04070E" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1.5"/>
+  <rect width="1400" height="220" rx="30" fill="url(#footerBg)" stroke="url(#footerBorder)" stroke-width="1.5"/>
 
-  <!-- Terminal Window Controls -->
-  <circle cx="35" cy="25" r="5" fill="#FF5F56" opacity="0.85"/>
-  <circle cx="52" cy="25" r="5" fill="#FFBD2E" opacity="0.85"/>
-  <circle cx="69" cy="25" r="5" fill="#27C93F" opacity="0.85"/>
+  <!-- Background Dust -->
+  <g class="pFloat">
+    <circle cx="200" cy="60" r="2" fill="#4F8CFF"/>
+    <circle cx="1200" cy="160" r="2.5" fill="#B28DFF"/>
+    <circle cx="700" cy="40" r="1.5" fill="#7C5CFF"/>
+  </g>
 
-  <text x="450" y="28" fill="#94A3B8" font-size="11" font-weight="500" text-anchor="middle" letter-spacing="1">infinite-learning-loop.js</text>
+  <!-- Left Terminal Window -->
+  <g transform="translate(60, 30)">
+    <rect width="780" height="160" rx="16" fill="rgba(10, 18, 36, 0.75)" stroke="rgba(255, 255, 255, 0.1)"/>
 
-  <line x1="0" y1="45" x2="900" y2="45" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
+    <!-- Terminal Header Dots -->
+    <circle cx="24" cy="18" r="4.5" fill="#FF5F56"/>
+    <circle cx="40" cy="18" r="4.5" fill="#FFBD2E"/>
+    <circle cx="56" cy="18" r="4.5" fill="#27C93F"/>
+    <text x="400" y="22" fill="#94A3B8" font-size="11" text-anchor="middle" class="mono">life_loop.cpp — 80x24</text>
 
-  <!-- Code Content -->
-  <g transform="translate(40, 72)" font-size="14" font-weight="600">
-    <text x="0" y="0">
-      <tspan fill="#7C5CFF">while</tspan><tspan fill="#F8FAFC"> (</tspan><tspan fill="#4F8CFF">alive</tspan><tspan fill="#F8FAFC">) {</tspan>
-    </text>
-    <text x="30" y="24">
-      <tspan fill="#B28DFF">learn</tspan><tspan fill="#F8FAFC">();</tspan>
-    </text>
-    <text x="30" y="44">
-      <tspan fill="#4F8CFF">build</tspan><tspan fill="#F8FAFC">();</tspan>
-    </text>
-    <text x="30" y="64">
-      <tspan fill="#27C93F">share</tspan><tspan fill="#F8FAFC">();</tspan>
-    </text>
-    <text x="30" y="84">
-      <tspan fill="#7C5CFF">repeat</tspan><tspan fill="#F8FAFC">();</tspan>
-    </text>
-    <text x="0" y="104">
-      <tspan fill="#F8FAFC">}</tspan>
-    </text>
-    
-    <!-- Blinking Cursor -->
-    <rect x="20" y="93" width="9" height="16" fill="#4F8CFF" style="animation: blinkCursor 1s step-end infinite;"/>
+    <!-- Code Block -->
+    <g transform="translate(25, 48)">
+      <text y="0" fill="#7C5CFF" font-size="13" class="mono" font-weight="600">while<tspan fill="#F8FAFC">(alive)</tspan> {</text>
+      <text y="24" fill="#94A3B8" font-size="13" class="mono">    <tspan fill="#4F8CFF">learn</tspan>();</text>
+      <text y="46" fill="#94A3B8" font-size="13" class="mono">    <tspan fill="#7C5CFF">build</tspan>();</text>
+      <text y="68" fill="#94A3B8" font-size="13" class="mono">    <tspan fill="#B28DFF">share</tspan>();</text>
+      <text y="90" fill="#94A3B8" font-size="13" class="mono">    <tspan fill="#27C93F">repeat</tspan>();</text>
+      <text y="112" fill="#7C5CFF" font-size="13" class="mono" font-weight="600">} <tspan fill="#27C93F" class="cursor">█</tspan></text>
+    </g>
+  </g>
+
+  <!-- Right Side Brand Statement -->
+  <g transform="translate(890, 55)">
+    <text x="0" y="25" fill="#F8FAFC" font-size="20" font-weight="800">VISHAL RATHOD</text>
+    <text x="0" y="48" fill="#4F8CFF" font-size="13" font-weight="600" class="mono">AI ENGINEER &amp; RESEARCHER</text>
+    <text x="0" y="78" fill="#94A3B8" font-size="12">Designed for the future of Artificial Intelligence.</text>
+    <text x="0" y="98" fill="#94A3B8" font-size="12">Crafted with precision &amp; cinematic excellence.</text>
+    <text x="0" y="125" fill="#B28DFF" font-size="11" font-weight="600" class="mono">© 2026 VISHAL RATHOD • ALL RIGHTS RESERVED</text>
   </g>
 </svg>

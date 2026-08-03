@@ -2,35 +2,36 @@ name: Generate Contribution Snake
 
 on:
   schedule:
+    # Run every 24 hours
     - cron: "0 0 * * *"
   workflow_dispatch:
   push:
     branches:
-      - main
-      - master
+    - main
+    - master
 
 jobs:
   generate:
     permissions:
       contents: write
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 10
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-
-      - name: Generate Snake SVG
+      # Generates a snake game from a github user contributions graph
+      - name: Generate github-contribution-grid-snake.svg
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            assets/github-contribution-grid-snake.svg?color_snake=#4F8CFF&color_dots=#0A1224,#1E293B,#334155,#475569,#7C5CFF
-            assets/github-contribution-grid-snake-dark.svg?color_snake=#B28DFF&color_dots=#04070E,#0A1224,#1E293B,#4F8CFF,#7C5CFF
+            dist/github-contribution-grid-snake.svg?color_snake=#7C5CFF&color_dots=#04070E,#0A1224,#1E293B,#4F8CFF,#B28DFF
+            dist/github-contribution-grid-snake-dark.svg?color_snake=#B28DFF&color_dots=#04070E,#0A1224,#1E293B,#4F8CFF,#7C5CFF
 
-      - name: Commit and Push
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add assets/
-          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: update contribution snake animation" && git push)
+      # Push the content to the output branch
+      - name: Push github-contribution-grid-snake.svg to the output branch
+        uses: crazy-max/ghaction-github-pages@v3.1.0
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

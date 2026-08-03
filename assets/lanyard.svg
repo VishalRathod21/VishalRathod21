@@ -1,69 +1,78 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 240" width="900" height="240">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 130" width="1400" height="130">
   <defs>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@500;600&amp;display=swap');
-      * { box-sizing: border-box; }
+      @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap');
       text { font-family: 'Inter', sans-serif; }
-      .mono { font-family: 'JetBrains Mono', monospace; }
-
-      @keyframes waveAnim {
-        0% { stroke-dashoffset: 0; }
-        100% { stroke-dashoffset: -200; }
-      }
+      .mono { font-family: 'Fira Code', monospace; }
 
       @keyframes pulseDot {
-        0%, 100% { transform: scale(1); opacity: 0.8; }
-        50% { transform: scale(1.4); opacity: 1; }
+        0%, 100% { transform: scale(1); opacity: 1; }
+        50% { transform: scale(1.3); opacity: 0.5; }
       }
+      @keyframes waveDash {
+        to { stroke-dashoffset: -100; }
+      }
+      .pulse { transform-origin: center; animation: pulseDot 2s infinite ease-in-out; }
+      .wave { stroke-dasharray: 6, 6; animation: waveDash 4s linear infinite; }
     </style>
 
-    <linearGradient id="lanyard-bg" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="rgba(10, 18, 36, 0.8)"/>
-      <stop offset="100%" stop-color="rgba(4, 7, 14, 0.9)"/>
+    <linearGradient id="lanyardBg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#04070E" />
+      <stop offset="50%" stop-color="#0A1224" />
+      <stop offset="100%" stop-color="#04070E" />
     </linearGradient>
+
+    <linearGradient id="lanyardBorder" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="rgba(79, 140, 255, 0.3)" />
+      <stop offset="50%" stop-color="rgba(178, 141, 255, 0.3)" />
+      <stop offset="100%" stop-color="rgba(124, 92, 255, 0.3)" />
+    </linearGradient>
+
+    <linearGradient id="waveGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4F8CFF" />
+      <stop offset="50%" stop-color="#7C5CFF" />
+      <stop offset="100%" stop-color="#B28DFF" />
+    </linearGradient>
+
+    <filter id="lanyardGlow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
   </defs>
 
-  <rect width="900" height="240" rx="20" fill="url(#lanyard-bg)" stroke="rgba(79, 140, 255, 0.25)" stroke-width="1.5"/>
+  <g transform="translate(10, 10)">
+    <!-- Main Glass Container -->
+    <rect width="1380" height="110" rx="20" fill="url(#lanyardBg)" stroke="url(#lanyardBorder)" stroke-width="1.5"/>
 
-  <!-- Header Status Bar -->
-  <g transform="translate(30, 35)">
-    <circle cx="10" cy="10" r="5" fill="#27C93F" style="animation: pulseDot 2s infinite;"/>
-    <text x="26" y="14" fill="#27C93F" font-size="12" font-weight="700" class="mono" letter-spacing="1.5">SYSTEM STATUS // ONLINE &amp; ACTIVE</text>
-  </g>
+    <!-- Left Block: Telemetry Core Status -->
+    <g transform="translate(30, 25)">
+      <!-- Status Pill -->
+      <rect width="180" height="28" rx="14" fill="rgba(39, 201, 63, 0.12)" stroke="rgba(39, 201, 63, 0.3)" stroke-width="1"/>
+      <circle cx="20" cy="14" r="4.5" fill="#27C93F" class="pulse"/>
+      <text x="32" y="18" fill="#27C93F" font-size="11" font-weight="700" class="mono">SYSTEM: ONLINE</text>
 
-  <!-- Content Grid -->
-  <g transform="translate(30, 75)">
-    <!-- Box 1: Active Model -->
-    <rect width="260" height="125" rx="14" fill="rgba(255, 255, 255, 0.03)" stroke="rgba(255, 255, 255, 0.08)"/>
-    <g transform="translate(20, 30)">
-      <text x="0" y="0" fill="#94A3B8" font-size="10" font-weight="600" class="mono">PRIMARY MODELS</text>
-      <text x="0" y="26" fill="#F8FAFC" font-size="15" font-weight="700">Claude 3.5 Sonnet</text>
-      <text x="0" y="48" fill="#4F8CFF" font-size="13" font-weight="600">GPT-4o &amp; Gemini 1.5</text>
-      <text x="0" y="70" fill="#94A3B8" font-size="10" class="mono">Autonomous Multi-Agent</text>
+      <text x="0" y="52" fill="#F8FAFC" font-size="14" font-weight="700">FRONTIER AI RESEARCH MATRIX</text>
+      <text x="0" y="70" fill="#94A3B8" font-size="11" class="mono">ACTIVE MODEL: <tspan fill="#4F8CFF">LLAMA-3.3-70B / DEEPSEEK-R1</tspan> | LATENCY: <tspan fill="#B28DFF">14ms</tspan></text>
     </g>
 
-    <!-- Box 2: Infrastructure -->
-    <g transform="translate(280, 0)">
-      <rect width="260" height="125" rx="14" fill="rgba(255, 255, 255, 0.03)" stroke="rgba(255, 255, 255, 0.08)"/>
-      <g transform="translate(20, 30)">
-        <text x="0" y="0" fill="#94A3B8" font-size="10" font-weight="600" class="mono">COMPUTE ENGINE</text>
-        <text x="0" y="26" fill="#F8FAFC" font-size="15" font-weight="700">PyTorch + vLLM</text>
-        <text x="0" y="48" fill="#7C5CFF" font-size="13" font-weight="600">Groq LPU Acceleration</text>
-        <text x="0" y="70" fill="#94A3B8" font-size="10" class="mono">Sub-10ms Inference</text>
-      </g>
+    <!-- Center Block: Animated Waveform / Neural Signal -->
+    <g transform="translate(480, 25)">
+      <text x="210" y="15" fill="#94A3B8" font-size="10" text-anchor="middle" class="mono">NEURAL INFERENCE DYNAMICS</text>
+      <!-- Telemetry Sine Curve -->
+      <path d="M 0 45 Q 50 15, 100 45 T 200 45 T 300 45 T 420 45" fill="none" stroke="url(#waveGrad)" stroke-width="2.5" class="wave" filter="url(#lanyardGlow)"/>
+      <circle cx="210" cy="45" r="4" fill="#B28DFF" class="pulse"/>
+      <text x="210" y="70" fill="#7C5CFF" font-size="10" text-anchor="middle" class="mono">THROUGHPUT: 128 TOK/S</text>
     </g>
 
-    <!-- Box 3: Waveform Visualizer -->
-    <g transform="translate(560, 0)">
-      <rect width="280" height="125" rx="14" fill="rgba(255, 255, 255, 0.03)" stroke="rgba(178, 141, 255, 0.2)"/>
-      <g transform="translate(20, 30)">
-        <text x="0" y="0" fill="#94A3B8" font-size="10" font-weight="600" class="mono">SIGNAL FREQUENCY</text>
-        
-        <!-- Animated Wave Sine Line -->
-        <path d="M 0 45 Q 20 15, 40 45 T 80 45 T 120 45 T 160 45 T 200 45 T 240 45" fill="none" stroke="#B28DFF" stroke-width="2" stroke-dasharray="10 5" style="animation: waveAnim 4s linear infinite;"/>
-        
-        <text x="0" y="75" fill="#B28DFF" font-size="12" font-weight="700" class="mono">STABLE // 120 FPS MOTION</text>
-      </g>
+    <!-- Right Block: Location & Mission Indicators -->
+    <g transform="translate(980, 25)">
+      <rect x="0" y="0" width="370" height="60" rx="14" fill="rgba(255, 255, 255, 0.03)" stroke="rgba(255, 255, 255, 0.08)"/>
+
+      <text x="20" y="24" fill="#F8FAFC" font-size="12" font-weight="600">📍 LOCATION: <tspan fill="#4F8CFF">INDIA 🇮🇳</tspan></text>
+      <text x="20" y="44" fill="#94A3B8" font-size="11" class="mono">GOAL: <tspan fill="#27C93F">Building High-Impact AI Products</tspan></text>
+
+      <rect x="250" y="12" width="105" height="24" rx="12" fill="rgba(124, 92, 255, 0.15)" stroke="rgba(124, 92, 255, 0.4)"/>
+      <text x="302" y="28" fill="#B28DFF" font-size="10" font-weight="700" text-anchor="middle" class="mono">AGENTIC v2.4</text>
     </g>
   </g>
 </svg>
