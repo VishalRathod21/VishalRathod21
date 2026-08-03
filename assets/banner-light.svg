@@ -63,13 +63,11 @@
   </defs>
 
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&amp;family=Fira+Code:wght@400;500;600&amp;display=swap');
-    
     text {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     }
     .code-text {
-      font-family: 'Fira Code', monospace;
+      font-family: 'Fira Code', Consolas, Monaco, 'Courier New', monospace;
     }
 
     .particle {
@@ -113,12 +111,12 @@
       50% { opacity: 0; }
     }
 
-    .neural-node {
-      animation: pulseNode 3s ease-in-out infinite alternate;
+    .float-card {
+      animation: subtleFloat 6s ease-in-out infinite alternate;
     }
-    @keyframes pulseNode {
-      0% { transform: scale(1); opacity: 0.4; }
-      100% { transform: scale(1.4); opacity: 0.9; }
+    @keyframes subtleFloat {
+      0% { transform: translateY(0px); }
+      100% { transform: translateY(-8px); }
     }
   </style>
 
@@ -130,7 +128,7 @@
     <rect width="1400" height="700" fill="url(#volumetric-light)"/>
     <rect width="1400" height="700" fill="url(#ambient-center)"/>
 
-    <!-- Subtle Grid Background -->
+    <!-- Grid Background -->
     <g opacity="0.04" stroke="#4F8CFF" stroke-width="1">
       <path d="M 0,100 L 1400,100 M 0,200 L 1400,200 M 0,300 L 1400,300 M 0,400 L 1400,400 M 0,500 L 1400,500 M 0,600 L 1400,600"/>
       <path d="M 200,0 L 200,700 M 400,0 L 400,700 M 600,0 L 600,700 M 800,0 L 800,700 M 1000,0 L 1000,700 M 1200,0 L 1200,700"/>
@@ -147,7 +145,7 @@
       <circle class="particle" cx="1300" cy="690" r="2" fill="#4F8CFF" style="animation-delay: 6s;"/>
     </g>
 
-    <!-- Floating Dust &amp; Stars -->
+    <!-- Floating Dust & Stars -->
     <g opacity="0.35">
       <circle cx="100" cy="120" r="1" fill="#FFF"/>
       <circle cx="280" cy="80" r="1.5" fill="#4F8CFF"/>
@@ -178,89 +176,91 @@
 
     <!-- LEFT SIDE TERMINAL WINDOW -->
     <g transform="translate(60, 190)">
-      <!-- Glass Frame -->
-      <rect x="0" y="0" width="760" height="440" rx="20" fill="rgba(10, 18, 36, 0.72)" stroke="url(#glass-border)" stroke-width="1.5"/>
-      <rect x="1" y="1" width="758" height="438" rx="19" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+      <g class="float-card">
+        <!-- Glass Frame -->
+        <rect x="0" y="0" width="760" height="440" rx="20" fill="rgba(10, 18, 36, 0.72)" stroke="url(#glass-border)" stroke-width="1.5"/>
+        <rect x="1" y="1" width="758" height="438" rx="19" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
 
-      <!-- Terminal Header -->
-      <rect x="0" y="0" width="760" height="44" rx="20" fill="rgba(255, 255, 255, 0.03)"/>
-      <line x1="0" y1="44" x2="760" y2="44" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
-      
-      <!-- Window Controls -->
-      <circle cx="24" cy="22" r="6" fill="#FF5F56" opacity="0.8"/>
-      <circle cx="44" cy="22" r="6" fill="#FFBD2E" opacity="0.8"/>
-      <circle cx="64" cy="22" r="6" fill="#27C93F" opacity="0.8"/>
-      
-      <text x="380" y="27" fill="#94A3B8" font-size="12" font-weight="600" text-anchor="middle" class="code-text">ai-core@vishal-lab:~</text>
-      <text x="730" y="27" fill="#4F8CFF" font-size="11" font-weight="600" text-anchor="end" class="code-text">v3.6</text>
-
-      <!-- Terminal Content -->
-      <g transform="translate(30, 75)" class="code-text" font-size="13.5">
-        <g class="type-line-1">
-          <text x="0" y="0" fill="#7C5CFF">system@ai-lab:~$ </text>
-          <text x="145" y="0" fill="#F8FAFC">init --core-agent</text>
-        </g>
+        <!-- Terminal Header -->
+        <rect x="0" y="0" width="760" height="44" rx="20" fill="rgba(255, 255, 255, 0.03)"/>
+        <line x1="0" y1="44" x2="760" y2="44" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
         
-        <g class="type-line-2">
-          <text x="0" y="25" fill="#94A3B8">[1/4] Initializing AI Core...</text>
-          <text x="440" y="25" fill="#27C93F">[OK]</text>
-        </g>
+        <!-- Window Controls -->
+        <circle cx="24" cy="22" r="6" fill="#FF5F56" opacity="0.8"/>
+        <circle cx="44" cy="22" r="6" fill="#FFBD2E" opacity="0.8"/>
+        <circle cx="64" cy="22" r="6" fill="#27C93F" opacity="0.8"/>
         
-        <g class="type-line-3">
-          <text x="0" y="48" fill="#94A3B8">[2/4] Loading Neural Networks &amp; LLMs...</text>
-          <text x="440" y="48" fill="#27C93F">[OK]</text>
-        </g>
+        <text x="380" y="27" fill="#94A3B8" font-size="12" font-weight="600" text-anchor="middle" class="code-text">ai-core@vishal-lab:~</text>
+        <text x="730" y="27" fill="#4F8CFF" font-size="11" font-weight="600" text-anchor="end" class="code-text">v3.6</text>
 
-        <g class="type-line-4">
-          <text x="0" y="71" fill="#94A3B8">[3/4] Loading Memory &amp; Vector Indexes...</text>
-          <text x="440" y="71" fill="#27C93F">[OK]</text>
-        </g>
-        
-        <g class="type-line-5">
-          <text x="0" y="94" fill="#94A3B8">[4/4] Loading Projects &amp; MLOps Pipelines...</text>
-          <text x="440" y="94" fill="#27C93F">[OK]</text>
-        </g>
-
-        <g class="type-line-6">
-          <text x="0" y="117" fill="#B28DFF">[SUCCESS] All systems operational. Status: Ready.</text>
-        </g>
-
-        <!-- Divider -->
-        <g class="type-line-7">
-          <line x1="0" y1="135" x2="700" y2="135" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
-          <text x="0" y="160" fill="#4F8CFF">system@ai-lab:~$ </text>
-          <text x="145" y="160" fill="#F8FAFC">whoami</text>
-        </g>
-
-        <!-- Output Card -->
-        <g class="type-line-8" transform="translate(0, 182)">
-          <text x="0" y="0" fill="#F8FAFC" font-weight="700" font-size="17">Vishal Rathod</text>
-          <text x="140" y="0" fill="#4F8CFF" font-weight="600" font-size="13">| AI Engineer • ML Specialist</text>
+        <!-- Terminal Content -->
+        <g transform="translate(30, 75)" class="code-text" font-size="13.5">
+          <g class="type-line-1">
+            <text x="0" y="0" fill="#7C5CFF">system@ai-lab:~$ </text>
+            <text x="145" y="0" fill="#F8FAFC">init --core-agent</text>
+          </g>
           
-          <text x="0" y="24" fill="#94A3B8" font-size="12.5">Location: </text>
-          <text x="75" y="24" fill="#F8FAFC" font-size="12.5">India 🇮🇳</text>
-
-          <text x="160" y="24" fill="#94A3B8" font-size="12.5">Domain: </text>
-          <text x="220" y="24" fill="#B28DFF" font-size="12.5">Deep Learning, Agentic AI &amp; MLOps</text>
-
-          <!-- Mission Box -->
-          <g transform="translate(0, 44)">
-            <rect x="0" y="0" width="700" height="58" rx="10" fill="rgba(79, 140, 255, 0.06)" stroke="rgba(79, 140, 255, 0.22)" stroke-width="1"/>
-            <text x="18" y="22" fill="#7C5CFF" font-size="10.5" font-weight="700" letter-spacing="1">CURRENT MISSION</text>
-            <text x="18" y="42" fill="#F8FAFC" font-size="12.5" font-weight="500">"Building intelligent AI products that positively impact millions of people."</text>
+          <g class="type-line-2">
+            <text x="0" y="25" fill="#94A3B8">[1/4] Initializing AI Core...</text>
+            <text x="440" y="25" fill="#27C93F">[OK]</text>
+          </g>
+          
+          <g class="type-line-3">
+            <text x="0" y="48" fill="#94A3B8">[2/4] Loading Neural Networks &amp; LLMs...</text>
+            <text x="440" y="48" fill="#27C93F">[OK]</text>
           </g>
 
-          <!-- Command Cursor Line -->
-          <g transform="translate(0, 126)">
-            <text x="0" y="0" fill="#4F8CFF">system@ai-lab:~$ </text>
-            <text x="145" y="0" fill="#B28DFF">start-ai-agent --active</text>
-            <rect x="330" y="-11" width="8" height="15" fill="#4F8CFF" class="cursor"/>
+          <g class="type-line-4">
+            <text x="0" y="71" fill="#94A3B8">[3/4] Loading Memory &amp; Vector Indexes...</text>
+            <text x="440" y="71" fill="#27C93F">[OK]</text>
+          </g>
+          
+          <g class="type-line-5">
+            <text x="0" y="94" fill="#94A3B8">[4/4] Loading Projects &amp; MLOps Pipelines...</text>
+            <text x="440" y="94" fill="#27C93F">[OK]</text>
+          </g>
+
+          <g class="type-line-6">
+            <text x="0" y="117" fill="#B28DFF">[SUCCESS] All systems operational. Status: Ready.</text>
+          </g>
+
+          <!-- Divider -->
+          <g class="type-line-7">
+            <line x1="0" y1="135" x2="700" y2="135" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+            <text x="0" y="160" fill="#4F8CFF">system@ai-lab:~$ </text>
+            <text x="145" y="160" fill="#F8FAFC">whoami</text>
+          </g>
+
+          <!-- Output Card -->
+          <g class="type-line-8" transform="translate(0, 182)">
+            <text x="0" y="0" fill="#F8FAFC" font-weight="700" font-size="17">Vishal Rathod</text>
+            <text x="140" y="0" fill="#4F8CFF" font-weight="600" font-size="13">| AI Engineer • ML Specialist</text>
+            
+            <text x="0" y="24" fill="#94A3B8" font-size="12.5">Location: </text>
+            <text x="75" y="24" fill="#F8FAFC" font-size="12.5">India 🇮🇳</text>
+
+            <text x="160" y="24" fill="#94A3B8" font-size="12.5">Domain: </text>
+            <text x="220" y="24" fill="#B28DFF" font-size="12.5">Deep Learning, Agentic AI &amp; MLOps</text>
+
+            <!-- Mission Box -->
+            <g transform="translate(0, 44)">
+              <rect x="0" y="0" width="700" height="58" rx="10" fill="rgba(79, 140, 255, 0.06)" stroke="rgba(79, 140, 255, 0.22)" stroke-width="1"/>
+              <text x="18" y="22" fill="#7C5CFF" font-size="10.5" font-weight="700" letter-spacing="1">CURRENT MISSION</text>
+              <text x="18" y="42" fill="#F8FAFC" font-size="12.5" font-weight="500">"Building intelligent AI products that positively impact millions of people."</text>
+            </g>
+
+            <!-- Command Cursor Line -->
+            <g transform="translate(0, 126)">
+              <text x="0" y="0" fill="#4F8CFF">system@ai-lab:~$ </text>
+              <text x="145" y="0" fill="#B28DFF">start-ai-agent --active</text>
+              <rect x="330" y="-11" width="8" height="15" fill="#4F8CFF" class="cursor"/>
+            </g>
           </g>
         </g>
       </g>
     </g>
 
-    <!-- RIGHT SIDE ANIME CHARACTER &amp; HOLOGRAM SCANNER -->
+    <!-- RIGHT SIDE ANIME CHARACTER & HOLOGRAM SCANNER -->
     <g transform="translate(870, 190)">
       <!-- Glass Backing -->
       <rect x="0" y="0" width="470" height="440" rx="20" fill="rgba(10, 18, 36, 0.65)" stroke="url(#glass-border)" stroke-width="1.5"/>
@@ -273,12 +273,12 @@
         <line x1="160" y1="50" x2="210" y2="190"/>
         <line x1="280" y1="110" x2="330" y2="230"/>
 
-        <circle cx="60" cy="90" r="4" fill="#4F8CFF" class="neural-node"/>
-        <circle cx="160" cy="50" r="5" fill="#7C5CFF" class="neural-node" style="animation-delay: 1s;"/>
-        <circle cx="280" cy="110" r="4" fill="#B28DFF" class="neural-node" style="animation-delay: 2s;"/>
-        <circle cx="390" cy="60" r="5" fill="#4F8CFF" class="neural-node"/>
-        <circle cx="210" cy="190" r="4" fill="#7C5CFF" class="neural-node"/>
-        <circle cx="330" cy="230" r="5" fill="#B28DFF" class="neural-node"/>
+        <circle cx="60" cy="90" r="4" fill="#4F8CFF"/>
+        <circle cx="160" cy="50" r="5" fill="#7C5CFF"/>
+        <circle cx="280" cy="110" r="4" fill="#B28DFF"/>
+        <circle cx="390" cy="60" r="5" fill="#4F8CFF"/>
+        <circle cx="210" cy="190" r="4" fill="#7C5CFF"/>
+        <circle cx="330" cy="230" r="5" fill="#B28DFF"/>
       </g>
 
       <!-- Character Image -->

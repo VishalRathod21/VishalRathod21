@@ -41,47 +41,39 @@
   </defs>
 
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;family=Fira+Code:wght@500&amp;display=swap');
-    text { font-family: 'Inter', -apple-system, sans-serif; }
-    .mono { font-family: 'Fira Code', monospace; }
+    text {{ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }}
+    .mono {{ font-family: 'Fira Code', Consolas, Monaco, monospace; }}
 
-    .card-float-1 {
+    .card-float-1 {{
       animation: floatCard1 6s ease-in-out infinite alternate;
-    }
-    .card-float-2 {
+    }}
+    .card-float-2 {{
       animation: floatCard2 7s ease-in-out infinite alternate;
-    }
-    .card-float-3 {
+    }}
+    .card-float-3 {{
       animation: floatCard3 6.5s ease-in-out infinite alternate;
-    }
+    }}
 
-    @keyframes floatCard1 {
-      0% { transform: translateY(0px); }
-      100% { transform: translateY(-8px); }
-    }
-    @keyframes floatCard2 {
-      0% { transform: translateY(0px); }
-      100% { transform: translateY(-12px); }
-    }
-    @keyframes floatCard3 {
-      0% { transform: translateY(0px); }
-      100% { transform: translateY(-6px); }
-    }
+    @keyframes floatCard1 {{
+      0% {{ transform: translateY(0px); }}
+      100% {{ transform: translateY(-8px); }}
+    }}
+    @keyframes floatCard2 {{
+      0% {{ transform: translateY(0px); }}
+      100% {{ transform: translateY(-12px); }}
+    }}
+    @keyframes floatCard3 {{
+      0% {{ transform: translateY(0px); }}
+      100% {{ transform: translateY(-6px); }}
+    }}
 
-    .pill {
-      transition: all 0.3s ease;
-    }
-    .pill:hover {
-      fill: rgba(79, 140, 255, 0.2);
-    }
-
-    .pulse-dot {
+    .pulse-dot {{
       animation: dotPulse 2s infinite alternate;
-    }
-    @keyframes dotPulse {
-      0% { opacity: 0.3; }
-      100% { opacity: 1; }
-    }
+    }}
+    @keyframes dotPulse {{
+      0% {{ opacity: 0.3; }}
+      100% {{ opacity: 1; }}
+    }}
   </style>
 
   <!-- Section Background Container -->
@@ -89,209 +81,215 @@
 
   <!-- Section Header -->
   <g transform="translate(600, 50)" text-anchor="middle">
-    <rect x="-80" y="-22" width="160" height="26" rx="13" fill="rgba(79, 140, 255, 0.08)" stroke="rgba(79, 140, 255, 0.25)" stroke-width="1"/>
+    <rect x="-95" y="-22" width="190" height="26" rx="13" fill="rgba(79, 140, 255, 0.08)" stroke="rgba(79, 140, 255, 0.25)" stroke-width="1"/>
     <text x="0" y="-5" fill="#4F8CFF" font-size="10" font-weight="800" letter-spacing="2">TECHNICAL CAPABILITIES</text>
     <text x="0" y="24" fill="#F8FAFC" font-size="28" font-weight="900" letter-spacing="2">SKILL MATRIX &amp; TECH STACK</text>
   </g>
 
   <!-- CARD 1: LANGUAGES -->
-  <g transform="translate(40, 110)" class="card-float-1" filter="url(#card-shadow)">
-    <rect width="350" height="370" rx="20" fill="url(#glass-card)" stroke="url(#border-lang)" stroke-width="1.5"/>
-    <rect x="1" y="1" width="348" height="368" rx="19" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <g transform="translate(40, 110)">
+    <g class="card-float-1" filter="url(#card-shadow)">
+      <rect width="350" height="370" rx="20" fill="url(#glass-card)" stroke="url(#border-lang)" stroke-width="1.5"/>
+      <rect x="1" y="1" width="348" height="368" rx="19" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
 
-    <!-- Category Header -->
-    <g transform="translate(24, 30)">
-      <rect x="0" y="0" width="40" height="40" rx="10" fill="rgba(79, 140, 255, 0.12)" stroke="rgba(79, 140, 255, 0.3)" stroke-width="1"/>
-      <path d="M 12,20 L 18,14 M 18,14 L 12,8 M 28,8 L 22,14 M 22,14 L 28,20" transform="translate(0, 6)" stroke="#4F8CFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-      
-      <text x="54" y="20" fill="#F8FAFC" font-size="18" font-weight="800">Languages</text>
-      <text x="54" y="36" fill="#94A3B8" font-size="11" font-weight="600">CORE COMPUTING &amp; LOGIC</text>
-    </g>
-
-    <line x1="24" y1="90" x2="326" y2="90" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
-
-    <!-- Skill Pills Grid -->
-    <g transform="translate(24, 110)">
-      <!-- Python -->
-      <g transform="translate(0, 0)">
-        <rect width="145" height="44" rx="12" fill="url(#pill-bg)" stroke="rgba(79, 140, 255, 0.3)" stroke-width="1" class="pill"/>
-        <circle cx="22" cy="22" r="4" fill="#4F8CFF" class="pulse-dot"/>
-        <text x="36" y="26" fill="#F8FAFC" font-size="14" font-weight="700">Python</text>
-        <text x="125" y="26" fill="#4F8CFF" font-size="10" font-weight="700" text-anchor="end">95%</text>
+      <!-- Category Header -->
+      <g transform="translate(24, 30)">
+        <rect x="0" y="0" width="40" height="40" rx="10" fill="rgba(79, 140, 255, 0.12)" stroke="rgba(79, 140, 255, 0.3)" stroke-width="1"/>
+        <path d="M 12,20 L 18,14 M 18,14 L 12,8 M 28,8 L 22,14 M 22,14 L 28,20" transform="translate(0, 6)" stroke="#4F8CFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        
+        <text x="54" y="20" fill="#F8FAFC" font-size="18" font-weight="800">Languages</text>
+        <text x="54" y="36" fill="#94A3B8" font-size="11" font-weight="600">CORE COMPUTING &amp; LOGIC</text>
       </g>
 
-      <!-- C++ -->
-      <g transform="translate(157, 0)">
-        <rect width="145" height="44" rx="12" fill="url(#pill-bg)" stroke="rgba(79, 140, 255, 0.3)" stroke-width="1" class="pill"/>
-        <circle cx="22" cy="22" r="4" fill="#4F8CFF" class="pulse-dot"/>
-        <text x="36" y="26" fill="#F8FAFC" font-size="14" font-weight="700">C++</text>
-        <text x="125" y="26" fill="#4F8CFF" font-size="10" font-weight="700" text-anchor="end">88%</text>
+      <line x1="24" y1="90" x2="326" y2="90" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+
+      <!-- Skill Pills Grid -->
+      <g transform="translate(24, 110)">
+        <!-- Python -->
+        <g transform="translate(0, 0)">
+          <rect width="145" height="44" rx="12" fill="url(#pill-bg)" stroke="rgba(79, 140, 255, 0.3)" stroke-width="1"/>
+          <circle cx="22" cy="22" r="4" fill="#4F8CFF" class="pulse-dot"/>
+          <text x="36" y="26" fill="#F8FAFC" font-size="14" font-weight="700">Python</text>
+          <text x="125" y="26" fill="#4F8CFF" font-size="10" font-weight="700" text-anchor="end">95%</text>
+        </g>
+
+        <!-- C++ -->
+        <g transform="translate(157, 0)">
+          <rect width="145" height="44" rx="12" fill="url(#pill-bg)" stroke="rgba(79, 140, 255, 0.3)" stroke-width="1"/>
+          <circle cx="22" cy="22" r="4" fill="#4F8CFF" class="pulse-dot"/>
+          <text x="36" y="26" fill="#F8FAFC" font-size="14" font-weight="700">C++</text>
+          <text x="125" y="26" fill="#4F8CFF" font-size="10" font-weight="700" text-anchor="end">88%</text>
+        </g>
+
+        <!-- SQL -->
+        <g transform="translate(0, 56)">
+          <rect width="145" height="44" rx="12" fill="url(#pill-bg)" stroke="rgba(79, 140, 255, 0.3)" stroke-width="1"/>
+          <circle cx="22" cy="22" r="4" fill="#4F8CFF" class="pulse-dot"/>
+          <text x="36" y="26" fill="#F8FAFC" font-size="14" font-weight="700">SQL</text>
+          <text x="125" y="26" fill="#4F8CFF" font-size="10" font-weight="700" text-anchor="end">90%</text>
+        </g>
+
+        <!-- JavaScript -->
+        <g transform="translate(157, 56)">
+          <rect width="145" height="44" rx="12" fill="url(#pill-bg)" stroke="rgba(79, 140, 255, 0.3)" stroke-width="1"/>
+          <circle cx="22" cy="22" r="4" fill="#4F8CFF" class="pulse-dot"/>
+          <text x="36" y="26" fill="#F8FAFC" font-size="14" font-weight="700">JavaScript</text>
+          <text x="125" y="26" fill="#4F8CFF" font-size="10" font-weight="700" text-anchor="end">85%</text>
+        </g>
       </g>
 
-      <!-- SQL -->
-      <g transform="translate(0, 56)">
-        <rect width="145" height="44" rx="12" fill="url(#pill-bg)" stroke="rgba(79, 140, 255, 0.3)" stroke-width="1" class="pill"/>
-        <circle cx="22" cy="22" r="4" fill="#4F8CFF" class="pulse-dot"/>
-        <text x="36" y="26" fill="#F8FAFC" font-size="14" font-weight="700">SQL</text>
-        <text x="125" y="26" fill="#4F8CFF" font-size="10" font-weight="700" text-anchor="end">90%</text>
+      <!-- Bottom Highlight Metric -->
+      <g transform="translate(24, 280)">
+        <rect width="302" height="60" rx="12" fill="rgba(79, 140, 255, 0.06)" stroke="rgba(79, 140, 255, 0.2)" stroke-width="1"/>
+        <text x="16" y="24" fill="#94A3B8" font-size="11" font-weight="600">PRIMARY FOCUS</text>
+        <text x="16" y="44" fill="#F8FAFC" font-size="13" font-weight="700">High Performance Algorithmic &amp; AI Systems</text>
       </g>
-
-      <!-- JavaScript -->
-      <g transform="translate(157, 56)">
-        <rect width="145" height="44" rx="12" fill="url(#pill-bg)" stroke="rgba(79, 140, 255, 0.3)" stroke-width="1" class="pill"/>
-        <circle cx="22" cy="22" r="4" fill="#4F8CFF" class="pulse-dot"/>
-        <text x="36" y="26" fill="#F8FAFC" font-size="14" font-weight="700">JavaScript</text>
-        <text x="125" y="26" fill="#4F8CFF" font-size="10" font-weight="700" text-anchor="end">85%</text>
-      </g>
-    </g>
-
-    <!-- Bottom Highlight Metric -->
-    <g transform="translate(24, 280)">
-      <rect width="302" height="60" rx="12" fill="rgba(79, 140, 255, 0.06)" stroke="rgba(79, 140, 255, 0.2)" stroke-width="1"/>
-      <text x="16" y="24" fill="#94A3B8" font-size="11" font-weight="600">PRIMARY FOCUS</text>
-      <text x="16" y="44" fill="#F8FAFC" font-size="13" font-weight="700">High Performance Algorithmic &amp; AI Systems</text>
     </g>
   </g>
 
   <!-- CARD 2: AI & ML (CENTER HIGHLIGHT CARD) -->
-  <g transform="translate(415, 110)" class="card-float-2" filter="url(#card-shadow)">
-    <rect width="370" height="370" rx="20" fill="url(#glass-card)" stroke="url(#border-ai)" stroke-width="2"/>
-    <rect x="0" y="0" width="370" height="370" rx="20" fill="url(#glow-ai)"/>
-    <rect x="1" y="1" width="368" height="368" rx="19" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <g transform="translate(415, 110)">
+    <g class="card-float-2" filter="url(#card-shadow)">
+      <rect width="370" height="370" rx="20" fill="url(#glass-card)" stroke="url(#border-ai)" stroke-width="2"/>
+      <rect x="0" y="0" width="370" height="370" rx="20" fill="url(#glow-ai)"/>
+      <rect x="1" y="1" width="368" height="368" rx="19" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
 
-    <!-- Category Header -->
-    <g transform="translate(24, 30)">
-      <rect x="0" y="0" width="40" height="40" rx="10" fill="rgba(124, 92, 255, 0.16)" stroke="rgba(124, 92, 255, 0.4)" stroke-width="1"/>
-      <circle cx="20" cy="20" r="8" fill="none" stroke="#7C5CFF" stroke-width="2"/>
-      <circle cx="20" cy="20" r="3" fill="#B28DFF"/>
-      
-      <text x="54" y="20" fill="#F8FAFC" font-size="18" font-weight="800">AI &amp; Neural Frameworks</text>
-      <text x="54" y="36" fill="#B28DFF" font-size="11" font-weight="600">DEEP LEARNING &amp; AGENTIC SWARMS</text>
-    </g>
-
-    <line x1="24" y1="90" x2="346" y2="90" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
-
-    <!-- Skill Grid -->
-    <g transform="translate(20, 105)" font-size="12.5" font-weight="700">
-      <!-- Row 1 -->
-      <g transform="translate(0, 0)">
-        <rect width="102" height="34" rx="10" fill="url(#pill-bg)" stroke="rgba(124, 92, 255, 0.35)" stroke-width="1"/>
-        <text x="51" y="21" fill="#F8FAFC" text-anchor="middle">PyTorch</text>
-      </g>
-      <g transform="translate(114, 0)">
-        <rect width="102" height="34" rx="10" fill="url(#pill-bg)" stroke="rgba(124, 92, 255, 0.35)" stroke-width="1"/>
-        <text x="51" y="21" fill="#F8FAFC" text-anchor="middle">TensorFlow</text>
-      </g>
-      <g transform="translate(228, 0)">
-        <rect width="102" height="34" rx="10" fill="url(#pill-bg)" stroke="rgba(124, 92, 255, 0.35)" stroke-width="1"/>
-        <text x="51" y="21" fill="#F8FAFC" text-anchor="middle">Scikit-Learn</text>
+      <!-- Category Header -->
+      <g transform="translate(24, 30)">
+        <rect x="0" y="0" width="40" height="40" rx="10" fill="rgba(124, 92, 255, 0.16)" stroke="rgba(124, 92, 255, 0.4)" stroke-width="1"/>
+        <circle cx="20" cy="20" r="8" fill="none" stroke="#7C5CFF" stroke-width="2"/>
+        <circle cx="20" cy="20" r="3" fill="#B28DFF"/>
+        
+        <text x="54" y="20" fill="#F8FAFC" font-size="18" font-weight="800">AI &amp; Neural Frameworks</text>
+        <text x="54" y="36" fill="#B28DFF" font-size="11" font-weight="600">DEEP LEARNING &amp; AGENTIC SWARMS</text>
       </g>
 
-      <!-- Row 2 -->
-      <g transform="translate(0, 44)">
-        <rect width="102" height="34" rx="10" fill="url(#pill-bg)" stroke="rgba(124, 92, 255, 0.35)" stroke-width="1"/>
-        <text x="51" y="21" fill="#F8FAFC" text-anchor="middle">LangChain</text>
-      </g>
-      <g transform="translate(114, 44)">
-        <rect width="102" height="34" rx="10" fill="url(#pill-bg)" stroke="rgba(124, 92, 255, 0.35)" stroke-width="1"/>
-        <text x="51" y="21" fill="#B28DFF" text-anchor="middle">LangGraph</text>
-      </g>
-      <g transform="translate(228, 44)">
-        <rect width="102" height="34" rx="10" fill="url(#pill-bg)" stroke="rgba(124, 92, 255, 0.35)" stroke-width="1"/>
-        <text x="51" y="21" fill="#F8FAFC" text-anchor="middle">CrewAI</text>
+      <line x1="24" y1="90" x2="346" y2="90" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+
+      <!-- Skill Grid -->
+      <g transform="translate(20, 105)" font-size="12.5" font-weight="700">
+        <!-- Row 1 -->
+        <g transform="translate(0, 0)">
+          <rect width="102" height="34" rx="10" fill="url(#pill-bg)" stroke="rgba(124, 92, 255, 0.35)" stroke-width="1"/>
+          <text x="51" y="21" fill="#F8FAFC" text-anchor="middle">PyTorch</text>
+        </g>
+        <g transform="translate(114, 0)">
+          <rect width="102" height="34" rx="10" fill="url(#pill-bg)" stroke="rgba(124, 92, 255, 0.35)" stroke-width="1"/>
+          <text x="51" y="21" fill="#F8FAFC" text-anchor="middle">TensorFlow</text>
+        </g>
+        <g transform="translate(228, 0)">
+          <rect width="102" height="34" rx="10" fill="url(#pill-bg)" stroke="rgba(124, 92, 255, 0.35)" stroke-width="1"/>
+          <text x="51" y="21" fill="#F8FAFC" text-anchor="middle">Scikit-Learn</text>
+        </g>
+
+        <!-- Row 2 -->
+        <g transform="translate(0, 44)">
+          <rect width="102" height="34" rx="10" fill="url(#pill-bg)" stroke="rgba(124, 92, 255, 0.35)" stroke-width="1"/>
+          <text x="51" y="21" fill="#F8FAFC" text-anchor="middle">LangChain</text>
+        </g>
+        <g transform="translate(114, 44)">
+          <rect width="102" height="34" rx="10" fill="url(#pill-bg)" stroke="rgba(124, 92, 255, 0.35)" stroke-width="1"/>
+          <text x="51" y="21" fill="#B28DFF" text-anchor="middle">LangGraph</text>
+        </g>
+        <g transform="translate(228, 44)">
+          <rect width="102" height="34" rx="10" fill="url(#pill-bg)" stroke="rgba(124, 92, 255, 0.35)" stroke-width="1"/>
+          <text x="51" y="21" fill="#F8FAFC" text-anchor="middle">CrewAI</text>
+        </g>
+
+        <!-- Row 3 -->
+        <g transform="translate(0, 88)">
+          <rect width="102" height="34" rx="10" fill="url(#pill-bg)" stroke="rgba(124, 92, 255, 0.35)" stroke-width="1"/>
+          <text x="51" y="21" fill="#F8FAFC" text-anchor="middle">AutoGen</text>
+        </g>
+        <g transform="translate(114, 88)">
+          <rect width="102" height="34" rx="10" fill="url(#pill-bg)" stroke="rgba(124, 92, 255, 0.35)" stroke-width="1"/>
+          <text x="51" y="21" fill="#F8FAFC" text-anchor="middle">OpenAI API</text>
+        </g>
+        <g transform="translate(228, 88)">
+          <rect width="102" height="34" rx="10" fill="url(#pill-bg)" stroke="rgba(124, 92, 255, 0.35)" stroke-width="1"/>
+          <text x="51" y="21" fill="#F8FAFC" text-anchor="middle">Gemini API</text>
+        </g>
+
+        <!-- Row 4 -->
+        <g transform="translate(114, 132)">
+          <rect width="102" height="34" rx="10" fill="url(#pill-bg)" stroke="rgba(178, 141, 255, 0.5)" stroke-width="1"/>
+          <text x="51" y="21" fill="#4F8CFF" text-anchor="middle">Groq LPU</text>
+        </g>
       </g>
 
-      <!-- Row 3 -->
-      <g transform="translate(0, 88)">
-        <rect width="102" height="34" rx="10" fill="url(#pill-bg)" stroke="rgba(124, 92, 255, 0.35)" stroke-width="1"/>
-        <text x="51" y="21" fill="#F8FAFC" text-anchor="middle">AutoGen</text>
+      <!-- Bottom Highlight Metric -->
+      <g transform="translate(24, 280)">
+        <rect width="322" height="60" rx="12" fill="rgba(124, 92, 255, 0.08)" stroke="rgba(124, 92, 255, 0.3)" stroke-width="1"/>
+        <text x="16" y="24" fill="#B28DFF" font-size="11" font-weight="600">SPECIALIZATION</text>
+        <text x="16" y="44" fill="#F8FAFC" font-size="13" font-weight="700">Autonomous Agents, RAG &amp; LLM Fine-Tuning</text>
       </g>
-      <g transform="translate(114, 88)">
-        <rect width="102" height="34" rx="10" fill="url(#pill-bg)" stroke="rgba(124, 92, 255, 0.35)" stroke-width="1"/>
-        <text x="51" y="21" fill="#F8FAFC" text-anchor="middle">OpenAI API</text>
-      </g>
-      <g transform="translate(228, 88)">
-        <rect width="102" height="34" rx="10" fill="url(#pill-bg)" stroke="rgba(124, 92, 255, 0.35)" stroke-width="1"/>
-        <text x="51" y="21" fill="#F8FAFC" text-anchor="middle">Gemini API</text>
-      </g>
-
-      <!-- Row 4 -->
-      <g transform="translate(114, 132)">
-        <rect width="102" height="34" rx="10" fill="url(#pill-bg)" stroke="rgba(178, 141, 255, 0.5)" stroke-width="1"/>
-        <text x="51" y="21" fill="#4F8CFF" text-anchor="middle">Groq LPU</text>
-      </g>
-    </g>
-
-    <!-- Bottom Highlight Metric -->
-    <g transform="translate(24, 280)">
-      <rect width="322" height="60" rx="12" fill="rgba(124, 92, 255, 0.08)" stroke="rgba(124, 92, 255, 0.3)" stroke-width="1"/>
-      <text x="16" y="24" fill="#B28DFF" font-size="11" font-weight="600">SPECIALIZATION</text>
-      <text x="16" y="44" fill="#F8FAFC" font-size="13" font-weight="700">Autonomous Agents, RAG &amp; LLM Fine-Tuning</text>
     </g>
   </g>
 
   <!-- CARD 3: BACKEND & MLOPS -->
-  <g transform="translate(810, 110)" class="card-float-3" filter="url(#card-shadow)">
-    <rect width="350" height="370" rx="20" fill="url(#glass-card)" stroke="url(#border-backend)" stroke-width="1.5"/>
-    <rect x="1" y="1" width="348" height="368" rx="19" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <g transform="translate(810, 110)">
+    <g class="card-float-3" filter="url(#card-shadow)">
+      <rect width="350" height="370" rx="20" fill="url(#glass-card)" stroke="url(#border-backend)" stroke-width="1.5"/>
+      <rect x="1" y="1" width="348" height="368" rx="19" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
 
-    <!-- Category Header -->
-    <g transform="translate(24, 30)">
-      <rect x="0" y="0" width="40" height="40" rx="10" fill="rgba(178, 141, 255, 0.12)" stroke="rgba(178, 141, 255, 0.3)" stroke-width="1"/>
-      <rect x="12" y="12" width="16" height="16" rx="3" fill="none" stroke="#B28DFF" stroke-width="2"/>
-      
-      <text x="54" y="20" fill="#F8FAFC" font-size="18" font-weight="800">Backend &amp; MLOps</text>
-      <text x="54" y="36" fill="#94A3B8" font-size="11" font-weight="600">INFRASTRUCTURE &amp; SERVING</text>
-    </g>
-
-    <line x1="24" y1="90" x2="326" y2="90" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
-
-    <!-- Skill Pills Grid -->
-    <g transform="translate(20, 105)" font-size="12.5" font-weight="700">
-      <!-- Row 1 -->
-      <g transform="translate(0, 0)">
-        <rect width="94" height="34" rx="10" fill="url(#pill-bg)" stroke="rgba(178, 141, 255, 0.3)" stroke-width="1"/>
-        <text x="47" y="21" fill="#F8FAFC" text-anchor="middle">FastAPI</text>
-      </g>
-      <g transform="translate(106, 0)">
-        <rect width="94" height="34" rx="10" fill="url(#pill-bg)" stroke="rgba(178, 141, 255, 0.3)" stroke-width="1"/>
-        <text x="47" y="21" fill="#F8FAFC" text-anchor="middle">Flask</text>
-      </g>
-      <g transform="translate(212, 0)">
-        <rect width="94" height="34" rx="10" fill="url(#pill-bg)" stroke="rgba(178, 141, 255, 0.3)" stroke-width="1"/>
-        <text x="47" y="21" fill="#F8FAFC" text-anchor="middle">Docker</text>
+      <!-- Category Header -->
+      <g transform="translate(24, 30)">
+        <rect x="0" y="0" width="40" height="40" rx="10" fill="rgba(178, 141, 255, 0.12)" stroke="rgba(178, 141, 255, 0.3)" stroke-width="1"/>
+        <rect x="12" y="12" width="16" height="16" rx="3" fill="none" stroke="#B28DFF" stroke-width="2"/>
+        
+        <text x="54" y="20" fill="#F8FAFC" font-size="18" font-weight="800">Backend &amp; MLOps</text>
+        <text x="54" y="36" fill="#94A3B8" font-size="11" font-weight="600">INFRASTRUCTURE &amp; SERVING</text>
       </g>
 
-      <!-- Row 2 -->
-      <g transform="translate(0, 44)">
-        <rect width="94" height="34" rx="10" fill="url(#pill-bg)" stroke="rgba(178, 141, 255, 0.3)" stroke-width="1"/>
-        <text x="47" y="21" fill="#F8FAFC" text-anchor="middle">Linux</text>
-      </g>
-      <g transform="translate(106, 44)">
-        <rect width="94" height="34" rx="10" fill="url(#pill-bg)" stroke="rgba(178, 141, 255, 0.3)" stroke-width="1"/>
-        <text x="47" y="21" fill="#F8FAFC" text-anchor="middle">Redis</text>
-      </g>
-      <g transform="translate(212, 44)">
-        <rect width="94" height="34" rx="10" fill="url(#pill-bg)" stroke="rgba(178, 141, 255, 0.3)" stroke-width="1"/>
-        <text x="47" y="21" fill="#F8FAFC" text-anchor="middle">Postgres</text>
+      <line x1="24" y1="90" x2="326" y2="90" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+
+      <!-- Skill Pills Grid -->
+      <g transform="translate(20, 105)" font-size="12.5" font-weight="700">
+        <!-- Row 1 -->
+        <g transform="translate(0, 0)">
+          <rect width="94" height="34" rx="10" fill="url(#pill-bg)" stroke="rgba(178, 141, 255, 0.3)" stroke-width="1"/>
+          <text x="47" y="21" fill="#F8FAFC" text-anchor="middle">FastAPI</text>
+        </g>
+        <g transform="translate(106, 0)">
+          <rect width="94" height="34" rx="10" fill="url(#pill-bg)" stroke="rgba(178, 141, 255, 0.3)" stroke-width="1"/>
+          <text x="47" y="21" fill="#F8FAFC" text-anchor="middle">Flask</text>
+        </g>
+        <g transform="translate(212, 0)">
+          <rect width="94" height="34" rx="10" fill="url(#pill-bg)" stroke="rgba(178, 141, 255, 0.3)" stroke-width="1"/>
+          <text x="47" y="21" fill="#F8FAFC" text-anchor="middle">Docker</text>
+        </g>
+
+        <!-- Row 2 -->
+        <g transform="translate(0, 44)">
+          <rect width="94" height="34" rx="10" fill="url(#pill-bg)" stroke="rgba(178, 141, 255, 0.3)" stroke-width="1"/>
+          <text x="47" y="21" fill="#F8FAFC" text-anchor="middle">Linux</text>
+        </g>
+        <g transform="translate(106, 44)">
+          <rect width="94" height="34" rx="10" fill="url(#pill-bg)" stroke="rgba(178, 141, 255, 0.3)" stroke-width="1"/>
+          <text x="47" y="21" fill="#F8FAFC" text-anchor="middle">Redis</text>
+        </g>
+        <g transform="translate(212, 44)">
+          <rect width="94" height="34" rx="10" fill="url(#pill-bg)" stroke="rgba(178, 141, 255, 0.3)" stroke-width="1"/>
+          <text x="47" y="21" fill="#F8FAFC" text-anchor="middle">Postgres</text>
+        </g>
+
+        <!-- Row 3 -->
+        <g transform="translate(53, 88)">
+          <rect width="94" height="34" rx="10" fill="url(#pill-bg)" stroke="rgba(178, 141, 255, 0.3)" stroke-width="1"/>
+          <text x="47" y="21" fill="#F8FAFC" text-anchor="middle">MongoDB</text>
+        </g>
+        <g transform="translate(159, 88)">
+          <rect width="94" height="34" rx="10" fill="url(#pill-bg)" stroke="rgba(178, 141, 255, 0.3)" stroke-width="1"/>
+          <text x="47" y="21" fill="#4F8CFF" text-anchor="middle">AWS Cloud</text>
+        </g>
       </g>
 
-      <!-- Row 3 -->
-      <g transform="translate(53, 88)">
-        <rect width="94" height="34" rx="10" fill="url(#pill-bg)" stroke="rgba(178, 141, 255, 0.3)" stroke-width="1"/>
-        <text x="47" y="21" fill="#F8FAFC" text-anchor="middle">MongoDB</text>
+      <!-- Bottom Highlight Metric -->
+      <g transform="translate(24, 280)">
+        <rect width="302" height="60" rx="12" fill="rgba(178, 141, 255, 0.06)" stroke="rgba(178, 141, 255, 0.2)" stroke-width="1"/>
+        <text x="16" y="24" fill="#94A3B8" font-size="11" font-weight="600">DEPLOYMENT ARCHITECTURE</text>
+        <text x="16" y="44" fill="#F8FAFC" font-size="13" font-weight="700">Scalable Microservices &amp; Vector Databases</text>
       </g>
-      <g transform="translate(159, 88)">
-        <rect width="94" height="34" rx="10" fill="url(#pill-bg)" stroke="rgba(178, 141, 255, 0.3)" stroke-width="1"/>
-        <text x="47" y="21" fill="#4F8CFF" text-anchor="middle">AWS Cloud</text>
-      </g>
-    </g>
-
-    <!-- Bottom Highlight Metric -->
-    <g transform="translate(24, 280)">
-      <rect width="302" height="60" rx="12" fill="rgba(178, 141, 255, 0.06)" stroke="rgba(178, 141, 255, 0.2)" stroke-width="1"/>
-      <text x="16" y="24" fill="#94A3B8" font-size="11" font-weight="600">DEPLOYMENT ARCHITECTURE</text>
-      <text x="16" y="44" fill="#F8FAFC" font-size="13" font-weight="700">Scalable Microservices &amp; Vector Databases</text>
     </g>
   </g>
 </svg>

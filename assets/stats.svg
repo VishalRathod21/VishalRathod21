@@ -37,57 +37,37 @@
   </defs>
 
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&amp;family=Fira+Code:wght@500;600;700&amp;display=swap');
-    text { font-family: 'Inter', -apple-system, sans-serif; }
-    .mono { font-family: 'Fira Code', monospace; }
+    text {{ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }}
+    .mono {{ font-family: 'Fira Code', Consolas, Monaco, monospace; }}
 
-    /* Ring Progress Animation */
-    .ring-circle {
+    .ring-circle {{
       stroke-dasharray: 440;
       stroke-dashoffset: 440;
       animation: fillRing 2.5s ease-out forwards;
-    }
-    @keyframes fillRing {
-      to { stroke-dashoffset: 65; } /* ~85% fill */
-    }
+    }}
+    @keyframes fillRing {{
+      to {{ stroke-dashoffset: 65; }}
+    }}
 
-    /* Bar Slide Animation */
-    .bar-python {
-      animation: slidePy 2s ease-out forwards;
-    }
-    @keyframes slidePy {
-      from { width: 0px; }
-      to { width: 340px; }
-    }
-    .bar-cpp {
-      animation: slideCpp 2s 0.2s ease-out forwards;
-    }
-    @keyframes slideCpp {
-      from { width: 0px; }
-      to { width: 140px; }
-    }
-    .bar-sql {
-      animation: slideSql 2s 0.4s ease-out forwards;
-    }
-    @keyframes slideSql {
-      from { width: 0px; }
-      to { width: 90px; }
-    }
-    .bar-js {
-      animation: slideJs 2s 0.6s ease-out forwards;
-    }
-    @keyframes slideJs {
-      from { width: 0px; }
-      to { width: 60px; }
-    }
+    .bar-python {{ animation: slidePy 2s ease-out forwards; }}
+    @keyframes slidePy {{ from {{ width: 0px; }} to {{ width: 340px; }} }}
 
-    .pulse-rank {
+    .bar-cpp {{ animation: slideCpp 2s 0.2s ease-out forwards; }}
+    @keyframes slideCpp {{ from {{ width: 0px; }} to {{ width: 140px; }} }}
+
+    .bar-sql {{ animation: slideSql 2s 0.4s ease-out forwards; }}
+    @keyframes slideSql {{ from {{ width: 0px; }} to {{ width: 90px; }} }}
+
+    .bar-js {{ animation: slideJs 2s 0.6s ease-out forwards; }}
+    @keyframes slideJs {{ from {{ width: 0px; }} to {{ width: 60px; }} }}
+
+    .pulse-rank {{
       animation: rankPulse 2s infinite alternate;
-    }
-    @keyframes rankPulse {
-      0% { transform: scale(1); filter: brightness(1); }
-      100% { transform: scale(1.05); filter: brightness(1.2); }
-    }
+    }}
+    @keyframes rankPulse {{
+      0% {{ filter: brightness(1); }}
+      100% {{ filter: brightness(1.25); }}
+    }}
   </style>
 
   <!-- Container -->
@@ -149,14 +129,16 @@
     </g>
 
     <!-- Rank & Commitment Status Banner -->
-    <g transform="translate(24, 275)" class="pulse-rank">
-      <rect width="492" height="68" rx="14" fill="rgba(79, 140, 255, 0.08)" stroke="rgba(79, 140, 255, 0.35)" stroke-width="1.5"/>
-      <g transform="translate(20, 34)">
-        <circle cx="0" cy="0" r="18" fill="url(#blue-grad)"/>
-        <text x="0" y="6" fill="#F8FAFC" font-size="14" font-weight="900" text-anchor="middle">S+</text>
+    <g transform="translate(24, 275)">
+      <g class="pulse-rank">
+        <rect width="492" height="68" rx="14" fill="rgba(79, 140, 255, 0.08)" stroke="rgba(79, 140, 255, 0.35)" stroke-width="1.5"/>
+        <g transform="translate(20, 34)">
+          <circle cx="0" cy="0" r="18" fill="url(#blue-grad)"/>
+          <text x="0" y="5" fill="#F8FAFC" font-size="14" font-weight="900" text-anchor="middle">S+</text>
+        </g>
+        <text x="54" y="28" fill="#F8FAFC" font-size="15" font-weight="800">GLOBAL ARCHITECT RANK: S+ TIER</text>
+        <text x="54" y="46" fill="#4F8CFF" font-size="12" font-weight="600">Top 1% Engineering Consistency &amp; System Quality</text>
       </g>
-      <text x="54" y="28" fill="#F8FAFC" font-size="15" font-weight="800">GLOBAL ARCHITECT RANK: S+ TIER</text>
-      <text x="54" y="46" fill="#4F8CFF" font-size="12" font-weight="600">Top 1% Engineering Consistency &amp; System Quality</text>
     </g>
   </g>
 
