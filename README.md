@@ -1,173 +1,178 @@
 <div align="center">
 
-<!-- HERO BANNER (DARK / LIGHT PREFERENCE) -->
+<!-- HERO BANNER (LIGHT/DARK THEME SWITCHING) -->
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg?v=2">
-  <source media="(prefers-color-scheme: light)" srcset="assets/banner-light.svg?v=2">
-  <img src="assets/banner-dark.svg?v=2" alt="Vishal Rathod - AI Operating System Banner" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg?v=1">
+  <source media="(prefers-color-scheme: light)" srcset="assets/banner-light.svg?v=1">
+  <img alt="Vishal Rathod - AI Engineer Research Facility Banner" src="assets/banner-dark.svg?v=1" width="100%">
 </picture>
 
-<br><br>
+<br/><br/>
 
-<!-- ANIMATED LANYARD ID BADGE -->
-<img src="assets/lanyard.svg?v=2" alt="Vishal Rathod Security ID Badge" width="280">
-
-<br>
-
-<!-- ANIMATED LOADING BAR -->
-<img src="assets/loading.svg?v=2" alt="AI Core Loading Status" width="100%">
-
-<br><br>
-
-<!-- QUICK SOCIAL BADGES -->
-<a href="https://linkedin.com/in/vishalrathod09">
-  <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
-</a>
-<a href="mailto:vr3204917@gmail.com">
-  <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail">
-</a>
-<a href="https://github.com/VishalRathod21">
-  <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
-</a>
-<a href="https://github.com/VishalRathod21">
-  <img src="https://img.shields.io/badge/Portfolio-00E5FF?style=for-the-badge&logo=react&logoColor=black" alt="Portfolio">
-</a>
-<a href="#">
-  <img src="https://img.shields.io/badge/Resume-FF3CAC?style=for-the-badge&logo=adobeacrobatreader&logoColor=white" alt="Resume">
-</a>
+<!-- AMBIENT SUBTITLE BADGES -->
+<p align="center">
+  <img src="https://img.shields.io/badge/LOCATION-INDIA-4F8CFF?style=for-the-badge&logo=googlemaps&logoColor=white&labelColor=0A1224" alt="Location" />
+  <img src="https://img.shields.io/badge/ROLE-AI%20ENGINEER-7C5CFF?style=for-the-badge&logo=openai&logoColor=white&labelColor=0A1224" alt="Role" />
+  <img src="https://img.shields.io/badge/FOCUS-GENERATIVE%20%26%20AGENTIC%20AI-B28DFF?style=for-the-badge&logo=pytorch&logoColor=white&labelColor=0A1224" alt="Focus" />
+  <img src="https://img.shields.io/badge/STATUS-OPEN%20FOR%20COLLABORATION-27C93F?style=for-the-badge&logo=githubactions&logoColor=white&labelColor=0A1224" alt="Status" />
+</p>
 
 </div>
 
-<br><hr><br>
+---
 
-<!-- ========================================================= -->
-<!-- 🚀 FEATURED AI PROJECTS SHOWCASE                           -->
-<!-- ========================================================= -->
+### 🧬 Executive Overview & AI Mission
 
-## 🤖 Featured AI Projects
+> *"Building intelligent, production-grade AI systems that solve real-world problems and positively impact millions of people."*
+
+I am an **AI Engineer** specializing in **Deep Learning**, **Large Language Models (LLMs)**, **Agentic AI Systems**, and **MLOps infrastructure**. My work bridges the gap between frontier research in neural architectures and robust, high-performance software engineering.
+
+---
+
+### ⚡ Core Technical Stack
 
 <div align="center">
-
-| Project | Tech Stack | Key Innovations & Architecture |
-|---|---|---|
-| 🧠 **[InterviewAI](https://github.com/VishalRathod21)**<br>*(Multi-Agent Platform)* | `LangGraph` · `FastAPI`<br>`Docker` · `OpenAI` | 🔹 Multi-agent automated interview platform<br>🔹 Resume Analysis &amp; DSA Code Assessment<br>🔹 Technical, HR &amp; Comprehensive Report Generator |
-| 🎙️ **[AI Voice Assistant](https://github.com/VishalRathod21)**<br>*(Real-time Streaming)* | `FastAPI` · `PyTorch`<br>`Python` · `WebSockets` | 🔹 End-to-end low latency voice pipeline<br>🔹 Realtime Speech-to-Text &amp; LLM Streaming<br>🔹 Natural Realtime Text-to-Speech synthesis |
-| 📚 **[RAG Assistant](https://github.com/VishalRathod21)**<br>*(Semantic Search Engine)* | `LangChain` · `FAISS`<br>`Embeddings` · `Python` | 🔹 Production Retrieval-Augmented Generation<br>🔹 High-density vector similarity search with FAISS<br>🔹 Contextual chunking &amp; source attribution |
-| 🚗 **[Auto Insurance Prediction](https://github.com/VishalRathod21)**<br>*(End-to-End MLOps)* | `XGBoost` · `MongoDB`<br>`AWS` · `Docker` | 🔹 Scalable risk prediction pipeline<br>🔹 Cloud backend integration on AWS &amp; MongoDB<br>🔹 Model tracking and production containerization |
-
+  <img src="assets/skills.svg?v=1" alt="Vishal Rathod Tech Stack & Capabilities Grid" width="100%" />
 </div>
 
-<br><hr><br>
-
-<!-- ========================================================= -->
-<!-- ⚡ TECTONIC SKILLS & MATRIX                               -->
-<!-- ========================================================= -->
-
-## ⚡ Tech Stack & Capabilities
-
-<div align="center">
-  <img src="assets/skills.svg?v=2" alt="Vishal Rathod Tech Matrix" width="100%">
-</div>
-
-<br>
+<br/>
 
 <details>
-  <summary><b>🔍 View Granular Skill Breakdown</b></summary>
-  <br>
+<summary><b>🔍 Comprehensive Technical Index</b></summary>
 
-  - **AI & Machine Learning**: `PyTorch`, `TensorFlow`, `Scikit-Learn`, `XGBoost`, `OpenCV`, `Transformers`, `HuggingFace`, `Pandas`, `NumPy`
-  - **Generative AI & Agentic Frameworks**: `LangChain`, `LangGraph`, `CrewAI`, `OpenAI API`, `Google Gemini`, `Groq Llama-3`
-  - **Backend & Cloud Architecture**: `FastAPI`, `Flask`, `Docker`, `Linux`, `AWS (EC2, S3)`, `MongoDB`, `PostgreSQL`, `Redis`
-  - **Languages & Developer Tools**: `Python`, `C++`, `SQL`, `JavaScript`, `Git`, `GitHub Actions`, `MLflow`, `Jupyter`, `VS Code`
+<br/>
+
+| Category | Technologies & Tools |
+| :--- | :--- |
+| **Primary Languages** | Python, C++, SQL, JavaScript / TypeScript, Bash |
+| **AI Frameworks & Libraries** | PyTorch, TensorFlow, Scikit-Learn, NumPy, Pandas, OpenCV, Hugging Face Transformers |
+| **LLM & Agentic Frameworks** | LangChain, LangGraph, CrewAI, AutoGen, LlamaIndex, OpenAI API, Gemini API, Groq LPU |
+| **Vector DBs & Embeddings** | ChromaDB, Qdrant, FAISS, Pinecone |
+| **Backend & Microservices** | FastAPI, Flask, REST APIs, WebSockets, gRPC |
+| **MLOps & Infrastructure** | Docker, Linux, Redis, PostgreSQL, MongoDB, AWS (EC2, S3), Git, CI/CD |
+
 </details>
 
-<br><hr><br>
+---
 
-<!-- ========================================================= -->
-<!-- 📈 EVOLUTIONARY TIMELINE                                  -->
-<!-- ========================================================= -->
-
-## 📈 Evolutionary Timeline
+### 📊 AI Research Telemetry & GitHub Dashboard
 
 <div align="center">
-  <img src="assets/timeline.svg?v=2" alt="Career Evolution Timeline" width="100%">
+  <img src="assets/stats.svg?v=1" alt="Vishal Rathod AI Telemetry & Stats Dashboard" width="100%" />
 </div>
 
-<br><hr><br>
+---
 
-<!-- ========================================================= -->
-<!-- 📊 SYSTEM ANALYTICS & GITHUB STATS                       -->
-<!-- ========================================================= -->
+### 🛸 Featured AI Projects
 
-## 📊 System Analytics & Contribution Activity
+<table width="100%">
+  <tr>
+    <td width="50%" valign="top">
+      <h3>🤖 01. InterviewAI</h3>
+      <p><b>Multi-Agent AI Interview &amp; Evaluation Platform</b></p>
+      <p>An autonomous agentic platform that conducts real-time technical interviews, evaluates code quality, and generates comprehensive candidate assessment reports using graph-based agent orchestration.</p>
+      <p><b>Tech Stack:</b> <code>LangGraph</code> <code>CrewAI</code> <code>FastAPI</code> <code>PyTorch</code> <code>OpenAI API</code></p>
+      <p>
+        <a href="https://github.com/VishalRathod21"><img src="https://img.shields.io/badge/CODE-GitHub-4F8CFF?style=flat-square&logo=github" /></a>
+        <a href="#"><img src="https://img.shields.io/badge/DEMO-Live%20System-7C5CFF?style=flat-square&logo=vercel" /></a>
+      </p>
+    </td>
+    <td width="50%" valign="top">
+      <h3>🎙️ 02. AI Voice Assistant</h3>
+      <p><b>Real-Time Conversational AI Voice Agent</b></p>
+      <p>Low-latency end-to-end voice assistant integrating speech-to-text, streaming LLM inference, and neural text-to-speech synthesis for seamless natural conversation.</p>
+      <p><b>Tech Stack:</b> <code>Whisper</code> <code>LLM Streaming</code> <code>TTS</code> <code>Python</code> <code>WebSockets</code></p>
+      <p>
+        <a href="https://github.com/VishalRathod21"><img src="https://img.shields.io/badge/CODE-GitHub-4F8CFF?style=flat-square&logo=github" /></a>
+        <a href="#"><img src="https://img.shields.io/badge/DEMO-Live%20System-7C5CFF?style=flat-square&logo=vercel" /></a>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>📚 03. Enterprise RAG Chatbot</h3>
+      <p><b>High-Accuracy Document Intelligence Pipeline</b></p>
+      <p>Production-grade Retrieval-Augmented Generation (RAG) system utilizing hybrid vector search, re-ranking models, and contextual compression for precise enterprise document Q&amp;A.</p>
+      <p><b>Tech Stack:</b> <code>LangChain</code> <code>ChromaDB</code> <code>Llama-3</code> <code>FastAPI</code> <code>Docker</code></p>
+      <p>
+        <a href="https://github.com/VishalRathod21"><img src="https://img.shields.io/badge/CODE-GitHub-4F8CFF?style=flat-square&logo=github" /></a>
+        <a href="#"><img src="https://img.shields.io/badge/DEMO-Live%20System-7C5CFF?style=flat-square&logo=vercel" /></a>
+      </p>
+    </td>
+    <td width="50%" valign="top">
+      <h3>🎬 04. Movie Recommendation System</h3>
+      <p><b>Neural Collaborative Filtering Engine</b></p>
+      <p>Hybrid recommendation engine combining content-based embeddings and matrix factorization neural networks to deliver real-time personalized movie suggestions.</p>
+      <p><b>Tech Stack:</b> <code>TensorFlow</code> <code>Scikit-Learn</code> <code>Flask</code> <code>Pandas</code></p>
+      <p>
+        <a href="https://github.com/VishalRathod21"><img src="https://img.shields.io/badge/CODE-GitHub-4F8CFF?style=flat-square&logo=github" /></a>
+        <a href="#"><img src="https://img.shields.io/badge/DEMO-Live%20System-7C5CFF?style=flat-square&logo=vercel" /></a>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>🏠 05. House Price Prediction</h3>
+      <p><b>End-to-End MLOps Regression Pipeline</b></p>
+      <p>Predictive real estate analytics pipeline featuring automated feature engineering, hyperparameter tuning, model versioning, and containerized cloud inference API.</p>
+      <p><b>Tech Stack:</b> <code>XGBoost</code> <code>Scikit-Learn</code> <code>Docker</code> <code>AWS EC2</code></p>
+      <p>
+        <a href="https://github.com/VishalRathod21"><img src="https://img.shields.io/badge/CODE-GitHub-4F8CFF?style=flat-square&logo=github" /></a>
+        <a href="#"><img src="https://img.shields.io/badge/DEMO-Live%20System-7C5CFF?style=flat-square&logo=vercel" /></a>
+      </p>
+    </td>
+    <td width="50%" valign="top">
+      <h3>🚗 06. Auto Insurance Prediction</h3>
+      <p><b>Risk Assessment &amp; Claims Analytics Model</b></p>
+      <p>Machine learning engine designed to assess policyholder risk factors, predict insurance claim likelihoods, and optimize premium pricing strategies.</p>
+      <p><b>Tech Stack:</b> <code>LightGBM</code> <code>Python</code> <code>PostgreSQL</code> <code>Streamlit</code></p>
+      <p>
+        <a href="https://github.com/VishalRathod21"><img src="https://img.shields.io/badge/CODE-GitHub-4F8CFF?style=flat-square&logo=github" /></a>
+        <a href="#"><img src="https://img.shields.io/badge/DEMO-Live%20System-7C5CFF?style=flat-square&logo=vercel" /></a>
+      </p>
+    </td>
+  </tr>
+</table>
+
+---
+
+### ⏳ Career & AI Evolution Trajectory
 
 <div align="center">
-  <img src="assets/stats.svg?v=2" alt="GitHub Analytics Dashboard" width="100%">
+  <img src="assets/timeline.svg?v=1" alt="Vishal Rathod Career Evolution Timeline" width="100%" />
 </div>
 
-<br>
+---
+
+### 🐍 Neural Contribution Grid
 
 <div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=VishalRathod21&theme=react-dark&hide_border=true&area=true" width="100%" alt="Contribution Graph">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/VishalRathod21/VishalRathod21/output/github-contribution-grid-snake-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/VishalRathod21/VishalRathod21/output/github-contribution-grid-snake.svg">
+    <img alt="Contribution Snake" src="https://raw.githubusercontent.com/VishalRathod21/VishalRathod21/output/github-contribution-grid-snake-dark.svg" width="100%">
+  </picture>
 </div>
 
-<br><hr><br>
+---
 
-<!-- ========================================================= -->
-<!-- 🐍 CONTRIBUTION SNAKE MATRIX                               -->
-<!-- ========================================================= -->
-
-## 🐍 Neural Contribution Snake
+### 📬 Connect & Collaborate
 
 <div align="center">
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/VishalRathod21/VishalRathod21/output/github-snake-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/VishalRathod21/VishalRathod21/output/github-snake-light.svg">
-  <img src="https://raw.githubusercontent.com/VishalRathod21/VishalRathod21/output/github-snake.svg" alt="Contribution Snake" width="100%">
-</picture>
-
+  <a href="https://github.com/VishalRathod21">
+    <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+  </a>
+  <a href="mailto:vishalrathod234509@gmail.com">
+    <img src="https://img.shields.io/badge/Email-0078D4?style=for-the-badge&logo=microsoftoutlook&logoColor=white" alt="Email" />
+  </a>
+  <a href="https://linkedin.com">
+    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+  </a>
 </div>
 
-<br><hr><br>
+<br/>
 
-<!-- ========================================================= -->
-<!-- 🎓 ACADEMIC BACKGROUND & EDUCATION                        -->
-<!-- ========================================================= -->
-
-## 🎓 Academic Background
-
-```
- 🏛️ School of Data Science & Forecasting (SDSF), DAVV, Indore
- 📜 Integrated M.Tech in Artificial Intelligence & Data Science (2021 – Present)
- 🔬 Specialization: Deep Learning, Natural Language Processing, Agentic Systems, MLOps
-```
-
-<br><hr><br>
-
-<!-- ========================================================= -->
-<!-- 🤝 CONNECT & COLLABORATE                                   -->
-<!-- ========================================================= -->
-
-## 📬 Terminal Connect
-
-```bash
-# Send a transmission or connect on socials:
-$ email send --to "vr3204917@gmail.com" --subject "AI Collaboration"
-$ open https://linkedin.com/in/vishalrathod09
-$ git clone https://github.com/VishalRathod21
-```
-
-<br>
-
+<!-- TERMINAL FOOTER -->
 <div align="center">
-
-<!-- FOOTER TERMINAL -->
-<img src="assets/footer.svg?v=2" alt="Perpetual Execution Loop Footer" width="100%">
-
-<br><br>
-
-<!-- PROFILE VIEWS -->
-<img src="https://komarev.com/ghpvc/?username=VishalRathod21&label=AI_OS_VISITORS&color=00e5ff&style=for-the-badge" alt="Profile Views Counter">
-
+  <img src="assets/footer.svg?v=1" alt="Vishal Rathod Terminal Footer" width="100%" />
 </div>

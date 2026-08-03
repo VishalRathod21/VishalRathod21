@@ -1,32 +1,36 @@
-name: Generate Snake Contribution Grid
+name: Generate Contribution Snake
 
 on:
   schedule:
+    # Run automatically every 24 hours
     - cron: "0 0 * * *"
   workflow_dispatch:
   push:
     branches:
       - main
+      - master
 
 jobs:
   generate:
     permissions:
       contents: write
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 10
 
     steps:
-      - name: Generate github-contribution-grid-snake.svg
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Generate Contribution Snake SVG
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            dist/github-snake.svg
-            dist/github-snake-dark.svg?color_snake=#00E5FF&color_dots=#0F172A,#1E293B,#334155,#475569,#8B5CF6
-            dist/github-snake-light.svg?color_snake=#8B5CF6&color_dots=#F8FAFC,#E2E8F0,#CBD5E1,#94A3B8,#00E5FF
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?color_snake=#4F8CFF&color_dots=#0A1224,#16233B,#4F8CFF,#7C5CFF,#B28DFF
 
-      - name: Push github-contribution-grid-snake.svg to the output branch
-        uses: crazy-max/ghaction-github-pages@v3.1.0
+      - name: Push Snake SVG to Output Branch
+        uses: crazy-max/ghaction-github-pages@v4
         with:
           target_branch: output
           build_dir: dist
