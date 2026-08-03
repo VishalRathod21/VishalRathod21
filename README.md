@@ -1,10 +1,10 @@
 <div align="center">
 
-<!-- HERO BANNER (LIGHT/DARK THEME SWITCHING WITH EMBEDDED BASE64 PROFILE IMAGE) -->
+<!-- HERO BANNER (LIGHT/DARK THEME SWITCHING WITH VECTOR AI AVATAR) -->
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg?v=2">
-  <source media="(prefers-color-scheme: light)" srcset="assets/banner-light.svg?v=2">
-  <img alt="Vishal Rathod - AI Engineer Research Facility Banner" src="assets/banner-dark.svg?v=2" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg?v=3">
+  <source media="(prefers-color-scheme: light)" srcset="assets/banner-light.svg?v=3">
+  <img alt="Vishal Rathod - AI Engineer Research Facility Banner" src="assets/banner-dark.svg?v=3" width="100%">
 </picture>
 
 <br/><br/>
@@ -25,8 +25,8 @@
 
 <table width="100%" border="0">
   <tr>
-    <td width="220" align="center" valign="middle">
-      <img src="assets/profile.png" width="180" height="195" style="border-radius: 20px; border: 2px solid rgba(79, 140, 255, 0.4);" alt="Vishal Rathod Profile Picture" />
+    <td width="260" align="center" valign="middle">
+      <img src="assets/profile.png" width="220" style="border-radius: 22px; border: 2.5px solid #7C5CFF; box-shadow: 0 0 25px rgba(124, 92, 255, 0.4);" alt="Vishal Rathod Profile Picture" />
     </td>
     <td valign="middle">
       <blockquote><em>"Building intelligent, production-grade AI systems that solve real-world problems and positively impact millions of people."</em></blockquote>
