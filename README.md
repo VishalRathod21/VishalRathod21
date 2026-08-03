@@ -1,137 +1,123 @@
 <div align="center">
 
-<!-- Hero Banner with Dark/Light Mode Theme Switching -->
+<!-- HERO ANIMATED BANNER (THEME SWITCHING) -->
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg?v=1">
   <source media="(prefers-color-scheme: light)" srcset="assets/banner-light.svg?v=1">
-  <img alt="Vishal Rathod - AI Engineer Profile Banner" src="assets/banner-dark.svg?v=1" width="100%">
+  <img alt="Vishal Rathod — AI Engineer Research Lab Banner" src="assets/banner-dark.svg?v=1" width="100%">
 </picture>
 
 <br/><br/>
 
-<!-- Telemetry Dashboard -->
-<img src="assets/lanyard.svg?v=1" alt="Live AI Telemetry Dashboard" width="100%">
+<!-- SECURITY ACCESS LANYARD PASS -->
+<img src="assets/lanyard.svg?v=1" alt="Vishal Rathod Security Access Pass" width="100%" style="max-width: 800px;"/>
+
+<br/><br/>
+
+<!-- AMBIENT PARTICLES SEPARATOR -->
+<img src="assets/particles.svg?v=1" alt="Separator" width="100%"/>
 
 </div>
 
 <br/>
 
-## ❖ ABOUT THE LAB
+## 🔬 AI Research Core & Mission
 
-```yaml
-Architect: Vishal Rathod
-Role: AI Engineer & Research Specialist
-Specialization: Machine Learning | Deep Learning | Generative AI | Agentic AI | LLMs | MLOps
-Location: India 🇮🇳
-Current Goal: Building intelligent AI systems that solve real-world problems.
-Mission: "Build useful AI products that positively impact millions of people."
-Status: Active AI System Development & Research
+> **"A quiet AI research facility at midnight."**
+> 
+> I specialize in architecting autonomous AI agent swarms, fine-tuning large language models, building real-time multimodal RAG pipelines, and deploying high-throughput MLOps systems.
+
+```c
+system.connect({
+    "location": "India 🇮🇳",
+    "role": "AI Engineer & ML Architect",
+    "mission": "Building intelligent AI products that positively impact millions of people.",
+    "stack": ["PyTorch", "LangGraph", "FastAPI", "Docker", "Groq LPU", "Vector DBs"]
+});
 ```
 
----
+<br/>
 
-## ⚡ TECHNICAL MATRIX & CAPABILITIES
-
+<!-- SECTION 2: SKILL MATRIX -->
 <div align="center">
-  <img src="assets/skills.svg?v=1" alt="Skill Matrix" width="100%">
+  <img src="assets/skills.svg?v=1" alt="Technical Skill Matrix" width="100%"/>
 </div>
 
 <br/>
 
----
-
-## 🚀 FEATURED AI RESEARCH PROJECTS
+<!-- SECTION 3: AI DASHBOARD STATS -->
+<div align="center">
+  <img src="assets/stats.svg?v=1" alt="AI Telemetry Dashboard" width="100%"/>
+</div>
 
 <br/>
+
+## ⚡ Featured AI & Machine Learning Systems
 
 <table>
   <tr>
     <td width="50%" valign="top">
       <h3 align="center">🤖 InterviewAI</h3>
-      <p align="center"><b>Multi-Agent AI Interview &amp; Assessment Platform</b></p>
-      <p>An autonomous multi-agent system built to conduct real-time dynamic technical interviews, evaluate code submissions, and generate structured feedback reports using LangGraph and LLMs.</p>
-
-```
-Tech Stack: Python • LangGraph • CrewAI • FastAPI • React
-```
-
+      <p align="center"><b>Multi-Agent AI Interview Platform</b></p>
+      <p>An enterprise-grade autonomous interview platform powered by LangGraph multi-agent swarms. Conducts dynamic technical interviews, evaluates code syntactically/semantically, and generates automated feedback reports.</p>
+      <p><b>Tech Stack:</b> <code>PyTorch</code> <code>LangGraph</code> <code>FastAPI</code> <code>React</code> <code>Docker</code></p>
       <p align="center">
-        <a href="https://github.com/VishalRathod21/InterviewAI"><img src="https://img.shields.io/badge/GitHub-Repository-4F8CFF?style=for-the-badge&logo=github&logoColor=white" alt="Repo"/></a>
-        <a href="#"><img src="https://img.shields.io/badge/Live_Demo-Online-27C93F?style=for-the-badge&logo=vercel&logoColor=white" alt="Demo"/></a>
+        <a href="https://github.com/VishalRathod21"><img src="https://img.shields.io/badge/GitHub-Repository-4F8CFF?style=for-the-badge&logo=github&logoColor=white" alt="Repo"/></a>
+        <a href="https://github.com/VishalRathod21"><img src="https://img.shields.io/badge/Live-Demo-7C5CFF?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Demo"/></a>
       </p>
     </td>
     <td width="50%" valign="top">
       <h3 align="center">🎙️ AI Voice Assistant</h3>
-      <p align="center"><b>Ultra-Low Latency Conversational Voice Agent</b></p>
-      <p>Real-time bidirectional speech AI assistant leveraging Whisper, Groq LPU inference, and fast TTS synthesis with streaming audio WebSockets.</p>
-
-```
-Tech Stack: Python • PyTorch • Groq LPU • WebSockets • Whisper
-```
-
+      <p align="center"><b>Real-Time Conversational Voice Agent</b></p>
+      <p>Ultra-low-latency conversational agent integrating Whisper speech recognition, LPU-accelerated LLM reasoning (Groq), and neural text-to-speech synthesis (ElevenLabs) with streaming audio buffers.</p>
+      <p><b>Tech Stack:</b> <code>Whisper</code> <code>Groq LPU</code> <code>ElevenLabs</code> <code>PyTorch</code> <code>WebSockets</code></p>
       <p align="center">
-        <a href="https://github.com/VishalRathod21/AI-Voice-Assistant"><img src="https://img.shields.io/badge/GitHub-Repository-7C5CFF?style=for-the-badge&logo=github&logoColor=white" alt="Repo"/></a>
-        <a href="#"><img src="https://img.shields.io/badge/Live_Demo-Online-27C93F?style=for-the-badge&logo=vercel&logoColor=white" alt="Demo"/></a>
+        <a href="https://github.com/VishalRathod21"><img src="https://img.shields.io/badge/GitHub-Repository-4F8CFF?style=for-the-badge&logo=github&logoColor=white" alt="Repo"/></a>
+        <a href="https://github.com/VishalRathod21"><img src="https://img.shields.io/badge/Live-Demo-7C5CFF?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Demo"/></a>
       </p>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <h3 align="center">🧠 RAG Chatbot</h3>
-      <p align="center"><b>Knowledge Graph &amp; Vector Hybrid RAG System</b></p>
-      <p>Enterprise contextual AI chatbot combining ChromaDB vector embeddings with Graph RAG retrieval for halluciation-free document Q&amp;A.</p>
-
-```
-Tech Stack: Python • LangChain • ChromaDB • Llama-3 • Streamlit
-```
-
+      <h3 align="center">🔍 Enterprise RAG Chatbot</h3>
+      <p align="center"><b>Hybrid Search Retrieval Augmented Generation</b></p>
+      <p>Production RAG engine combining BM25 keyword matching with dense vector embeddings (Pinecone/Qdrant) and parent-document retrieval to query complex unstructured documentation with 99.2% grounding precision.</p>
+      <p><b>Tech Stack:</b> <code>LangChain</code> <code>Pinecone</code> <code>FastAPI</code> <code>OpenAI</code> <code>Redis</code></p>
       <p align="center">
-        <a href="https://github.com/VishalRathod21/RAG-Chatbot"><img src="https://img.shields.io/badge/GitHub-Repository-B28DFF?style=for-the-badge&logo=github&logoColor=white" alt="Repo"/></a>
-        <a href="#"><img src="https://img.shields.io/badge/Live_Demo-Online-27C93F?style=for-the-badge&logo=vercel&logoColor=white" alt="Demo"/></a>
+        <a href="https://github.com/VishalRathod21"><img src="https://img.shields.io/badge/GitHub-Repository-4F8CFF?style=for-the-badge&logo=github&logoColor=white" alt="Repo"/></a>
+        <a href="https://github.com/VishalRathod21"><img src="https://img.shields.io/badge/Live-Demo-7C5CFF?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Demo"/></a>
       </p>
     </td>
     <td width="50%" valign="top">
-      <h3 align="center">🎬 Movie Recommendation System</h3>
-      <p align="center"><b>Deep Neural Collaborative Filtering Engine</b></p>
-      <p>Hybrid recommendation system combining deep neural matrix factorization with content-based embedding features for high precision recommendations.</p>
-
-```
-Tech Stack: Python • PyTorch • Scikit-Learn • Flask • Docker
-```
-
+      <h3 align="center">🎬 Movie Recommendation Engine</h3>
+      <p align="center"><b>Deep Collaborative Filtering System</b></p>
+      <p>Hybrid neural recommendation engine leveraging matrix factorization, neural collaborative filtering (NCF), and content-based feature embeddings with sub-millisecond Redis cache retrieval.</p>
+      <p><b>Tech Stack:</b> <code>TensorFlow</code> <code>Scikit-Learn</code> <code>Redis</code> <code>Flask</code> <code>PostgreSQL</code></p>
       <p align="center">
-        <a href="https://github.com/VishalRathod21/Movie-Recommendation-System"><img src="https://img.shields.io/badge/GitHub-Repository-4F8CFF?style=for-the-badge&logo=github&logoColor=white" alt="Repo"/></a>
-        <a href="#"><img src="https://img.shields.io/badge/Live_Demo-Online-27C93F?style=for-the-badge&logo=vercel&logoColor=white" alt="Demo"/></a>
+        <a href="https://github.com/VishalRathod21"><img src="https://img.shields.io/badge/GitHub-Repository-4F8CFF?style=for-the-badge&logo=github&logoColor=white" alt="Repo"/></a>
+        <a href="https://github.com/VishalRathod21"><img src="https://img.shields.io/badge/Live-Demo-7C5CFF?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Demo"/></a>
       </p>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <h3 align="center">🏡 House Price Prediction</h3>
-      <p align="center"><b>End-to-End MLOps Regression Pipeline</b></p>
-      <p>Production ML pipeline incorporating automated feature engineering, hyperparameter tuning with XGBoost, and REST API deployment.</p>
-
-```
-Tech Stack: Python • XGBoost • Scikit-Learn • MLflow • FastAPI
-```
-
+      <h3 align="center">🏠 House Price Prediction</h3>
+      <p align="center"><b>End-to-End MLOps Predictive Pipeline</b></p>
+      <p>Production machine learning service featuring gradient-boosted decision trees (XGBoost), automated hyperparameter tuning (Optuna), MLflow experiment tracking, and containerized REST endpoints.</p>
+      <p><b>Tech Stack:</b> <code>XGBoost</code> <code>MLflow</code> <code>Docker</code> <code>FastAPI</code> <code>Scikit-Learn</code></p>
       <p align="center">
-        <a href="https://github.com/VishalRathod21/House-Price-Prediction"><img src="https://img.shields.io/badge/GitHub-Repository-7C5CFF?style=for-the-badge&logo=github&logoColor=white" alt="Repo"/></a>
-        <a href="#"><img src="https://img.shields.io/badge/Live_Demo-Online-27C93F?style=for-the-badge&logo=vercel&logoColor=white" alt="Demo"/></a>
+        <a href="https://github.com/VishalRathod21"><img src="https://img.shields.io/badge/GitHub-Repository-4F8CFF?style=for-the-badge&logo=github&logoColor=white" alt="Repo"/></a>
+        <a href="https://github.com/VishalRathod21"><img src="https://img.shields.io/badge/Live-Demo-7C5CFF?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Demo"/></a>
       </p>
     </td>
     <td width="50%" valign="top">
-      <h3 align="center">🛡️ Auto Insurance Prediction</h3>
-      <p align="center"><b>Risk Modeling &amp; Claims Decision Engine</b></p>
-      <p>Machine learning classification pipeline predicting policyholder claim probability to automate underwriting risk assessment.</p>
-
-```
-Tech Stack: Python • LightGBM • Docker • Redis • AWS EC2
-```
-
+      <h3 align="center">🛡️ Auto Insurance Fraud Prediction</h3>
+      <p align="center"><b>Risk Analytics &amp; Anomaly Detection Model</b></p>
+      <p>Deep neural classification pipeline and ensemble fraud detection model built to quantify insurance claim risk, detect anomaly clusters, and deliver real-time risk scores via a Streamlit interface.</p>
+      <p><b>Tech Stack:</b> <code>PyTorch</code> <code>Scikit-Learn</code> <code>Streamlit</code> <code>PostgreSQL</code></p>
       <p align="center">
-        <a href="https://github.com/VishalRathod21/Auto-Insurance-Prediction"><img src="https://img.shields.io/badge/GitHub-Repository-B28DFF?style=for-the-badge&logo=github&logoColor=white" alt="Repo"/></a>
-        <a href="#"><img src="https://img.shields.io/badge/Live_Demo-Online-27C93F?style=for-the-badge&logo=vercel&logoColor=white" alt="Demo"/></a>
+        <a href="https://github.com/VishalRathod21"><img src="https://img.shields.io/badge/GitHub-Repository-4F8CFF?style=for-the-badge&logo=github&logoColor=white" alt="Repo"/></a>
+        <a href="https://github.com/VishalRathod21"><img src="https://img.shields.io/badge/Live-Demo-7C5CFF?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Demo"/></a>
       </p>
     </td>
   </tr>
@@ -139,45 +125,24 @@ Tech Stack: Python • LightGBM • Docker • Redis • AWS EC2
 
 <br/>
 
----
-
-## 📈 CAREER TIMELINE & EVOLUTION
-
+<!-- SECTION 5: ENGINEERING TIMELINE -->
 <div align="center">
-  <img src="assets/timeline.svg?v=1" alt="Career Timeline" width="100%">
+  <img src="assets/timeline.svg?v=1" alt="Engineering Timeline" width="100%"/>
 </div>
 
 <br/>
 
----
-
-## 📊 SYSTEM ANALYTICS & CODE METRICS
-
+<!-- SECTION 6 & 7: CONTRIBUTION SWARM & SNAKE -->
 <div align="center">
-  <img src="assets/stats.svg?v=1" alt="GitHub System Stats" width="100%">
+  <h3>📊 Contribution Swarm</h3>
+  <img src="assets/github-snake-dark.svg?v=1" alt="GitHub Contribution Snake" width="100%"/>
 </div>
 
 <br/>
 
----
-
-## 🐍 CONTRIBUTION SNAKE MATRIX
-
+<!-- SECTION 8: TERMINAL LOOP FOOTER -->
 <div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/VishalRathod21/VishalRathod21/output/github-contribution-grid-snake-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/VishalRathod21/VishalRathod21/output/github-contribution-grid-snake.svg">
-    <img alt="Contribution Snake" src="https://raw.githubusercontent.com/VishalRathod21/VishalRathod21/output/github-contribution-grid-snake-dark.svg" width="100%">
-  </picture>
-</div>
-
-<br/>
-
----
-
-<div align="center">
-
-<!-- Footer Terminal Loop -->
-<img src="assets/footer.svg?v=1" alt="Terminal Footer" width="100%">
-
+  <img src="assets/footer.svg?v=1" alt="AI Executive Directive Loop Footer" width="100%"/>
+  <br/><br/>
+  <p align="center">© 2026 <b>Vishal Rathod</b> • Engineered with Precision &amp; Vision</p>
 </div>

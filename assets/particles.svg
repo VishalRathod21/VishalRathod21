@@ -1,27 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 300" width="1400" height="300">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 80" width="100%" height="auto">
   <defs>
-    <style>
-      @keyframes floatP1 { 0%, 100% { transform: translateY(0) translateX(0); } 50% { transform: translateY(-20px) translateX(15px); } }
-      @keyframes floatP2 { 0%, 100% { transform: translateY(0) translateX(0); } 50% { transform: translateY(25px) translateX(-20px); } }
-      .p1 { animation: floatP1 8s ease-in-out infinite; }
-      .p2 { animation: floatP2 10s ease-in-out infinite 1s; }
-    </style>
-    <radialGradient id="pGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="rgba(79, 140, 255, 0.25)"/>
-      <stop offset="100%" stop-color="rgba(4, 7, 14, 0)"/>
-    </radialGradient>
+    <linearGradient id="p-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4F8CFF" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#7C5CFF" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#B28DFF" stop-opacity="0"/>
+    </linearGradient>
   </defs>
-  <rect width="1400" height="300" rx="20" fill="#04070E"/>
-  <rect width="1400" height="300" fill="url(#pGlow)"/>
-  <g class="p1">
-    <circle cx="100" cy="80" r="3" fill="#4F8CFF" opacity="0.6"/>
-    <circle cx="400" cy="220" r="2" fill="#7C5CFF" opacity="0.8"/>
-    <circle cx="900" cy="90" r="2.5" fill="#B28DFF" opacity="0.7"/>
-    <circle cx="1300" cy="250" r="3" fill="#4F8CFF" opacity="0.5"/>
-  </g>
-  <g class="p2">
-    <circle cx="250" cy="240" r="2" fill="#B28DFF" opacity="0.7"/>
-    <circle cx="650" cy="110" r="3" fill="#4F8CFF" opacity="0.6"/>
-    <circle cx="1150" cy="70" r="2" fill="#7C5CFF" opacity="0.8"/>
+  <style>
+    .p-pulse { animation: pPulse 3s ease-in-out infinite alternate; }
+    @keyframes pPulse { 0% { opacity: 0.3; } 100% { opacity: 0.9; } }
+  </style>
+  <g class="p-pulse">
+    <line x1="100" y1="40" x2="1100" y2="40" stroke="url(#p-grad)" stroke-width="1.5" stroke-dasharray="8,6"/>
+    <circle cx="300" cy="40" r="4" fill="#4F8CFF"/>
+    <circle cx="600" cy="40" r="5" fill="#7C5CFF"/>
+    <circle cx="900" cy="40" r="4" fill="#B28DFF"/>
   </g>
 </svg>

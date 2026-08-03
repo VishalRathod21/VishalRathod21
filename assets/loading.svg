@@ -1,23 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100" width="100%" height="auto">
   <defs>
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@500;700&amp;display=swap');
-      .mono { font-family: 'Fira Code', monospace; }
-      @keyframes spinCore { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-      @keyframes pulseText { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
-      .spinner { transform-origin: 400px 80px; animation: spinCore 4s linear infinite; }
-      .txtPulse { animation: pulseText 2s infinite ease-in-out; }
-    </style>
-    <linearGradient id="loadGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="load-grad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#4F8CFF"/>
       <stop offset="50%" stop-color="#7C5CFF"/>
       <stop offset="100%" stop-color="#B28DFF"/>
     </linearGradient>
   </defs>
-  <rect width="800" height="200" rx="20" fill="#04070E"/>
-  <g class="spinner">
-    <circle cx="400" cy="80" r="35" fill="none" stroke="rgba(255, 255, 255, 0.1)" stroke-width="4"/>
-    <circle cx="400" cy="80" r="35" fill="none" stroke="url(#loadGrad)" stroke-width="4" stroke-dasharray="160" stroke-dashoffset="60" stroke-linecap="round"/>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@600&amp;display=swap');
+    text { font-family: 'Fira Code', monospace; }
+    .spinner { transform-origin: 50px 50px; animation: spin 2s linear infinite; }
+    @keyframes spin { 100% { transform: rotate(360deg); } }
+  </style>
+  <g transform="translate(10, 0)">
+    <circle cx="50" cy="50" r="28" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="4"/>
+    <circle cx="50" cy="50" r="28" fill="none" stroke="url(#load-grad)" stroke-width="4" stroke-linecap="round" stroke-dasharray="120" stroke-dashoffset="40" class="spinner"/>
+    <text x="100" y="55" fill="#F8FAFC" font-size="14" font-weight="600">INITIALIZING AI CORE...</text>
   </g>
-  <text x="400" y="150" fill="#F8FAFC" font-size="14" font-weight="700" text-anchor="middle" class="mono txtPulse">INITIALIZING AI RESEARCH CORE...</text>
 </svg>
