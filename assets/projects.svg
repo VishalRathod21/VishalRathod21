@@ -1,0 +1,225 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 920" width="100%" height="auto">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#04070E"/>
+      <stop offset="100%" stop-color="#0A1224"/>
+    </linearGradient>
+
+    <linearGradient id="card-glass" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(10, 18, 36, 0.85)"/>
+      <stop offset="100%" stop-color="rgba(4, 7, 14, 0.95)"/>
+    </linearGradient>
+
+    <linearGradient id="card-border" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(79, 140, 255, 0.4)"/>
+      <stop offset="100%" stop-color="rgba(178, 141, 255, 0.15)"/>
+    </linearGradient>
+
+    <linearGradient id="pill-bg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="rgba(255, 255, 255, 0.05)"/>
+      <stop offset="100%" stop-color="rgba(255, 255, 255, 0.02)"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    text { font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+    .mono { font-family: 'Fira Code', Consolas, Monaco, monospace; }
+  </style>
+
+  <rect width="1200" height="920" rx="28" fill="url(#bg-grad)" stroke="rgba(255,255,255,0.08)" stroke-width="1.5"/>
+
+  <!-- Section Header -->
+  <g transform="translate(600, 48)" text-anchor="middle">
+    <rect x="-95" y="-22" width="190" height="26" rx="13" fill="rgba(79, 140, 255, 0.08)" stroke="rgba(79, 140, 255, 0.25)" stroke-width="1"/>
+    <text x="0" y="-5" fill="#4F8CFF" font-size="10" font-weight="800" letter-spacing="2">PRODUCTION REPOSITORIES</text>
+    <text x="0" y="24" fill="#F8FAFC" font-size="28" font-weight="900" letter-spacing="2">FEATURED AI &amp; ML SYSTEMS</text>
+  </g>
+
+  <g transform="translate(40, 105)">
+    <!-- ROW 1, CARD 1: InterviewAI -->
+    <g transform="translate(0, 0)">
+      <rect width="545" height="240" rx="20" fill="url(#card-glass)" stroke="url(#card-border)" stroke-width="1.5"/>
+      <g transform="translate(24, 28)">
+        <circle cx="16" cy="16" r="16" fill="rgba(79, 140, 255, 0.12)"/>
+        <text x="16" y="21" fill="#4F8CFF" font-size="14" text-anchor="middle">🤖</text>
+        <text x="44" y="22" fill="#F8FAFC" font-size="18" font-weight="800">InterviewAI</text>
+        <rect x="360" y="4" width="125" height="22" rx="11" fill="rgba(39, 201, 63, 0.12)" stroke="rgba(39, 201, 63, 0.4)" stroke-width="1"/>
+        <circle cx="372" cy="15" r="3" fill="#27C93F">
+          <animate attributeName="opacity" values="0.3;1;0.3" dur="1.5s" repeatCount="indefinite"/>
+        </circle>
+        <text x="382" y="19" fill="#27C93F" font-size="9.5" font-weight="700">MULTI-AGENT PLATFORM</text>
+      </g>
+      <text x="24" y="80" fill="#94A3B8" font-size="13">Autonomous interview platform powered by LangGraph multi-agent swarms.</text>
+      <text x="24" y="100" fill="#94A3B8" font-size="13">Evaluates code syntax, reasoning depth &amp; generates feedback reports.</text>
+      <g transform="translate(24, 130)" font-size="11" font-weight="700">
+        <rect x="0" y="0" width="75" height="26" rx="8" fill="url(#pill-bg)" stroke="rgba(79, 140, 255, 0.3)" stroke-width="1"/>
+        <text x="37.5" y="17" fill="#F8FAFC" text-anchor="middle">PyTorch</text>
+        <rect x="83" y="0" width="85" height="26" rx="8" fill="url(#pill-bg)" stroke="rgba(124, 92, 255, 0.4)" stroke-width="1"/>
+        <text x="125.5" y="17" fill="#B28DFF" text-anchor="middle">LangGraph</text>
+        <rect x="176" y="0" width="70" height="26" rx="8" fill="url(#pill-bg)" stroke="rgba(79, 140, 255, 0.3)" stroke-width="1"/>
+        <text x="211" y="17" fill="#F8FAFC" text-anchor="middle">FastAPI</text>
+        <rect x="254" y="0" width="60" height="26" rx="8" fill="url(#pill-bg)" stroke="rgba(79, 140, 255, 0.3)" stroke-width="1"/>
+        <text x="284" y="17" fill="#F8FAFC" text-anchor="middle">React</text>
+        <rect x="322" y="0" width="65" height="26" rx="8" fill="url(#pill-bg)" stroke="rgba(79, 140, 255, 0.3)" stroke-width="1"/>
+        <text x="354.5" y="17" fill="#4F8CFF" text-anchor="middle">Docker</text>
+      </g>
+      <g transform="translate(24, 180)">
+        <rect width="140" height="34" rx="8" fill="rgba(79, 140, 255, 0.12)" stroke="rgba(79, 140, 255, 0.4)" stroke-width="1"/>
+        <text x="70" y="21" fill="#4F8CFF" font-size="11" font-weight="700" text-anchor="middle">GitHub Repository ➔</text>
+      </g>
+    </g>
+
+    <!-- ROW 1, CARD 2: AI Voice Assistant -->
+    <g transform="translate(575, 0)">
+      <rect width="545" height="240" rx="20" fill="url(#card-glass)" stroke="url(#card-border)" stroke-width="1.5"/>
+      <g transform="translate(24, 28)">
+        <circle cx="16" cy="16" r="16" fill="rgba(124, 92, 255, 0.12)"/>
+        <text x="16" y="21" fill="#7C5CFF" font-size="14" text-anchor="middle">🎙️</text>
+        <text x="44" y="22" fill="#F8FAFC" font-size="18" font-weight="800">AI Voice Assistant</text>
+        <rect x="360" y="4" width="125" height="22" rx="11" fill="rgba(124, 92, 255, 0.12)" stroke="rgba(124, 92, 255, 0.4)" stroke-width="1"/>
+        <circle cx="372" cy="15" r="3" fill="#B28DFF">
+          <animate attributeName="opacity" values="0.3;1;0.3" dur="1.5s" repeatCount="indefinite"/>
+        </circle>
+        <text x="382" y="19" fill="#B28DFF" font-size="9.5" font-weight="700">REAL-TIME VOICE</text>
+      </g>
+      <text x="24" y="80" fill="#94A3B8" font-size="13">Ultra-low-latency voice agent combining Whisper, Groq LPU LLM</text>
+      <text x="24" y="100" fill="#94A3B8" font-size="13">reasoning, and ElevenLabs neural audio synthesis.</text>
+      <g transform="translate(24, 130)" font-size="11" font-weight="700">
+        <rect x="0" y="0" width="75" height="26" rx="8" fill="url(#pill-bg)" stroke="rgba(124, 92, 255, 0.3)" stroke-width="1"/>
+        <text x="37.5" y="17" fill="#F8FAFC" text-anchor="middle">Whisper</text>
+        <rect x="83" y="0" width="80" height="26" rx="8" fill="url(#pill-bg)" stroke="rgba(178, 141, 255, 0.4)" stroke-width="1"/>
+        <text x="123" y="17" fill="#4F8CFF" text-anchor="middle">Groq LPU</text>
+        <rect x="171" y="0" width="85" height="26" rx="8" fill="url(#pill-bg)" stroke="rgba(124, 92, 255, 0.3)" stroke-width="1"/>
+        <text x="213.5" y="17" fill="#F8FAFC" text-anchor="middle">ElevenLabs</text>
+        <rect x="264" y="0" width="90" height="26" rx="8" fill="url(#pill-bg)" stroke="rgba(124, 92, 255, 0.3)" stroke-width="1"/>
+        <text x="309" y="17" fill="#B28DFF" text-anchor="middle">WebSockets</text>
+      </g>
+      <g transform="translate(24, 180)">
+        <rect width="140" height="34" rx="8" fill="rgba(124, 92, 255, 0.12)" stroke="rgba(124, 92, 255, 0.4)" stroke-width="1"/>
+        <text x="70" y="21" fill="#7C5CFF" font-size="11" font-weight="700" text-anchor="middle">GitHub Repository ➔</text>
+      </g>
+    </g>
+
+    <!-- ROW 2, CARD 3: Enterprise RAG Chatbot -->
+    <g transform="translate(0, 265)">
+      <rect width="545" height="240" rx="20" fill="url(#card-glass)" stroke="url(#card-border)" stroke-width="1.5"/>
+      <g transform="translate(24, 28)">
+        <circle cx="16" cy="16" r="16" fill="rgba(178, 141, 255, 0.12)"/>
+        <text x="16" y="21" fill="#B28DFF" font-size="14" text-anchor="middle">🔍</text>
+        <text x="44" y="22" fill="#F8FAFC" font-size="18" font-weight="800">Enterprise RAG Engine</text>
+        <rect x="360" y="4" width="125" height="22" rx="11" fill="rgba(79, 140, 255, 0.12)" stroke="rgba(79, 140, 255, 0.4)" stroke-width="1"/>
+        <circle cx="372" cy="15" r="3" fill="#4F8CFF">
+          <animate attributeName="opacity" values="0.3;1;0.3" dur="1.5s" repeatCount="indefinite"/>
+        </circle>
+        <text x="382" y="19" fill="#4F8CFF" font-size="9.5" font-weight="700">HYBRID SEARCH RAG</text>
+      </g>
+      <text x="24" y="80" fill="#94A3B8" font-size="13">Hybrid BM25 &amp; dense vector retrieval engine with parent-document</text>
+      <text x="24" y="100" fill="#94A3B8" font-size="13">chunking for enterprise document intelligence (99.2% precision).</text>
+      <g transform="translate(24, 130)" font-size="11" font-weight="700">
+        <rect x="0" y="0" width="85" height="26" rx="8" fill="url(#pill-bg)" stroke="rgba(178, 141, 255, 0.3)" stroke-width="1"/>
+        <text x="42.5" y="17" fill="#F8FAFC" text-anchor="middle">LangChain</text>
+        <rect x="93" y="0" width="75" height="26" rx="8" fill="url(#pill-bg)" stroke="rgba(178, 141, 255, 0.3)" stroke-width="1"/>
+        <text x="130.5" y="17" fill="#B28DFF" text-anchor="middle">Pinecone</text>
+        <rect x="176" y="0" width="70" height="26" rx="8" fill="url(#pill-bg)" stroke="rgba(178, 141, 255, 0.3)" stroke-width="1"/>
+        <text x="211" y="17" fill="#F8FAFC" text-anchor="middle">FastAPI</text>
+        <rect x="254" y="0" width="60" height="26" rx="8" fill="url(#pill-bg)" stroke="rgba(178, 141, 255, 0.3)" stroke-width="1"/>
+        <text x="284" y="17" fill="#F8FAFC" text-anchor="middle">Redis</text>
+      </g>
+      <g transform="translate(24, 180)">
+        <rect width="140" height="34" rx="8" fill="rgba(178, 141, 255, 0.12)" stroke="rgba(178, 141, 255, 0.4)" stroke-width="1"/>
+        <text x="70" y="21" fill="#B28DFF" font-size="11" font-weight="700" text-anchor="middle">GitHub Repository ➔</text>
+      </g>
+    </g>
+
+    <!-- ROW 2, CARD 4: Movie Recommendation Engine -->
+    <g transform="translate(575, 265)">
+      <rect width="545" height="240" rx="20" fill="url(#card-glass)" stroke="url(#card-border)" stroke-width="1.5"/>
+      <g transform="translate(24, 28)">
+        <circle cx="16" cy="16" r="16" fill="rgba(79, 140, 255, 0.12)"/>
+        <text x="16" y="21" fill="#4F8CFF" font-size="14" text-anchor="middle">🎬</text>
+        <text x="44" y="22" fill="#F8FAFC" font-size="18" font-weight="800">Movie Recommender</text>
+        <rect x="360" y="4" width="125" height="22" rx="11" fill="rgba(39, 201, 63, 0.12)" stroke="rgba(39, 201, 63, 0.4)" stroke-width="1"/>
+        <circle cx="372" cy="15" r="3" fill="#27C93F">
+          <animate attributeName="opacity" values="0.3;1;0.3" dur="1.5s" repeatCount="indefinite"/>
+        </circle>
+        <text x="382" y="19" fill="#27C93F" font-size="9.5" font-weight="700">COLLABORATIVE FILTER</text>
+      </g>
+      <text x="24" y="80" fill="#94A3B8" font-size="13">Hybrid neural collaborative filtering (NCF) system combining matrix</text>
+      <text x="24" y="100" fill="#94A3B8" font-size="13">factorization with sub-millisecond Redis caching.</text>
+      <g transform="translate(24, 130)" font-size="11" font-weight="700">
+        <rect x="0" y="0" width="90" height="26" rx="8" fill="url(#pill-bg)" stroke="rgba(79, 140, 255, 0.3)" stroke-width="1"/>
+        <text x="45" y="17" fill="#F8FAFC" text-anchor="middle">TensorFlow</text>
+        <rect x="98" y="0" width="95" height="26" rx="8" fill="url(#pill-bg)" stroke="rgba(79, 140, 255, 0.3)" stroke-width="1"/>
+        <text x="145.5" y="17" fill="#4F8CFF" text-anchor="middle">Scikit-Learn</text>
+        <rect x="201" y="0" width="60" height="26" rx="8" fill="url(#pill-bg)" stroke="rgba(79, 140, 255, 0.3)" stroke-width="1"/>
+        <text x="231" y="17" fill="#F8FAFC" text-anchor="middle">Redis</text>
+        <rect x="269" y="0" width="60" height="26" rx="8" fill="url(#pill-bg)" stroke="rgba(79, 140, 255, 0.3)" stroke-width="1"/>
+        <text x="299" y="17" fill="#F8FAFC" text-anchor="middle">Flask</text>
+      </g>
+      <g transform="translate(24, 180)">
+        <rect width="140" height="34" rx="8" fill="rgba(79, 140, 255, 0.12)" stroke="rgba(79, 140, 255, 0.4)" stroke-width="1"/>
+        <text x="70" y="21" fill="#4F8CFF" font-size="11" font-weight="700" text-anchor="middle">GitHub Repository ➔</text>
+      </g>
+    </g>
+
+    <!-- ROW 3, CARD 5: House Price Prediction -->
+    <g transform="translate(0, 530)">
+      <rect width="545" height="240" rx="20" fill="url(#card-glass)" stroke="url(#card-border)" stroke-width="1.5"/>
+      <g transform="translate(24, 28)">
+        <circle cx="16" cy="16" r="16" fill="rgba(124, 92, 255, 0.12)"/>
+        <text x="16" y="21" fill="#7C5CFF" font-size="14" text-anchor="middle">🏠</text>
+        <text x="44" y="22" fill="#F8FAFC" font-size="18" font-weight="800">House Price Predictor</text>
+        <rect x="360" y="4" width="125" height="22" rx="11" fill="rgba(124, 92, 255, 0.12)" stroke="rgba(124, 92, 255, 0.4)" stroke-width="1"/>
+        <circle cx="372" cy="15" r="3" fill="#B28DFF">
+          <animate attributeName="opacity" values="0.3;1;0.3" dur="1.5s" repeatCount="indefinite"/>
+        </circle>
+        <text x="382" y="19" fill="#B28DFF" font-size="9.5" font-weight="700">MLOPS PIPELINE</text>
+      </g>
+      <text x="24" y="80" fill="#94A3B8" font-size="13">End-to-end predictive machine learning service with XGBoost gradient</text>
+      <text x="24" y="100" fill="#94A3B8" font-size="13">boosting, MLflow tracking, and Docker containerized REST API.</text>
+      <g transform="translate(24, 130)" font-size="11" font-weight="700">
+        <rect x="0" y="0" width="75" height="26" rx="8" fill="url(#pill-bg)" stroke="rgba(124, 92, 255, 0.3)" stroke-width="1"/>
+        <text x="37.5" y="17" fill="#F8FAFC" text-anchor="middle">XGBoost</text>
+        <rect x="83" y="0" width="70" height="26" rx="8" fill="url(#pill-bg)" stroke="rgba(124, 92, 255, 0.3)" stroke-width="1"/>
+        <text x="118" y="17" fill="#B28DFF" text-anchor="middle">MLflow</text>
+        <rect x="161" y="0" width="65" height="26" rx="8" fill="url(#pill-bg)" stroke="rgba(124, 92, 255, 0.3)" stroke-width="1"/>
+        <text x="193.5" y="17" fill="#F8FAFC" text-anchor="middle">Docker</text>
+        <rect x="234" y="0" width="70" height="26" rx="8" fill="url(#pill-bg)" stroke="rgba(124, 92, 255, 0.3)" stroke-width="1"/>
+        <text x="269" y="17" fill="#4F8CFF" text-anchor="middle">FastAPI</text>
+      </g>
+      <g transform="translate(24, 180)">
+        <rect width="140" height="34" rx="8" fill="rgba(124, 92, 255, 0.12)" stroke="rgba(124, 92, 255, 0.4)" stroke-width="1"/>
+        <text x="70" y="21" fill="#7C5CFF" font-size="11" font-weight="700" text-anchor="middle">GitHub Repository ➔</text>
+      </g>
+    </g>
+
+    <!-- ROW 3, CARD 6: Auto Insurance Fraud Prediction -->
+    <g transform="translate(575, 530)">
+      <rect width="545" height="240" rx="20" fill="url(#card-glass)" stroke="url(#card-border)" stroke-width="1.5"/>
+      <g transform="translate(24, 28)">
+        <circle cx="16" cy="16" r="16" fill="rgba(178, 141, 255, 0.12)"/>
+        <text x="16" y="21" fill="#B28DFF" font-size="14" text-anchor="middle">🛡️</text>
+        <text x="44" y="22" fill="#F8FAFC" font-size="18" font-weight="800">Auto Insurance Fraud</text>
+        <rect x="360" y="4" width="125" height="22" rx="11" fill="rgba(79, 140, 255, 0.12)" stroke="rgba(79, 140, 255, 0.4)" stroke-width="1"/>
+        <circle cx="372" cy="15" r="3" fill="#4F8CFF">
+          <animate attributeName="opacity" values="0.3;1;0.3" dur="1.5s" repeatCount="indefinite"/>
+        </circle>
+        <text x="382" y="19" fill="#4F8CFF" font-size="9.5" font-weight="700">FRAUD ANALYTICS</text>
+      </g>
+      <text x="24" y="80" fill="#94A3B8" font-size="13">Deep neural classification pipeline quantifying insurance claim risk</text>
+      <text x="24" y="100" fill="#94A3B8" font-size="13">and detecting anomaly clusters with real-time risk scores.</text>
+      <g transform="translate(24, 130)" font-size="11" font-weight="700">
+        <rect x="0" y="0" width="75" height="26" rx="8" fill="url(#pill-bg)" stroke="rgba(178, 141, 255, 0.3)" stroke-width="1"/>
+        <text x="37.5" y="17" fill="#F8FAFC" text-anchor="middle">PyTorch</text>
+        <rect x="83" y="0" width="95" height="26" rx="8" fill="url(#pill-bg)" stroke="rgba(178, 141, 255, 0.3)" stroke-width="1"/>
+        <text x="130.5" y="17" fill="#B28DFF" text-anchor="middle">Scikit-Learn</text>
+        <rect x="186" y="0" width="80" height="26" rx="8" fill="url(#pill-bg)" stroke="rgba(178, 141, 255, 0.3)" stroke-width="1"/>
+        <text x="226" y="17" fill="#F8FAFC" text-anchor="middle">Streamlit</text>
+      </g>
+      <g transform="translate(24, 180)">
+        <rect width="140" height="34" rx="8" fill="rgba(178, 141, 255, 0.12)" stroke="rgba(178, 141, 255, 0.4)" stroke-width="1"/>
+        <text x="70" y="21" fill="#B28DFF" font-size="11" font-weight="700" text-anchor="middle">GitHub Repository ➔</text>
+      </g>
+    </g>
+  </g>
+</svg>

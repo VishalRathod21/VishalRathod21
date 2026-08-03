@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 260" width="100%" height="auto">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#04070E"/>
+      <stop offset="100%" stop-color="#0A1224"/>
+    </linearGradient>
+
+    <linearGradient id="card-border" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(79, 140, 255, 0.4)"/>
+      <stop offset="100%" stop-color="rgba(178, 141, 255, 0.15)"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    text { font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+    .mono { font-family: 'Fira Code', Consolas, Monaco, monospace; }
+  </style>
+
+  <rect width="1200" height="260" rx="28" fill="url(#bg-grad)" stroke="rgba(255,255,255,0.08)" stroke-width="1.5"/>
+
+  <g transform="translate(40, 30)">
+    <rect width="1120" height="200" rx="20" fill="rgba(10, 18, 36, 0.8)" stroke="url(#card-border)" stroke-width="1.5"/>
+
+    <!-- Left Quote Block -->
+    <g transform="translate(30, 30)">
+      <rect x="0" y="0" width="150" height="24" rx="12" fill="rgba(79, 140, 255, 0.1)" stroke="rgba(79, 140, 255, 0.3)" stroke-width="1"/>
+      <text x="75" y="16" fill="#4F8CFF" font-size="10" font-weight="700" letter-spacing="1.5" text-anchor="middle">RESEARCH PHILOSOPHY</text>
+      
+      <text x="0" y="55" fill="#F8FAFC" font-size="20" font-weight="800">"A quiet AI research facility at midnight."</text>
+      <text x="0" y="85" fill="#94A3B8" font-size="13" font-weight="500">I specialize in architecting autonomous AI agent swarms, fine-tuning large language models,</text>
+      <text x="0" y="105" fill="#94A3B8" font-size="13" font-weight="500">building real-time multimodal RAG pipelines, and deploying scalable MLOps infrastructure.</text>
+    </g>
+
+    <!-- Right System Config Code Block -->
+    <g transform="translate(680, 25)" class="mono" font-size="12">
+      <rect width="410" height="150" rx="12" fill="rgba(4, 7, 14, 0.9)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+      <text x="20" y="30" fill="#7C5CFF">system.<tspan fill="#4F8CFF">connect</tspan>({</text>
+      <text x="40" y="52" fill="#94A3B8">"location": <tspan fill="#F8FAFC">"India 🇮🇳"</tspan>,</text>
+      <text x="40" y="72" fill="#94A3B8">"role": <tspan fill="#B28DFF">"AI Engineer &amp; ML Architect"</tspan>,</text>
+      <text x="40" y="92" fill="#94A3B8">"mission": <tspan fill="#27C93F">"Build impactful AI products"</tspan>,</text>
+      <text x="40" y="112" fill="#94A3B8">"stack": [<tspan fill="#4F8CFF">"PyTorch"</tspan>, <tspan fill="#4F8CFF">"LangGraph"</tspan>, <tspan fill="#4F8CFF">"FastAPI"</tspan>]</text>
+      <text x="20" y="132" fill="#7C5CFF">});</text>
+    </g>
+  </g>
+</svg>
