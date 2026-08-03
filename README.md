@@ -1,10 +1,10 @@
 <div align="center">
 
-<!-- HERO BANNER (LIGHT/DARK THEME SWITCHING) -->
+<!-- HERO BANNER (LIGHT/DARK THEME SWITCHING WITH EMBEDDED BASE64 PROFILE IMAGE) -->
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg?v=1">
-  <source media="(prefers-color-scheme: light)" srcset="assets/banner-light.svg?v=1">
-  <img alt="Vishal Rathod - AI Engineer Research Facility Banner" src="assets/banner-dark.svg?v=1" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg?v=2">
+  <source media="(prefers-color-scheme: light)" srcset="assets/banner-light.svg?v=2">
+  <img alt="Vishal Rathod - AI Engineer Research Facility Banner" src="assets/banner-dark.svg?v=2" width="100%">
 </picture>
 
 <br/><br/>
@@ -21,11 +21,19 @@
 
 ---
 
-### 🧬 Executive Overview & AI Mission
+### 🧬 Executive Profile & AI Mission
 
-> *"Building intelligent, production-grade AI systems that solve real-world problems and positively impact millions of people."*
-
-I am an **AI Engineer** specializing in **Deep Learning**, **Large Language Models (LLMs)**, **Agentic AI Systems**, and **MLOps infrastructure**. My work bridges the gap between frontier research in neural architectures and robust, high-performance software engineering.
+<table width="100%" border="0">
+  <tr>
+    <td width="220" align="center" valign="middle">
+      <img src="assets/profile.png" width="180" height="195" style="border-radius: 20px; border: 2px solid rgba(79, 140, 255, 0.4);" alt="Vishal Rathod Profile Picture" />
+    </td>
+    <td valign="middle">
+      <blockquote><em>"Building intelligent, production-grade AI systems that solve real-world problems and positively impact millions of people."</em></blockquote>
+      <p>I am an <b>AI Engineer</b> specializing in <b>Deep Learning</b>, <b>Large Language Models (LLMs)</b>, <b>Agentic AI Systems</b>, and <b>MLOps infrastructure</b>. My work bridges the gap between frontier research in neural architectures and robust, high-performance software engineering.</p>
+    </td>
+  </tr>
+</table>
 
 ---
 
