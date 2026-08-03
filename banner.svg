@@ -1,0 +1,270 @@
+<svg width="1280" height="740" viewBox="0 0 1280 740" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&amp;family=Poppins:wght@500;600;700&amp;display=swap');
+    .term  { font-family:'Fira Code',monospace; font-size:18px; fill:#7ee787; }
+    .code  { font-family:'Fira Code',monospace; font-size:15px; fill:#c9d1d9; }
+    .kw    { fill:#ff7ab6; }
+    .fn    { fill:#79c0ff; }
+    .str   { fill:#a5d6ff; }
+    .cm    { fill:#8b949e; }
+    .name  { font-family:'Poppins',sans-serif; font-weight:700; font-size:58px; }
+    .role  { font-family:'Fira Code',monospace; font-size:23px; fill:#e6b3ff; }
+    .quote { font-family:'Fira Code',monospace; font-size:15px; fill:#ffd580; }
+    .about { font-family:'Poppins',sans-serif; font-size:15px; fill:#c9d1d9; }
+    .pill  { font-family:'Fira Code',monospace; font-size:13px; fill:#0d1117; font-weight:600; }
+    .neon  { font-family:'Poppins',sans-serif; font-weight:600; font-size:21px; fill:#ff4fd8; }
+    .lbl   { font-family:'Fira Code',monospace; font-size:12px; fill:#8b949e; }
+  </style>
+
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#0d0817"/>
+    <stop offset="45%" stop-color="#1a0f2e"/>
+    <stop offset="100%" stop-color="#150a24"/>
+  </linearGradient>
+
+  <linearGradient id="nameGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#ff6ec7"/>
+    <stop offset="50%" stop-color="#c06bff"/>
+    <stop offset="100%" stop-color="#7c8bff"/>
+    <animate attributeName="x1" values="0%;100%;0%" dur="6s" repeatCount="indefinite"/>
+    <animate attributeName="x2" values="100%;200%;100%" dur="6s" repeatCount="indefinite"/>
+  </linearGradient>
+
+  <linearGradient id="statGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#ff6ec7"/>
+    <stop offset="100%" stop-color="#7c8bff"/>
+  </linearGradient>
+
+  <linearGradient id="cardTop" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#22163a"/>
+    <stop offset="100%" stop-color="#2a1a44"/>
+  </linearGradient>
+
+  <radialGradient id="orbGrad" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#c06bff" stop-opacity="0.55"/>
+    <stop offset="100%" stop-color="#c06bff" stop-opacity="0"/>
+  </radialGradient>
+
+  <linearGradient id="scanGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+    <stop offset="0%" stop-color="#7ee7ff" stop-opacity="0"/>
+    <stop offset="50%" stop-color="#7ee7ff" stop-opacity="0.95"/>
+    <stop offset="100%" stop-color="#7ee7ff" stop-opacity="0"/>
+  </linearGradient>
+
+  <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+    <feGaussianBlur stdDeviation="4" result="b"/>
+    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <filter id="glowSoft" x="-80%" y="-80%" width="260%" height="260%">
+    <feGaussianBlur stdDeviation="8" result="b"/>
+    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+
+  <clipPath id="frame"><rect x="0" y="0" width="1280" height="740" rx="26"/></clipPath>
+  <clipPath id="avatarClip"><rect x="742" y="128" width="380" height="480" rx="18"/></clipPath>
+  <clipPath id="revealClip"><rect id="revealRect" x="742" y="128" width="380" height="0" rx="18">
+    <animate attributeName="height" from="0" to="480" dur="1.6s" begin="0.3s" fill="freeze" calcMode="spline" keySplines="0.22 1 0.36 1"/>
+  </rect></clipPath>
+</defs>
+
+<rect width="1280" height="740" fill="url(#bg)"/>
+
+<g clip-path="url(#frame)">
+  <!-- dot grid texture -->
+  <g opacity="0.08">
+    <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="1.4" fill="#c06bff"/>
+    </pattern>
+    <rect width="1280" height="740" fill="url(#dots)"/>
+  </g>
+
+  <!-- ambient orbs -->
+  <circle cx="120" cy="620" r="150" fill="url(#orbGrad)">
+    <animate attributeName="cx" values="120;170;120" dur="9s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="1150" cy="90" r="180" fill="url(#orbGrad)">
+    <animate attributeName="cy" values="90;140;90" dur="11s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- floating particles -->
+  <g fill="#ff6ec7">
+    <circle cx="640" cy="90" r="3"><animate attributeName="cy" values="90;60;90" dur="4s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.2;1;0.2" dur="4s" repeatCount="indefinite"/></circle>
+    <circle cx="700" cy="680" r="2.5"><animate attributeName="cy" values="680;650;680" dur="5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.2;1;0.2" dur="5s" repeatCount="indefinite"/></circle>
+    <circle cx="60" cy="200" r="2"><animate attributeName="cy" values="200;170;200" dur="6s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.15;0.9;0.15" dur="6s" repeatCount="indefinite"/></circle>
+  </g>
+  <g fill="#7ee7ff">
+    <path d="M1220 200 l3 8 8 3 -8 3 -3 8 -3 -8 -8 -3 8 -3z" opacity="0.8">
+      <animate attributeName="opacity" values="0.1;0.9;0.1" dur="3s" repeatCount="indefinite"/>
+    </path>
+    <path d="M660 480 l2.5 6 6 2.5 -6 2.5 -2.5 6 -2.5 -6 -6 -2.5 6 -2.5z" opacity="0.7">
+      <animate attributeName="opacity" values="0.9;0.1;0.9" dur="2.6s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  <g fill="#ff9dd6" opacity="0.85">
+    <path d="M1180 640c-14-12-26-20-26-32 0-8 6-14 14-14 6 0 10 3 12 8 2-5 6-8 12-8 8 0 14 6 14 14 0 12-12 20-26 32z">
+      <animate attributeName="cy" values="0;-14;0" dur="4.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.2;0.9;0.2" dur="4.5s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- ===================== LEFT COLUMN ===================== -->
+
+  <!-- terminal line -->
+  <g transform="translate(50,58)">
+    <rect x="-14" y="-24" width="640" height="34" rx="8" fill="#ffffff" opacity="0.04"/>
+    <circle cx="-2" cy="-8" r="5" fill="#ff5f56"/>
+    <circle cx="16" cy="-8" r="5" fill="#ffbd2e"/>
+    <circle cx="34" cy="-8" r="5" fill="#27c93f"/>
+    <g clip-path="url(#typeClip1)">
+      <text class="term" x="52" y="-2">vishal@github:~$ cat README.md</text>
+    </g>
+    <clipPath id="typeClip1">
+      <rect x="0" y="-30" width="0" height="40">
+        <animate attributeName="width" from="0" to="470" dur="1.8s" begin="0.1s" fill="freeze" calcMode="spline" keySplines="0.22 1 0.36 1"/>
+      </rect>
+    </clipPath>
+    <rect x="524" y="-20" width="10" height="22" fill="#7ee787">
+      <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.5;0.51;1" dur="0.9s" repeatCount="indefinite"/>
+      <animate attributeName="x" values="52;524" dur="1.8s" begin="0.1s" fill="freeze"/>
+    </rect>
+  </g>
+
+  <!-- name -->
+  <g transform="translate(50,148)">
+    <text class="name" fill="url(#nameGrad)">
+      <tspan opacity="0">V<animate attributeName="opacity" to="1" dur="0.01s" begin="2.0s" fill="freeze"/></tspan><tspan opacity="0">i<animate attributeName="opacity" to="1" dur="0.01s" begin="2.06s" fill="freeze"/></tspan><tspan opacity="0">s<animate attributeName="opacity" to="1" dur="0.01s" begin="2.12s" fill="freeze"/></tspan><tspan opacity="0">h<animate attributeName="opacity" to="1" dur="0.01s" begin="2.18s" fill="freeze"/></tspan><tspan opacity="0">a<animate attributeName="opacity" to="1" dur="0.01s" begin="2.24s" fill="freeze"/></tspan><tspan opacity="0">l<animate attributeName="opacity" to="1" dur="0.01s" begin="2.30s" fill="freeze"/></tspan><tspan> </tspan><tspan opacity="0">R<animate attributeName="opacity" to="1" dur="0.01s" begin="2.42s" fill="freeze"/></tspan><tspan opacity="0">a<animate attributeName="opacity" to="1" dur="0.01s" begin="2.48s" fill="freeze"/></tspan><tspan opacity="0">t<animate attributeName="opacity" to="1" dur="0.01s" begin="2.54s" fill="freeze"/></tspan><tspan opacity="0">h<animate attributeName="opacity" to="1" dur="0.01s" begin="2.60s" fill="freeze"/></tspan><tspan opacity="0">o<animate attributeName="opacity" to="1" dur="0.01s" begin="2.66s" fill="freeze"/></tspan><tspan opacity="0">d<animate attributeName="opacity" to="1" dur="0.01s" begin="2.72s" fill="freeze"/></tspan>
+    </text>
+  </g>
+
+  <!-- cycling role titles -->
+  <g transform="translate(50,196)" class="role">
+    <text opacity="0">AI &amp; Data Science Enthusiast
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.001;0.019;0.2;0.219;1" dur="16s" repeatCount="indefinite"/>
+    </text>
+    <text opacity="0">ML Engineer in Training
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.25;0.269;0.45;0.469;1" dur="16s" repeatCount="indefinite"/>
+    </text>
+    <text opacity="0">Model Training Specialist 🤖
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.5;0.519;0.7;0.719;1" dur="16s" repeatCount="indefinite"/>
+    </text>
+    <text opacity="0">Debugging Life, One Line at a Time
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.75;0.769;0.95;0.969;1" dur="16s" repeatCount="indefinite"/>
+    </text>
+  </g>
+
+  <!-- tagline quote box -->
+  <g transform="translate(50,224)">
+    <rect x="-4" y="-22" width="580" height="46" rx="10" fill="#ffffff" opacity="0.05" stroke="#7c8bff" stroke-opacity="0.35"/>
+    <text class="quote" x="16" y="7">"</text>
+    <g clip-path="url(#typeClip2)">
+      <text class="quote" x="28" y="7">Model Training Specialist (Also Training Myself)</text>
+    </g>
+    <clipPath id="typeClip2">
+      <rect x="0" y="-16" width="0" height="30">
+        <animate attributeName="width" from="0" to="480" dur="1.6s" begin="3.0s" fill="freeze" calcMode="spline" keySplines="0.22 1 0.36 1"/>
+      </rect>
+    </clipPath>
+  </g>
+
+  <!-- tech pills -->
+  <g class="pill" opacity="0">
+    <animate attributeName="opacity" to="1" dur="0.01s" begin="4.4s" fill="freeze"/>
+    <g transform="translate(50,268)">
+      <rect width="72" height="28" rx="14" fill="#7ee787"/><text x="36" y="19" text-anchor="middle">Python</text>
+    </g>
+    <g transform="translate(130,268)">
+      <rect width="98" height="28" rx="14" fill="#ff9040"/><text x="49" y="19" text-anchor="middle">TensorFlow</text>
+    </g>
+    <g transform="translate(236,268)">
+      <rect width="84" height="28" rx="14" fill="#ff6f61"/><text x="42" y="19" text-anchor="middle">PyTorch</text>
+    </g>
+    <g transform="translate(328,268)">
+      <rect width="94" height="28" rx="14" fill="#79c0ff"/><text x="47" y="19" text-anchor="middle">LangChain</text>
+    </g>
+    <g transform="translate(430,268)">
+      <rect width="76" height="28" rx="14" fill="#7ee7ff"/><text x="38" y="19" text-anchor="middle">Docker</text>
+    </g>
+    <g transform="translate(514,268)">
+      <rect width="58" height="28" rx="14" fill="#e6b3ff"/><text x="29" y="19" text-anchor="middle">SQL</text>
+    </g>
+  </g>
+
+  <!-- about lines -->
+  <g class="about" opacity="0">
+    <animate attributeName="opacity" to="1" dur="0.01s" begin="4.8s" fill="freeze"/>
+    <text x="50" y="335">🎓  4th Year — Integrated M.Tech, AI &amp; Data Science, DAVV Indore</text>
+    <text x="50" y="360">🧠  Building &amp; deploying ML models — from notebook to production</text>
+    <text x="50" y="385">⚡  Fun fact: my models learn faster than I do (barely)</text>
+  </g>
+
+  <!-- stats bar -->
+  <g transform="translate(50,412)">
+    <text class="lbl" y="-8">// contribution momentum</text>
+    <rect width="580" height="10" rx="5" fill="#ffffff" opacity="0.07"/>
+    <rect width="0" height="10" rx="5" fill="url(#statGrad)">
+      <animate attributeName="width" from="0" to="430" dur="1.4s" begin="5.2s" fill="freeze" calcMode="spline" keySplines="0.22 1 0.36 1"/>
+    </rect>
+  </g>
+
+  <!-- code editor card -->
+  <g transform="translate(50,448)">
+    <rect width="580" height="205" rx="14" fill="url(#cardTop)" stroke="#3a2a5c"/>
+    <rect width="580" height="34" rx="14" fill="#2a1a44"/>
+    <rect y="20" width="580" height="14" fill="#2a1a44"/>
+    <circle cx="20" cy="17" r="5" fill="#ff5f56"/>
+    <circle cx="38" cy="17" r="5" fill="#ffbd2e"/>
+    <circle cx="56" cy="17" r="5" fill="#27c93f"/>
+    <text class="lbl" x="500" y="21">train.py</text>
+    <g class="code" transform="translate(20,60)">
+      <g opacity="0"><animate attributeName="opacity" to="1" dur="0.01s" begin="5.6s" fill="freeze"/>
+        <text><tspan class="kw">def</tspan> <tspan class="fn">train_dreams</tspan>():</text>
+      </g>
+      <g opacity="0"><animate attributeName="opacity" to="1" dur="0.01s" begin="5.9s" fill="freeze"/>
+        <text y="26">    model = build(<tspan class="str">"vishal-ai"</tspan>)</text>
+      </g>
+      <g opacity="0"><animate attributeName="opacity" to="1" dur="0.01s" begin="6.2s" fill="freeze"/>
+        <text y="52">    model.fit(coffee, curiosity)</text>
+      </g>
+      <g opacity="0"><animate attributeName="opacity" to="1" dur="0.01s" begin="6.5s" fill="freeze"/>
+        <text y="78">    <tspan class="kw">while</tspan> not model.mastered:</text>
+      </g>
+      <g opacity="0"><animate attributeName="opacity" to="1" dur="0.01s" begin="6.8s" fill="freeze"/>
+        <text y="104">        model.debug()  <tspan class="cm"># daily ritual</tspan></text>
+      </g>
+      <g opacity="0"><animate attributeName="opacity" to="1" dur="0.01s" begin="7.1s" fill="freeze"/>
+        <text y="130">    <tspan class="kw">return</tspan> model.ship()</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ===================== RIGHT COLUMN ===================== -->
+
+  <!-- neon sign -->
+  <g transform="translate(742,72)" class="neon" filter="url(#glowSoft)">
+    <text>
+      <animate attributeName="opacity" values="1;1;0.3;1;0.4;1;1" keyTimes="0;0.3;0.32;0.34;0.36;0.4;1" dur="5s" repeatCount="indefinite"/>
+      KEEP LEARNING · KEEP BUILDING
+    </text>
+  </g>
+
+  <!-- lanyard-style avatar hologram -->
+  <g>
+    <rect x="740" y="126" width="384" height="484" rx="20" fill="#0a0614" stroke="#c06bff" stroke-opacity="0.35"/>
+    <g clip-path="url(#revealClip)">
+      <image href="https://github.com/VishalRathod21.png?size=460" x="742" y="128" width="380" height="480" preserveAspectRatio="xMidYMid slice"/>
+      <rect x="742" y="128" width="380" height="480" fill="#c06bff" opacity="0.12"/>
+    </g>
+    <g clip-path="url(#avatarClip)">
+      <rect x="742" y="128" width="380" height="26" fill="url(#scanGrad)">
+        <animate attributeName="y" values="128;128;588" keyTimes="0;0.02;1" dur="3.5s" repeatCount="indefinite" begin="0.3s"/>
+      </rect>
+    </g>
+    <rect x="740" y="126" width="384" height="484" rx="20" fill="none" stroke="#7ee7ff" stroke-opacity="0.25" stroke-width="1.5"/>
+  </g>
+  <text class="lbl" x="742" y="632" opacity="0">
+    <animate attributeName="opacity" to="1" dur="0.01s" begin="1.9s" fill="freeze"/>
+    &lt;character render :: online&gt;
+  </text>
+</g>
+</svg>

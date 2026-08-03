@@ -1,0 +1,60 @@
+<svg width="480" height="200" viewBox="0 0 480 200" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@500;600&amp;family=Poppins:wght@600;700&amp;display=swap');
+    .title { font-family:'Poppins',sans-serif; font-weight:700; font-size:16px; fill:#ffffff; }
+    .lbl   { font-family:'Fira Code',monospace; font-size:12px; fill:#c9d1d9; }
+    .pct   { font-family:'Fira Code',monospace; font-size:12px; font-weight:600; fill:#7ee7ff; }
+  </style>
+  <clipPath id="frameL2"><rect width="480" height="200" rx="16"/></clipPath>
+</defs>
+
+<rect width="480" height="200" rx="16" fill="#0d0817" stroke="#3a2a5c"/>
+<g clip-path="url(#frameL2)">
+<text class="title" x="20" y="32" opacity="0">Most Used Languages
+  <animate attributeName="opacity" to="1" dur="0.01s" begin="0.1s" fill="freeze"/>
+</text>
+
+<g transform="translate(20,58)" font-family="Fira Code">
+  <!-- Python -->
+  <text class="lbl" y="0">Python</text>
+  <text class="pct" x="440" y="0" text-anchor="end">42%</text>
+  <rect y="8" width="440" height="9" rx="4.5" fill="#ffffff" opacity="0.06"/>
+  <rect y="8" width="0" height="9" rx="4.5" fill="#3572A5">
+    <animate attributeName="width" from="0" to="185" dur="1.1s" begin="0.4s" fill="freeze" calcMode="spline" keySplines="0.22 1 0.36 1"/>
+  </rect>
+
+  <!-- C++ -->
+  <text class="lbl" y="38">C++</text>
+  <text class="pct" x="440" y="38" text-anchor="end">21%</text>
+  <rect y="46" width="440" height="9" rx="4.5" fill="#ffffff" opacity="0.06"/>
+  <rect y="46" width="0" height="9" rx="4.5" fill="#f34b7d">
+    <animate attributeName="width" from="0" to="92" dur="1.1s" begin="0.55s" fill="freeze" calcMode="spline" keySplines="0.22 1 0.36 1"/>
+  </rect>
+
+  <!-- SQL -->
+  <text class="lbl" y="76">SQL</text>
+  <text class="pct" x="440" y="76" text-anchor="end">16%</text>
+  <rect y="84" width="440" height="9" rx="4.5" fill="#ffffff" opacity="0.06"/>
+  <rect y="84" width="0" height="9" rx="4.5" fill="#e38c00">
+    <animate attributeName="width" from="0" to="70" dur="1.1s" begin="0.7s" fill="freeze" calcMode="spline" keySplines="0.22 1 0.36 1"/>
+  </rect>
+
+  <!-- Jupyter -->
+  <text class="lbl" y="114">Jupyter Notebook</text>
+  <text class="pct" x="440" y="114" text-anchor="end">13%</text>
+  <rect y="122" width="440" height="9" rx="4.5" fill="#ffffff" opacity="0.06"/>
+  <rect y="122" width="0" height="9" rx="4.5" fill="#DA5B0B">
+    <animate attributeName="width" from="0" to="57" dur="1.1s" begin="0.85s" fill="freeze" calcMode="spline" keySplines="0.22 1 0.36 1"/>
+  </rect>
+
+  <!-- HTML/CSS -->
+  <text class="lbl" y="152">HTML / CSS</text>
+  <text class="pct" x="440" y="152" text-anchor="end">8%</text>
+  <rect y="160" width="440" height="9" rx="4.5" fill="#ffffff" opacity="0.06"/>
+  <rect y="160" width="0" height="9" rx="4.5" fill="#e34c26">
+    <animate attributeName="width" from="0" to="35" dur="1.1s" begin="1.0s" fill="freeze" calcMode="spline" keySplines="0.22 1 0.36 1"/>
+  </rect>
+</g>
+</g>
+</svg>
